@@ -1,0 +1,39 @@
+# Canonical IO-VNBD Train / Validation / Test Drive Splits
+#
+# RULE 30 & 31: All training, validation, and evaluation scripts must read
+# exclusively from this canonical configuration.
+# Drive IDs must be completely disjoint across all three splits.
+
+version: "1.0"
+dataset: "IO-VNBD"
+seed: 42
+
+splits:
+  train:
+    - "M_M"      # Driver B: Urban & suburban loop (~105k samples)
+    - "S1"       # Driver A: City driving (~51k samples)
+    - "S2"       # Driver A: Mixed route (~93k samples)
+    - "S3a"      # Driver A: Commute route (~24k samples)
+    - "S3c"      # Driver A: Arterial route (~37k samples)
+    - "Vta1a"    # Driver E: Highway & arterial (~25k samples)
+    - "Vta2"     # Driver E: Rural route (~11k samples)
+    - "Vta16"    # Driver E: Mixed route (~11k samples)
+    - "Vta29"    # Driver E: Long distance (~23k samples)
+    - "Vtb1"     # Driver E: Suburban route (~32k samples)
+    - "Vtb5"     # Driver E: Extended drive (~64k samples)
+    - "Vw1"      # Driver E: Urban route (~20k samples)
+    - "Vw2"      # Driver E: Suburban loop (~52k samples)
+    - "Vw4"      # Driver E: Highway corridor (~126k samples)
+
+  val:
+    - "Y1"       # Driver D: Complete held-out driver (~70k samples)
+
+  test:
+    - "Vfa01"    # Driver E: High-speed highway & suburban corridor (~11k samples)
+    - "Vfa02"    # Driver E: Long-distance highway & regional route (~67k samples)
+
+# Parameters for sliding window generation
+windowing:
+  window_size: 50       # 5.0 seconds at 10 Hz
+  window_stride: 10     # 1.0 second stride (80% temporal overlap)
+  sampling_rate_hz: 10.0

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "onnx_available": true,
+  "models": {
+    "VelocityEstimatorNet": {
+      "pytorch_size_kb": 323.9,
+      "onnx_size_kb": 314.9,
+      "num_parameters": 79394,
+      "under_2mb_target": true,
+      "numerical_parity": {
+        "mae": 1.1e-06,
+        "max_abs_error": 3.8e-06,
+        "mean_relative_error": 1e-07,
+        "parity_pass": true
+      }
+    },
+    "IMUDenoiseNet": {
+      "pytorch_size_kb": 221.7,
+      "onnx_size_kb": 209.2,
+      "num_parameters": 53414,
+      "under_2mb_target": true,
+      "numerical_parity": {
+        "mae": 7e-07,
+        "max_abs_error": 4.1e-06,
+        "mean_relative_error": 9e-07,
+        "parity_pass": true
+      }
+    }
+  },
+  "tflite": {
+    "supported_in_environment": false,
+    "status": "UNSUPPORTED_IN_ENVIRONMENT (TensorFlow / tflite_runtime not installed)",
+    "recommendation": "Use ONNX Runtime Mobile for on-device Android/ARM deployment."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "dataset": "IO-VNBD (Authentic)",
+  "test_drives": [
+    "Vfa01",
+    "Vfa02"
+  ],
+  "total_scenarios": 100,
+  "configurations": {
+    "Config A: Raw IMU Baseline": {
+      "num_scenarios": 100,
+      "mean_drift_pct": 38.55,
+      "median_drift_pct": 29.63,
+      "p90_drift_pct": 66.53,
+      "p95_drift_pct": 125.26,
+      "max_drift_pct": 222.26,
+      "mean_rmse_m": 123.98,
+      "mean_cep50_m": 85.69,
+      "pass_rate_under_10pct": 14.0
+    },
+    "Config B: EKF + AI Velocity + NHC": {
+      "num_scenarios": 100,
+      "mean_drift_pct": 89.36,
+      "median_drift_pct": 72.05,
+      "p90_drift_pct": 159.07,
+      "p95_drift_pct": 210.15,
+      "max_drift_pct": 494.69,
+      "mean_rmse_m": 307.82,
+      "mean_cep50_m": 206.37,
+      "pass_rate_under_10pct": 2.0
+    },
+    "Config C: EKF + AI Velocity + NHC + OSM HMM": {
+      "num_scenarios": 100,
+      "mean_drift_pct": 81.91,
+      "median_drift_pct": 56.8,
+      "p90_drift_pct": 171.33,
+      "p95_drift_pct": 241.52,
+      "max_drift_pct": 401.08,
+      "mean_rmse_m": 290.33,
+      "mean_cep50_m": 204.11,
+      "pass_rate_under_10pct": 6.0
+    }
+  }
+}

@@ -1,0 +1,5708 @@
+{
+  "status": "VALIDATED_AUTHENTIC",
+  "dataset_name": "IO-VNBD (Inertial and Odometry Benchmark Dataset for Ground Vehicle Positioning)",
+  "source": "onyekpeu/IO-VNBD",
+  "total_s_files": 72,
+  "total_v_files": 72,
+  "paired_drives": 72,
+  "unpaired_s_files": 0,
+  "unpaired_v_files": 0,
+  "total_sensor_samples": 1070745,
+  "total_driving_duration_hours": 25.08,
+  "global_bounding_box": {
+    "min_latitude": 51.946283,
+    "max_latitude": 53.792844,
+    "min_longitude": -2.253547,
+    "max_longitude": -0.602613
+  },
+  "drives": [
+    {
+      "drive_id": "M_M",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\M (Driver B)\\S-M.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\M (Driver B)\\V-M.csv",
+      "s_row_count": 105974,
+      "v_row_count": 105974,
+      "duration_seconds": 6171.7480000000005,
+      "sampling_rate": {
+        "mean_dt": 0.058239,
+        "median_dt": 0.1,
+        "std_dt": 13.598529,
+        "min_dt": -4426.717,
+        "max_dt": 1.365,
+        "estimated_frequency_hz": 17.17,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 1
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.357857,
+        "phone_lat_max": 52.4792,
+        "phone_lon_min": -1.588746,
+        "phone_lon_max": -1.378485,
+        "vehicle_lat_min": 52.3578301,
+        "vehicle_lat_max": 52.4793227,
+        "vehicle_lon_min": -1.5887188,
+        "vehicle_lon_max": -1.3784151999999998
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -39.6496,
+          "max": 18.2363,
+          "mean": -0.17382890237228,
+          "std": 1.2460897891964335
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -39.3612,
+          "max": 12.8086,
+          "mean": -0.07017688300903996,
+          "std": 1.2739559916586762
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": -19.5769,
+          "max": 59.4461,
+          "mean": 9.85422611772699,
+          "std": 0.6295747826002888
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -9.8108,
+          "max": 5.8733,
+          "mean": -0.002044944986506124,
+          "std": 0.09439239287138441
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -8.4485,
+          "max": 12.6635,
+          "mean": -0.01842270368203522,
+          "std": 0.17446628060864183
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -3.8472,
+          "max": 9.7169,
+          "mean": 0.0011782899579142053,
+          "std": 0.07765651230251966
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 27.968888888888888,
+          "mean": 9.918260679244174,
+          "std": 5.666587972062136
+        }
+      }
+    },
+    {
+      "drive_id": "S1",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S1\\S-S1.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S1\\V-S1.csv",
+      "s_row_count": 51746,
+      "v_row_count": 51746,
+      "duration_seconds": 5174.499000000001,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000765,
+        "min_dt": 0.089,
+        "max_dt": 0.111,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.398403,
+        "phone_lat_max": 52.419914,
+        "phone_lon_min": -1.603373,
+        "phone_lon_max": -1.50529,
+        "vehicle_lat_min": 52.3984045,
+        "vehicle_lat_max": 52.4199255,
+        "vehicle_lon_min": -1.6034266,
+        "vehicle_lon_max": -1.5053331
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -8.3689,
+          "max": 7.5736,
+          "mean": 0.0422816971360105,
+          "std": 1.0602462024492272
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -8.2137,
+          "max": 11.3521,
+          "mean": 0.06223483940787693,
+          "std": 1.0664370218653398
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 2.4242,
+          "max": 16.1533,
+          "mean": 9.847417781084527,
+          "std": 0.5131802743581733
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -1.1627,
+          "max": 1.3556,
+          "mean": 0.0021920515595408342,
+          "std": 0.09986786281775534
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7799,
+          "max": 0.633,
+          "mean": -0.007248550612607737,
+          "std": 0.14165254987265355
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.5837,
+          "max": 0.5546,
+          "mean": 0.0025491728829281487,
+          "std": 0.05147701685479646
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 26.065,
+          "mean": 7.333599666318814,
+          "std": 4.509890917913404
+        }
+      }
+    },
+    {
+      "drive_id": "S2",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S2\\S-S2.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S2\\V-S2.csv",
+      "s_row_count": 93876,
+      "v_row_count": 93876,
+      "duration_seconds": 9201.099,
+      "sampling_rate": {
+        "mean_dt": 0.098014,
+        "median_dt": 0.1,
+        "std_dt": 0.608375,
+        "min_dt": -186.301,
+        "max_dt": 0.112,
+        "estimated_frequency_hz": 10.2,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.39031,
+        "phone_lat_max": 52.558796,
+        "phone_lon_min": -1.597006,
+        "phone_lon_max": -1.363227,
+        "vehicle_lat_min": 52.3902747,
+        "vehicle_lat_max": 52.5587793,
+        "vehicle_lon_min": -1.5970094,
+        "vehicle_lon_max": -1.3631521
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -17.9018,
+          "max": 11.9297,
+          "mean": -0.03352263091738038,
+          "std": 1.194671483778271
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -31.9607,
+          "max": 13.0788,
+          "mean": -0.0004537794537474978,
+          "std": 1.146750606065237
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 0.6053,
+          "max": 41.0555,
+          "mean": 9.855591161745282,
+          "std": 0.6521521676299286
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -2.218,
+          "max": 13.692,
+          "mean": 0.0028293323107077416,
+          "std": 0.1708298331598513
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.0682,
+          "max": 4.5591,
+          "mean": -0.008924653798627977,
+          "std": 0.14703143474548414
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -3.9108,
+          "max": 10.1022,
+          "mean": 0.0029621639183603898,
+          "std": 0.07660152543147553
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 29.22888888888889,
+          "mean": 8.039247736967441,
+          "std": 5.87330569240188
+        }
+      }
+    },
+    {
+      "drive_id": "S3a",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S3a\\S-S3a.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S3a\\V-S3a.csv",
+      "s_row_count": 24621,
+      "v_row_count": 24621,
+      "duration_seconds": 2462.0,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000783,
+        "min_dt": 0.087,
+        "max_dt": 0.112,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.36264,
+        "phone_lat_max": 52.40768,
+        "phone_lon_min": -1.500284,
+        "phone_lon_max": -1.22892,
+        "vehicle_lat_min": 52.3626579,
+        "vehicle_lat_max": 52.4078496,
+        "vehicle_lon_min": -1.5002890999999998,
+        "vehicle_lon_max": -1.2288605
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -5.9431,
+          "max": 6.4687,
+          "mean": -0.014022013728118272,
+          "std": 0.8931834573390833
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -5.3225,
+          "max": 4.848,
+          "mean": 0.013724397871735504,
+          "std": 0.9292107674928344
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 3.185,
+          "max": 16.495,
+          "mean": 9.840845952642052,
+          "std": 0.5300705284682946
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4735,
+          "max": 0.7835,
+          "mean": 0.00019569067056577719,
+          "std": 0.03311020561998078
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7917,
+          "max": 0.6314,
+          "mean": -0.012811526745461193,
+          "std": 0.1306154237444083
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.2506,
+          "max": 0.2734,
+          "mean": 0.00011700986962349227,
+          "std": 0.03677052624281162
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 27.22694444444444,
+          "mean": 10.538016383936025,
+          "std": 6.0378810623062655
+        }
+      }
+    },
+    {
+      "drive_id": "S3b",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S3b\\S-S3b.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S3b\\V-S3b.csv",
+      "s_row_count": 6813,
+      "v_row_count": 6813,
+      "duration_seconds": -2026.4120000000003,
+      "sampling_rate": {
+        "mean_dt": -0.297477,
+        "median_dt": 0.1,
+        "std_dt": 32.803277,
+        "min_dt": -2707.512,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 0.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.369633,
+        "phone_lat_max": 52.37938,
+        "phone_lon_min": -1.261814,
+        "phone_lon_max": -1.252101,
+        "vehicle_lat_min": 52.369639600000006,
+        "vehicle_lat_max": 52.379301000000005,
+        "vehicle_lon_min": -1.2611948999999998,
+        "vehicle_lon_max": -1.2520968
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -39.9801,
+          "max": 13.4329,
+          "mean": -0.04285536474387201,
+          "std": 1.204820523912558
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -25.3969,
+          "max": 33.9549,
+          "mean": 0.06783800088066932,
+          "std": 1.2306950732752469
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": -28.0714,
+          "max": 19.2488,
+          "mean": 9.815971216791427,
+          "std": 0.9350947185551012
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -13.5066,
+          "max": 11.1325,
+          "mean": -0.0045048730368413325,
+          "std": 0.2724864103713869
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.4837,
+          "max": 20.0112,
+          "mean": -0.02122185527667694,
+          "std": 0.3369884679091853
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -5.9069,
+          "max": 4.8354,
+          "mean": -0.002431366505210627,
+          "std": 0.13773762186152477
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 12.426111111111112,
+          "mean": 5.529160917853123,
+          "std": 3.0309732853487605
+        }
+      }
+    },
+    {
+      "drive_id": "S3c",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S3c\\S-S3c.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S3c\\V-S3c.csv",
+      "s_row_count": 37183,
+      "v_row_count": 37183,
+      "duration_seconds": 3718.199,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000855,
+        "min_dt": 0.082,
+        "max_dt": 0.121,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.37938,
+        "phone_lat_max": 52.437267,
+        "phone_lon_min": -1.519662,
+        "phone_lon_max": -1.236601,
+        "vehicle_lat_min": 52.3794122,
+        "vehicle_lat_max": 52.4373251,
+        "vehicle_lon_min": -1.5197389,
+        "vehicle_lon_max": -1.2365298999999998
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -5.4517,
+          "max": 5.5606,
+          "mean": -0.001895968587795496,
+          "std": 0.9138198325686091
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -5.5134,
+          "max": 5.1397,
+          "mean": -0.013326713820832106,
+          "std": 0.9307168933797662
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.0467,
+          "max": 17.8755,
+          "mean": 9.838498961891188,
+          "std": 0.44758709862767504
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.8782,
+          "max": 0.8012,
+          "mean": -0.00022639378210472525,
+          "std": 0.02895227706395383
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.6842,
+          "max": 0.6515,
+          "mean": -0.0015017050802786228,
+          "std": 0.11712901835946053
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.3346,
+          "max": 0.1688,
+          "mean": -0.0006300863297743594,
+          "std": 0.022689138452635142
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 32.53388888888889,
+          "mean": 11.752299505150201,
+          "std": 8.256133700928793
+        }
+      }
+    },
+    {
+      "drive_id": "S4",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S4\\S-S4.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\S (Driver A)\\S4\\V-S4.csv",
+      "s_row_count": 94600,
+      "v_row_count": 94600,
+      "duration_seconds": 354.78000000000003,
+      "sampling_rate": {
+        "mean_dt": 0.00375,
+        "median_dt": 0.1,
+        "std_dt": 21.457132,
+        "min_dt": -5578.0,
+        "max_dt": 0.117,
+        "estimated_frequency_hz": 266.64,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.370026,
+        "phone_lat_max": 52.43819,
+        "phone_lon_min": -1.590086,
+        "phone_lon_max": -1.430474,
+        "vehicle_lat_min": 52.3698962,
+        "vehicle_lat_max": 52.4382826,
+        "vehicle_lon_min": -1.5901432,
+        "vehicle_lon_max": -1.4304653000000005
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -49.1996,
+          "max": 10.5057,
+          "mean": -0.010705654334038053,
+          "std": 1.0493745994815968
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -9.2256,
+          "max": 52.3986,
+          "mean": -0.0011271162790697682,
+          "std": 1.0576154335547987
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": -6.1671,
+          "max": 17.0603,
+          "mean": 9.84804166067653,
+          "std": 0.515545073729101
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -5.3169,
+          "max": 9.5216,
+          "mean": 0.0006783424947145877,
+          "std": 0.12161200942964158
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.1795,
+          "max": 9.1322,
+          "mean": -0.006991102536997885,
+          "std": 0.1337904847366816
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -7.1924,
+          "max": 4.6461,
+          "mean": 0.0015123995771670195,
+          "std": 0.065840241124228
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 30.453055555555554,
+          "mean": 9.34722339382194,
+          "std": 6.97820444191539
+        }
+      }
+    },
+    {
+      "drive_id": "Vfa01",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vf (Driver E)\\V-Vfa01\\S-Vfa01.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vf (Driver E)\\V-Vfa01\\V-Vfa01.csv",
+      "s_row_count": 11486,
+      "v_row_count": 11535,
+      "duration_seconds": 1148.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000848,
+        "min_dt": 0.086,
+        "max_dt": 0.113,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.5595,
+        "phone_lat_max": 52.709675,
+        "phone_lon_min": -1.511948,
+        "phone_lon_max": -1.473887,
+        "vehicle_lat_min": 52.5589784,
+        "vehicle_lat_max": 52.7098299,
+        "vehicle_lon_min": -1.5119583,
+        "vehicle_lon_max": -1.4738639
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -15.1118,
+          "max": 16.5209,
+          "mean": -0.16978561727320216,
+          "std": 2.3510117412162943
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.8842,
+          "max": 11.065,
+          "mean": -0.18190775726971964,
+          "std": 1.5789102608967585
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 1.122,
+          "max": 15.5626,
+          "mean": 9.846659777119973,
+          "std": 0.8552935257826487
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5305,
+          "max": 0.7377,
+          "mean": -0.0013913808114226014,
+          "std": 0.09545739592511707
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.9187,
+          "max": 1.5192,
+          "mean": 0.002158871669858958,
+          "std": 0.2707794903280578
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0531,
+          "max": 1.6351,
+          "mean": -0.000855911544488943,
+          "std": 0.17821993636085015
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0019444444444444166,
+          "max": 27.343888888888888,
+          "mean": 16.279479579058904,
+          "std": 7.170958208155263
+        }
+      }
+    },
+    {
+      "drive_id": "Vfa02",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vf (Driver E)\\V-Vfa02\\S-Vfa02.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vf (Driver E)\\V-Vfa02\\V-Vfa02.csv",
+      "s_row_count": 67523,
+      "v_row_count": 67755,
+      "duration_seconds": 6752.201,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00086,
+        "min_dt": 0.059,
+        "max_dt": 0.141,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.709957,
+        "phone_lat_max": 53.792767,
+        "phone_lon_min": -1.770408,
+        "phone_lon_max": -1.231123,
+        "vehicle_lat_min": 52.7098422,
+        "vehicle_lat_max": 53.792844,
+        "vehicle_lon_min": -1.770652,
+        "vehicle_lon_max": -1.2310592
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -12.6129,
+          "max": 12.3319,
+          "mean": 0.03492449980006812,
+          "std": 2.0627433153602834
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -8.4162,
+          "max": 9.3186,
+          "mean": 0.10403115679101935,
+          "std": 1.2787168258348478
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 3.6559,
+          "max": 16.767,
+          "mean": 9.859425583875122,
+          "std": 0.7380321112822648
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.6392,
+          "max": 0.6003,
+          "mean": -0.0022007789938243262,
+          "std": 0.08137606833753441
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.5182,
+          "max": 1.5591,
+          "mean": 0.005141889430268204,
+          "std": 0.24153693588980663
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0892,
+          "max": 0.9905,
+          "mean": -0.0035501177376597603,
+          "std": 0.1588528532489009
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 32.753055555555555,
+          "mean": 24.077463971498613,
+          "std": 6.748524714726396
+        }
+      }
+    },
+    {
+      "drive_id": "Vta1a",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta01a\\S-Vta1a.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta01a\\V-Vta1a.csv",
+      "s_row_count": 25676,
+      "v_row_count": 25676,
+      "duration_seconds": 2567.499,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000705,
+        "min_dt": 0.088,
+        "max_dt": 0.111,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.552773,
+        "phone_lat_max": 52.760777,
+        "phone_lon_min": -1.692337,
+        "phone_lon_max": -1.45475,
+        "vehicle_lat_min": 52.5527811,
+        "vehicle_lat_max": 52.7607462,
+        "vehicle_lon_min": -1.6923737,
+        "vehicle_lon_max": -1.4547392
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -16.9341,
+          "max": 15.1216,
+          "mean": -0.08338077192709145,
+          "std": 2.238433933631936
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -15.9552,
+          "max": 15.894,
+          "mean": -0.408605292880511,
+          "std": 2.5361602383029753
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 3.7943,
+          "max": 16.4517,
+          "mean": 9.8095476982396,
+          "std": 0.8419182237968281
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5871,
+          "max": 0.6623,
+          "mean": -0.0014038245832684222,
+          "std": 0.09976787585079179
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.0223,
+          "max": 2.2545,
+          "mean": 0.006859927558809782,
+          "std": 0.3428198273776064
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.3704,
+          "max": 1.4105,
+          "mean": -0.002978528587007322,
+          "std": 0.2109109544010935
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0019444444444444166,
+          "max": 28.735,
+          "mean": 15.860137374288136,
+          "std": 5.320613203143031
+        }
+      }
+    },
+    {
+      "drive_id": "Vta1b",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta01b\\S-Vta1b.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta01b\\V-Vta1b.csv",
+      "s_row_count": 954,
+      "v_row_count": 953,
+      "duration_seconds": 95.30000000000018,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000606,
+        "min_dt": 0.094,
+        "max_dt": 0.106,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.749237,
+        "phone_lat_max": 52.75984,
+        "phone_lon_min": -1.678711,
+        "phone_lon_max": -1.674216,
+        "vehicle_lat_min": 52.7492397,
+        "vehicle_lat_max": 52.7598923,
+        "vehicle_lon_min": -1.6786892,
+        "vehicle_lon_max": -1.6741376
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -7.4437,
+          "max": 6.2521,
+          "mean": 0.5833536687631029,
+          "std": 1.9272412278479985
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.1847,
+          "max": 12.7759,
+          "mean": -0.8626067085953879,
+          "std": 3.0878374383921283
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.032,
+          "max": 13.0417,
+          "mean": 9.762007232704404,
+          "std": 0.8591117287626073
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3204,
+          "max": 0.417,
+          "mean": -0.002331446540880504,
+          "std": 0.10019056415895033
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.2998,
+          "max": 1.6037,
+          "mean": 0.0150856394129979,
+          "std": 0.356872068414346
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9629,
+          "max": 0.8827,
+          "mean": -0.008892138364779872,
+          "std": 0.22264186976662106
+        },
+        "wheel_speed_m_s": {
+          "min": 0.041111111111111105,
+          "max": 21.578888888888887,
+          "mean": 13.208143290194705,
+          "std": 4.766483726506381
+        }
+      }
+    },
+    {
+      "drive_id": "Vta2",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta02\\S-Vta2.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta02\\V-vta2.csv",
+      "s_row_count": 10991,
+      "v_row_count": 10991,
+      "duration_seconds": 1098.998,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000698,
+        "min_dt": 0.09,
+        "max_dt": 0.108,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.7604,
+        "phone_lat_max": 52.819504,
+        "phone_lon_min": -1.680033,
+        "phone_lon_max": -1.619249,
+        "vehicle_lat_min": 52.7604151,
+        "vehicle_lat_max": 52.8195049,
+        "vehicle_lon_min": -1.6799638,
+        "vehicle_lon_max": -1.6192284
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -11.9016,
+          "max": 12.0144,
+          "mean": 0.19447518879082884,
+          "std": 1.7335707698931249
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -21.1488,
+          "max": 16.3325,
+          "mean": -0.5631517150395778,
+          "std": 2.4677460796355106
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.4334,
+          "max": 13.436,
+          "mean": 9.821559967245927,
+          "std": 0.664414656066632
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5801,
+          "max": 0.4573,
+          "mean": -0.002669302156309708,
+          "std": 0.08331851040888763
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.8381,
+          "max": 1.9541,
+          "mean": 0.0027517514329906284,
+          "std": 0.30827473250787385
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1655,
+          "max": 1.1048,
+          "mean": -0.0046819306705486305,
+          "std": 0.18760045805091402
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 22.678888888888885,
+          "mean": 10.052990805608628,
+          "std": 5.124776196558852
+        }
+      }
+    },
+    {
+      "drive_id": "Vta3",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta03\\S-Vta3.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta03\\V-vta3.csv",
+      "s_row_count": 645,
+      "v_row_count": 645,
+      "duration_seconds": 64.4,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00059,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.81309,
+        "phone_lat_max": 52.81347,
+        "phone_lon_min": -1.640957,
+        "phone_lon_max": -1.638823,
+        "vehicle_lat_min": 52.8130369,
+        "vehicle_lat_max": 52.8135866,
+        "vehicle_lon_min": -1.640958,
+        "vehicle_lon_max": -1.6378498999999995
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -5.6132,
+          "max": 5.4154,
+          "mean": -0.3352635658914729,
+          "std": 1.1816812104879149
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -3.7656,
+          "max": 3.6313,
+          "mean": -0.37612930232558145,
+          "std": 1.0053276101609074
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 8.0461,
+          "max": 11.0607,
+          "mean": 9.83013426356589,
+          "std": 0.3060286746520304
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1559,
+          "max": 0.1421,
+          "mean": -0.0025776744186046512,
+          "std": 0.038543702277628995
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.6265,
+          "max": 0.58,
+          "mean": -0.04038279069767441,
+          "std": 0.1875084965320319
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.3511,
+          "max": 0.3464,
+          "mean": -0.004111782945736434,
+          "std": 0.0757020708140991
+        },
+        "wheel_speed_m_s": {
+          "min": 0.015,
+          "max": 12.715,
+          "mean": 5.831234711455642,
+          "std": 4.338566313278535
+        }
+      }
+    },
+    {
+      "drive_id": "Vta4",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta04\\S-Vta4.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta04\\V-vta4.csv",
+      "s_row_count": 1789,
+      "v_row_count": 1789,
+      "duration_seconds": 178.799,
+      "sampling_rate": {
+        "mean_dt": 0.099999,
+        "median_dt": 0.1,
+        "std_dt": 0.000565,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.81381,
+        "phone_lat_max": 52.827927,
+        "phone_lon_min": -1.651136,
+        "phone_lon_max": -1.636467,
+        "vehicle_lat_min": 52.8137699,
+        "vehicle_lat_max": 52.8278828,
+        "vehicle_lon_min": -1.6510502,
+        "vehicle_lon_max": -1.6364091
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.2584,
+          "max": 8.6041,
+          "mean": 0.23325399664617105,
+          "std": 1.9077030229380638
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -15.2972,
+          "max": 15.206,
+          "mean": -0.7600832867523758,
+          "std": 3.1125896712301637
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.9348,
+          "max": 12.7924,
+          "mean": 9.785347177193964,
+          "std": 0.7201126600734941
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5131,
+          "max": 0.6305,
+          "mean": -0.0017667411961989937,
+          "std": 0.09585894066330036
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.0791,
+          "max": 1.3006,
+          "mean": 0.00531101173840134,
+          "std": 0.3771712965516228
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9775,
+          "max": 1.2066,
+          "mean": 0.0016171604248183336,
+          "std": 0.22943087353023145
+        },
+        "wheel_speed_m_s": {
+          "min": 1.6488888888888888,
+          "max": 14.356111111111112,
+          "mean": 11.139835724489162,
+          "std": 2.296923470593279
+        }
+      }
+    },
+    {
+      "drive_id": "Vta5",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta05\\S-Vta5.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta05\\V-vta5.csv",
+      "s_row_count": 307,
+      "v_row_count": 307,
+      "duration_seconds": 30.600000000000023,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000492,
+        "min_dt": 0.098,
+        "max_dt": 0.102,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.828754,
+        "phone_lat_max": 52.831345,
+        "phone_lon_min": -1.653286,
+        "phone_lon_max": -1.651825,
+        "vehicle_lat_min": 52.828763,
+        "vehicle_lat_max": 52.8317752,
+        "vehicle_lon_min": -1.653374,
+        "vehicle_lon_max": -1.6517674
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -4.1086,
+          "max": 4.0302,
+          "mean": 0.6233371335504887,
+          "std": 1.2444778310137017
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -8.2309,
+          "max": 5.6141,
+          "mean": -0.8472397394136808,
+          "std": 2.468116398349405
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 8.2111,
+          "max": 12.3881,
+          "mean": 9.795405863192183,
+          "std": 0.5687137820097765
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1958,
+          "max": 0.2688,
+          "mean": 0.0011501628664495117,
+          "std": 0.06752616020524854
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7206,
+          "max": 0.7766,
+          "mean": -0.022113029315960913,
+          "std": 0.26402498500236515
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.429,
+          "max": 0.4607,
+          "mean": 0.0054120521172638415,
+          "std": 0.1504381409950166
+        },
+        "wheel_speed_m_s": {
+          "min": 8.113888888888889,
+          "max": 14.206111111111111,
+          "mean": 11.797067499095187,
+          "std": 1.6918322924714577
+        }
+      }
+    },
+    {
+      "drive_id": "Vta6",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta06\\S-Vta6.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta06\\V-vta6.csv",
+      "s_row_count": 1376,
+      "v_row_count": 1376,
+      "duration_seconds": 137.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000598,
+        "min_dt": 0.095,
+        "max_dt": 0.106,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.832485,
+        "phone_lat_max": 52.848232,
+        "phone_lon_min": -1.67862,
+        "phone_lon_max": -1.653545,
+        "vehicle_lat_min": 52.832482,
+        "vehicle_lat_max": 52.8487367,
+        "vehicle_lon_min": -1.6788735,
+        "vehicle_lon_max": -1.6535135
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.8406,
+          "max": 9.315,
+          "mean": -0.0974313953488372,
+          "std": 2.397488017259841
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -12.378,
+          "max": 9.8312,
+          "mean": -1.1558097383720929,
+          "std": 2.894751170780346
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.6608,
+          "max": 12.5393,
+          "mean": 9.741181104651163,
+          "std": 0.8307228404965799
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4634,
+          "max": 0.4258,
+          "mean": -0.0051949127906976734,
+          "std": 0.1006335932502915
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.4997,
+          "max": 1.5442,
+          "mean": 0.01917936046511628,
+          "std": 0.3866599701535631
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.8781,
+          "max": 0.9041,
+          "mean": -0.007969186046511628,
+          "std": 0.24643732487885453
+        },
+        "wheel_speed_m_s": {
+          "min": 12.163055555555555,
+          "max": 28.866944444444446,
+          "mean": 18.85255046834625,
+          "std": 3.9983032375404584
+        }
+      }
+    },
+    {
+      "drive_id": "Vta7",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta07\\S-Vta7.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta07\\V-vta7.csv",
+      "s_row_count": 840,
+      "v_row_count": 840,
+      "duration_seconds": 83.90000000000003,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00066,
+        "min_dt": 0.091,
+        "max_dt": 0.108,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.84996,
+        "phone_lat_max": 52.861904,
+        "phone_lon_min": -1.683053,
+        "phone_lon_max": -1.679164,
+        "vehicle_lat_min": 52.8499582,
+        "vehicle_lat_max": 52.862270800000005,
+        "vehicle_lon_min": -1.6831827,
+        "vehicle_lon_max": -1.6791671999999995
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.3472,
+          "max": 7.3652,
+          "mean": 0.2467830952380952,
+          "std": 2.4156636516547674
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.9866,
+          "max": 14.251,
+          "mean": -0.5431970238095238,
+          "std": 3.002579497671325
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.1234,
+          "max": 13.2971,
+          "mean": 9.734636785714287,
+          "std": 0.7307692595934585
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.384,
+          "max": 0.4952,
+          "mean": -0.007688214285714286,
+          "std": 0.09461209440034261
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.4419,
+          "max": 1.7159,
+          "mean": 0.01590607142857143,
+          "std": 0.3683316228414616
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0234,
+          "max": 0.8192,
+          "mean": -0.014497023809523812,
+          "std": 0.21473657927196507
+        },
+        "wheel_speed_m_s": {
+          "min": 6.208888888888889,
+          "max": 31.428055555555556,
+          "mean": 17.941824735449735,
+          "std": 7.721338988496671
+        }
+      }
+    },
+    {
+      "drive_id": "Vta8",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta08\\S-Vta8.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta08\\V-vta8.csv",
+      "s_row_count": 3676,
+      "v_row_count": 3676,
+      "duration_seconds": 367.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000661,
+        "min_dt": 0.092,
+        "max_dt": 0.108,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.862984,
+        "phone_lat_max": 52.881462,
+        "phone_lon_min": -1.703815,
+        "phone_lon_max": -1.6789,
+        "vehicle_lat_min": 52.8629741,
+        "vehicle_lat_max": 52.8815867,
+        "vehicle_lon_min": -1.7049529,
+        "vehicle_lon_max": -1.6788961
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.0571,
+          "max": 11.9939,
+          "mean": -0.053781229597388486,
+          "std": 1.8096989640761219
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -12.6537,
+          "max": 16.6997,
+          "mean": -0.0934535092491839,
+          "std": 1.8757268146409787
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.8202,
+          "max": 12.6784,
+          "mean": 9.844412921653971,
+          "std": 0.549836374551488
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5518,
+          "max": 0.3456,
+          "mean": 0.0002923830250272038,
+          "std": 0.06594895632172725
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.9475,
+          "max": 2.2036,
+          "mean": 0.0006255712731229619,
+          "std": 0.26903306723207726
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1536,
+          "max": 1.3459,
+          "mean": 0.0021282100108813927,
+          "std": 0.1660014712373307
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 21.551944444444445,
+          "mean": 9.257216932656268,
+          "std": 6.849167751424117
+        }
+      }
+    },
+    {
+      "drive_id": "Vta9",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta09\\S-Vta9.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta09\\V-vta9.csv",
+      "s_row_count": 156,
+      "v_row_count": 156,
+      "duration_seconds": 15.497999999999934,
+      "sampling_rate": {
+        "mean_dt": 0.099987,
+        "median_dt": 0.1,
+        "std_dt": 0.000632,
+        "min_dt": 0.097,
+        "max_dt": 0.102,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.881516,
+        "phone_lat_max": 52.881527,
+        "phone_lon_min": -1.710504,
+        "phone_lon_max": -1.70811,
+        "vehicle_lat_min": 52.8815347,
+        "vehicle_lat_max": 52.881577,
+        "vehicle_lon_min": -1.7126874,
+        "vehicle_lon_max": -1.7080875
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -5.6371,
+          "max": 4.65,
+          "mean": -0.3055416666666667,
+          "std": 1.78583237229313
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -2.5758,
+          "max": 1.7197,
+          "mean": -0.44432564102564104,
+          "std": 0.860602207599651
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 8.0104,
+          "max": 11.3998,
+          "mean": 9.899341666666666,
+          "std": 0.6156601650531999
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1834,
+          "max": 0.1637,
+          "mean": 0.00032564102564102565,
+          "std": 0.06818681063627867
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.5827,
+          "max": 0.587,
+          "mean": -0.020285897435897437,
+          "std": 0.21677430166961836
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.3557,
+          "max": 0.3806,
+          "mean": 0.009342307692307693,
+          "std": 0.1424295515904375
+        },
+        "wheel_speed_m_s": {
+          "min": 14.018055555555556,
+          "max": 24.266944444444444,
+          "mean": 19.934503205128205,
+          "std": 2.8056862221358525
+        }
+      }
+    },
+    {
+      "drive_id": "Vta10",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta10\\S-Vta10.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta10\\V-vta10.csv",
+      "s_row_count": 1502,
+      "v_row_count": 1502,
+      "duration_seconds": 150.10000000000014,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000687,
+        "min_dt": 0.091,
+        "max_dt": 0.109,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.881744,
+        "phone_lat_max": 52.89024,
+        "phone_lon_min": -1.765211,
+        "phone_lon_max": -1.71748,
+        "vehicle_lat_min": 52.88176740000001,
+        "vehicle_lat_max": 52.8909042,
+        "vehicle_lon_min": -1.767002,
+        "vehicle_lon_max": -1.7174155000000002
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.4655,
+          "max": 11.5118,
+          "mean": -0.007871770972037298,
+          "std": 2.6514634627225444
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -7.154,
+          "max": 7.0549,
+          "mean": 0.11490372836218377,
+          "std": 1.7046460704739734
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.6064,
+          "max": 12.9159,
+          "mean": 9.857416977363515,
+          "std": 0.8994025489297718
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3763,
+          "max": 0.4454,
+          "mean": -0.0004327563249001334,
+          "std": 0.10978369468723374
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.418,
+          "max": 1.6015,
+          "mean": 0.009237549933422105,
+          "std": 0.3135000156962699
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0996,
+          "max": 0.8823,
+          "mean": -0.006987616511318242,
+          "std": 0.19532993354276126
+        },
+        "wheel_speed_m_s": {
+          "min": 10.778055555555556,
+          "max": 32.765,
+          "mean": 24.99743730581447,
+          "std": 5.02751005958347
+        }
+      }
+    },
+    {
+      "drive_id": "Vta11",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta11\\S-Vta11.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta11\\V-vta11.csv",
+      "s_row_count": 510,
+      "v_row_count": 510,
+      "duration_seconds": 50.90000000000009,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000578,
+        "min_dt": 0.097,
+        "max_dt": 0.102,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.892147,
+        "phone_lat_max": 52.89447,
+        "phone_lon_min": -1.77571,
+        "phone_lon_max": -1.7711,
+        "vehicle_lat_min": 52.892154,
+        "vehicle_lat_max": 52.8946472,
+        "vehicle_lon_min": -1.7760076,
+        "vehicle_lon_max": -1.7710478
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -8.1941,
+          "max": 9.0962,
+          "mean": -0.3655450980392157,
+          "std": 2.3447566480199358
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.1964,
+          "max": 7.5756,
+          "mean": 0.11632980392156865,
+          "std": 2.7849623894096465
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.9271,
+          "max": 12.3467,
+          "mean": 9.811678039215685,
+          "std": 0.6880116186339608
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.2775,
+          "max": 0.2744,
+          "mean": 0.0006341176470588229,
+          "std": 0.0798217454941859
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.3061,
+          "max": 1.0437,
+          "mean": -0.040174901960784305,
+          "std": 0.35077704071982724
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.5434,
+          "max": 0.5649,
+          "mean": -0.0012458823529411763,
+          "std": 0.16553903157610028
+        },
+        "wheel_speed_m_s": {
+          "min": 7.453888888888889,
+          "max": 27.126944444444444,
+          "mean": 14.048361655773421,
+          "std": 6.053315019419105
+        }
+      }
+    },
+    {
+      "drive_id": "Vta12",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta12\\S-Vta12.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta12\\V-vta12.csv",
+      "s_row_count": 610,
+      "v_row_count": 610,
+      "duration_seconds": 60.90000000000009,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000623,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.895805,
+        "phone_lat_max": 52.90393,
+        "phone_lon_min": -1.77048,
+        "phone_lon_max": -1.766186,
+        "vehicle_lat_min": 52.8958062,
+        "vehicle_lat_max": 52.90527039999999,
+        "vehicle_lon_min": -1.7704992,
+        "vehicle_lon_max": -1.7661359
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -6.2628,
+          "max": 3.7093,
+          "mean": -0.15383508196721313,
+          "std": 1.5282209641990523
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -6.6208,
+          "max": 6.3094,
+          "mean": -0.039097868852459014,
+          "std": 1.9908979676719196
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.1501,
+          "max": 12.0073,
+          "mean": 9.834815737704918,
+          "std": 0.6484505972891537
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1892,
+          "max": 0.2226,
+          "mean": 0.000975409836065573,
+          "std": 0.06461868818160296
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7957,
+          "max": 0.7165,
+          "mean": -0.007890819672131144,
+          "std": 0.22245182592667548
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.4808,
+          "max": 0.4619,
+          "mean": 0.009188032786885245,
+          "std": 0.14357405235654883
+        },
+        "wheel_speed_m_s": {
+          "min": 12.42388888888889,
+          "max": 23.698888888888888,
+          "mean": 18.421011384335156,
+          "std": 3.2114433824231337
+        }
+      }
+    },
+    {
+      "drive_id": "Vta13",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta13\\S-Vta13.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta13\\V-vta13.csv",
+      "s_row_count": 404,
+      "v_row_count": 404,
+      "duration_seconds": 40.30099999999993,
+      "sampling_rate": {
+        "mean_dt": 0.100002,
+        "median_dt": 0.1,
+        "std_dt": 0.000644,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.90566,
+        "phone_lat_max": 52.914574,
+        "phone_lon_min": -1.765884,
+        "phone_lon_max": -1.760504,
+        "vehicle_lat_min": 52.9073546,
+        "vehicle_lat_max": 52.9155214,
+        "vehicle_lon_min": -1.7648318,
+        "vehicle_lon_max": -1.760498
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -5.6917,
+          "max": 4.1958,
+          "mean": 0.0065925742574257495,
+          "std": 1.446174945793386
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -6.7483,
+          "max": 6.4368,
+          "mean": 0.16944801980198018,
+          "std": 2.218582156632492
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.9352,
+          "max": 13.993,
+          "mean": 9.834829702970298,
+          "std": 0.9947159593873828
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.2629,
+          "max": 0.2587,
+          "mean": -0.0031472772277227725,
+          "std": 0.08746713933833743
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7257,
+          "max": 0.7699,
+          "mean": -0.0027150990099009896,
+          "std": 0.2204359625668964
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.3692,
+          "max": 0.4697,
+          "mean": 0.01025470297029703,
+          "std": 0.148012143397803
+        },
+        "wheel_speed_m_s": {
+          "min": 20.189999999999998,
+          "max": 28.786111111111108,
+          "mean": 24.262658140814082,
+          "std": 2.0144149491718863
+        }
+      }
+    },
+    {
+      "drive_id": "Vta14",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta14\\S-Vta14.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta14\\V-vta14.csv",
+      "s_row_count": 2885,
+      "v_row_count": 2885,
+      "duration_seconds": 288.39999999999986,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000636,
+        "min_dt": 0.096,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.916435,
+        "phone_lat_max": 52.963867,
+        "phone_lon_min": -1.763724,
+        "phone_lon_max": -1.757514,
+        "vehicle_lat_min": 52.9164217,
+        "vehicle_lat_max": 52.9639178,
+        "vehicle_lon_min": -1.7637877000000002,
+        "vehicle_lon_max": -1.7574937
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.8279,
+          "max": 10.7387,
+          "mean": -0.08939712305025997,
+          "std": 2.4956504169234788
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.069,
+          "max": 12.6526,
+          "mean": -0.10622197573656848,
+          "std": 1.7903235775096082
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.7253,
+          "max": 14.2709,
+          "mean": 9.837152686308492,
+          "std": 0.7646984509813756
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4052,
+          "max": 0.3444,
+          "mean": 0.0023094280762564995,
+          "std": 0.0829817393468792
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.6456,
+          "max": 1.3991,
+          "mean": -0.013618890814558061,
+          "std": 0.32300120319874975
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.8369,
+          "max": 0.9879,
+          "mean": 0.008090849220103986,
+          "std": 0.20057334203087043
+        },
+        "wheel_speed_m_s": {
+          "min": 14.66611111111111,
+          "max": 25.28888888888889,
+          "mean": 18.833900250336992,
+          "std": 2.6508703689724222
+        }
+      }
+    },
+    {
+      "drive_id": "Vta15",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta15\\S-Vta15.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta15\\V-vta15.csv",
+      "s_row_count": 833,
+      "v_row_count": 833,
+      "duration_seconds": 83.20000000000005,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000841,
+        "min_dt": 0.09,
+        "max_dt": 0.11,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.965443,
+        "phone_lat_max": 52.97889,
+        "phone_lon_min": -1.756931,
+        "phone_lon_max": -1.749885,
+        "vehicle_lat_min": 52.9654261,
+        "vehicle_lat_max": 52.979204900000006,
+        "vehicle_lon_min": -1.7569492,
+        "vehicle_lon_max": -1.7498335000000005
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.1738,
+          "max": 11.3817,
+          "mean": -0.007785834333733483,
+          "std": 2.563120011496291
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -3.5203,
+          "max": 4.5457,
+          "mean": -0.11038691476590635,
+          "std": 1.1977769455064426
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.5697,
+          "max": 13.2594,
+          "mean": 9.842040456182474,
+          "std": 0.7062534189558383
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3055,
+          "max": 0.3299,
+          "mean": 0.0010135654261704677,
+          "std": 0.08029823104843614
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.365,
+          "max": 0.9121,
+          "mean": 0.00400732292917167,
+          "std": 0.29544339540124115
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.6061,
+          "max": 0.6723,
+          "mean": -0.004713205282112845,
+          "std": 0.19097408230928214
+        },
+        "wheel_speed_m_s": {
+          "min": 16.69888888888889,
+          "max": 21.891111111111112,
+          "mean": 19.880667266906762,
+          "std": 1.4787709845458556
+        }
+      }
+    },
+    {
+      "drive_id": "Vta16",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta16\\S-Vta16.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta16\\V-vta16.csv",
+      "s_row_count": 11335,
+      "v_row_count": 11335,
+      "duration_seconds": 1133.4,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000647,
+        "min_dt": 0.09,
+        "max_dt": 0.11,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.98011,
+        "phone_lat_max": 53.06292,
+        "phone_lon_min": -1.773255,
+        "phone_lon_max": -1.731663,
+        "vehicle_lat_min": 52.9800935,
+        "vehicle_lat_max": 53.0630724,
+        "vehicle_lon_min": -1.7740729,
+        "vehicle_lon_max": -1.7316515
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -11.3082,
+          "max": 16.1114,
+          "mean": -0.04047405381561534,
+          "std": 2.070222494996471
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -11.6638,
+          "max": 15.5943,
+          "mean": -0.0073429466254962515,
+          "std": 1.8130932814710536
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.6139,
+          "max": 14.2852,
+          "mean": 9.853041923246582,
+          "std": 0.6537144809572492
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5428,
+          "max": 0.4165,
+          "mean": 0.0022803793559770624,
+          "std": 0.0766796729534853
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.6293,
+          "max": 2.1805,
+          "mean": -0.0016160035288928097,
+          "std": 0.2830434651554289
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.4207,
+          "max": 1.0031,
+          "mean": 0.002602099691221879,
+          "std": 0.1691620378756247
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 26.09611111111111,
+          "mean": 12.04475655540852,
+          "std": 6.144105795915039
+        }
+      }
+    },
+    {
+      "drive_id": "Vta17",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta17\\S-Vta17.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta17\\V-vta17.csv",
+      "s_row_count": 4519,
+      "v_row_count": 4519,
+      "duration_seconds": 452.9859999999999,
+      "sampling_rate": {
+        "mean_dt": 0.100263,
+        "median_dt": 0.1,
+        "std_dt": 0.017623,
+        "min_dt": 0.093,
+        "max_dt": 1.284,
+        "estimated_frequency_hz": 9.97,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.042137,
+        "phone_lat_max": 53.05517,
+        "phone_lon_min": -1.804848,
+        "phone_lon_max": -1.77613,
+        "vehicle_lat_min": 53.0421429,
+        "vehicle_lat_max": 53.0552289,
+        "vehicle_lon_min": -1.8058336,
+        "vehicle_lon_max": -1.7761166000000002
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -18.5099,
+          "max": 13.4704,
+          "mean": -0.19476550121708344,
+          "std": 2.2927656887768757
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.1501,
+          "max": 9.8368,
+          "mean": -0.0721894224385926,
+          "std": 2.256717758734663
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.6526,
+          "max": 14.3064,
+          "mean": 9.842636468245187,
+          "std": 0.7368047707810335
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4339,
+          "max": 0.566,
+          "mean": -0.0004788227483956626,
+          "std": 0.08181187400132638
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.7139,
+          "max": 1.8658,
+          "mean": 0.0012388138968798404,
+          "std": 0.33175025834424704
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0984,
+          "max": 1.0973,
+          "mean": -9.090506749280777e-05,
+          "std": 0.20044471267939198
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0019444444444444166,
+          "max": 15.599999999999998,
+          "mean": 9.07940135477367,
+          "std": 4.139576253278846
+        }
+      }
+    },
+    {
+      "drive_id": "Vta19",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta19\\S-Vta19.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta19\\V-vta19.csv",
+      "s_row_count": 292,
+      "v_row_count": 292,
+      "duration_seconds": 29.101000000000113,
+      "sampling_rate": {
+        "mean_dt": 0.100003,
+        "median_dt": 0.1,
+        "std_dt": 0.000706,
+        "min_dt": 0.097,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.04241,
+        "phone_lat_max": 53.043278,
+        "phone_lon_min": -1.813062,
+        "phone_lon_max": -1.809921,
+        "vehicle_lat_min": 53.0424415,
+        "vehicle_lat_max": 53.043282,
+        "vehicle_lon_min": -1.8130826,
+        "vehicle_lon_max": -1.8099105
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -4.8997,
+          "max": 4.1959,
+          "mean": -0.19303321917808225,
+          "std": 1.6745736767277817
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -4.4818,
+          "max": 5.5382,
+          "mean": 0.2599907534246575,
+          "std": 1.8333846386245434
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 8.4323,
+          "max": 12.3793,
+          "mean": 9.857282876712329,
+          "std": 0.5270411550222892
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1689,
+          "max": 0.1622,
+          "mean": 0.0006270547945205489,
+          "std": 0.057066816094817625
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.637,
+          "max": 0.7071,
+          "mean": 0.011733561643835622,
+          "std": 0.23353918684175365
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.4713,
+          "max": 0.3887,
+          "mean": -0.0013643835616438352,
+          "std": 0.14253910935663333
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0019444444444444166,
+          "max": 15.075000000000001,
+          "mean": 8.077330669710806,
+          "std": 5.202805775133426
+        }
+      }
+    },
+    {
+      "drive_id": "Vta20",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta20\\S-Vta20.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta20\\V-vta20.csv",
+      "s_row_count": 3223,
+      "v_row_count": 3223,
+      "duration_seconds": 322.2,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000618,
+        "min_dt": 0.095,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.040512,
+        "phone_lat_max": 53.04241,
+        "phone_lon_min": -1.817495,
+        "phone_lon_max": -1.813062,
+        "vehicle_lat_min": 53.0404753,
+        "vehicle_lat_max": 53.042464200000005,
+        "vehicle_lon_min": -1.8174883,
+        "vehicle_lon_max": -1.8130511
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.7701,
+          "max": 7.953,
+          "mean": 0.022209152963077874,
+          "std": 1.0407194072637878
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -11.0507,
+          "max": 9.6924,
+          "mean": 0.00860977350294757,
+          "std": 1.186073889602138
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.4012,
+          "max": 14.5595,
+          "mean": 9.850343686006825,
+          "std": 0.39062337925732454
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3667,
+          "max": 0.3407,
+          "mean": -0.0005077257213775985,
+          "std": 0.042125633967086705
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.2799,
+          "max": 1.173,
+          "mean": 0.015172851380701211,
+          "std": 0.172925575242906
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.7665,
+          "max": 0.7685,
+          "mean": -0.004445051194539249,
+          "std": 0.10029142792264477
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 12.453888888888889,
+          "mean": 1.173164494777123,
+          "std": 2.9896793709443363
+        }
+      }
+    },
+    {
+      "drive_id": "Vta21",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta21\\S-Vta21.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta21\\V-vta21.csv",
+      "s_row_count": 2079,
+      "v_row_count": 2079,
+      "duration_seconds": 207.8,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000576,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.040535,
+        "phone_lat_max": 53.05154,
+        "phone_lon_min": -1.817358,
+        "phone_lon_max": -1.795467,
+        "vehicle_lat_min": 53.0405311,
+        "vehicle_lat_max": 53.051262,
+        "vehicle_lon_min": -1.817357,
+        "vehicle_lon_max": -1.7964151000000002
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.596,
+          "max": 20.8724,
+          "mean": 0.09412510822510824,
+          "std": 2.687243303579344
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.5638,
+          "max": 15.27,
+          "mean": -0.0874985088985089,
+          "std": 2.93854064843831
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.1025,
+          "max": 15.452,
+          "mean": 9.854355074555075,
+          "std": 1.041747437221072
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3706,
+          "max": 0.5135,
+          "mean": -0.0024302549302549297,
+          "std": 0.09988174727820832
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.7986,
+          "max": 1.8521,
+          "mean": -0.0026737373737373746,
+          "std": 0.43041011508054505
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1439,
+          "max": 1.9594,
+          "mean": 0.004454545454545454,
+          "std": 0.25336224915084815
+        },
+        "wheel_speed_m_s": {
+          "min": 0.004999999999999999,
+          "max": 20.786944444444444,
+          "mean": 13.27408275880498,
+          "std": 4.800906372908494
+        }
+      }
+    },
+    {
+      "drive_id": "Vta22",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta22\\S-Vta22.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta22\\V-vta22.csv",
+      "s_row_count": 1564,
+      "v_row_count": 1564,
+      "duration_seconds": 156.30099999999993,
+      "sampling_rate": {
+        "mean_dt": 0.100001,
+        "median_dt": 0.1,
+        "std_dt": 0.00059,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.05137,
+        "phone_lat_max": 53.055206,
+        "phone_lon_min": -1.799703,
+        "phone_lon_max": -1.783206,
+        "vehicle_lat_min": 53.0513697,
+        "vehicle_lat_max": 53.05525,
+        "vehicle_lon_min": -1.7996905,
+        "vehicle_lon_max": -1.7827442
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -11.5687,
+          "max": 15.5685,
+          "mean": 0.13789315856777495,
+          "std": 2.7187844749753727
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -9.8457,
+          "max": 9.706,
+          "mean": 0.07186790281329922,
+          "std": 2.560256934666733
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.4234,
+          "max": 13.09,
+          "mean": 9.847262851662403,
+          "std": 0.8593040475356326
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4826,
+          "max": 0.4406,
+          "mean": -0.0020794757033248084,
+          "std": 0.10419505157319948
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.9566,
+          "max": 1.4654,
+          "mean": 0.004113618925831203,
+          "std": 0.4017664440280843
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0785,
+          "max": 1.0851,
+          "mean": -0.0074812020460358055,
+          "std": 0.23336548809703325
+        },
+        "wheel_speed_m_s": {
+          "min": 4.116111111111111,
+          "max": 15.508055555555554,
+          "mean": 10.611621732026142,
+          "std": 2.5886676136033486
+        }
+      }
+    },
+    {
+      "drive_id": "Vta23",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta23\\S-Vta23.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta23\\V-vta23.csv",
+      "s_row_count": 1110,
+      "v_row_count": 1110,
+      "duration_seconds": 110.89999999999998,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000645,
+        "min_dt": 0.095,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.050575,
+        "phone_lat_max": 53.053005,
+        "phone_lon_min": -1.781771,
+        "phone_lon_max": -1.768223,
+        "vehicle_lat_min": 53.0503689,
+        "vehicle_lat_max": 53.052990300000005,
+        "vehicle_lon_min": -1.7817706000000002,
+        "vehicle_lon_max": -1.7679484
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.374,
+          "max": 8.505,
+          "mean": 0.254456036036036,
+          "std": 2.4400135126225195
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.4208,
+          "max": 11.4764,
+          "mean": -0.21757900900900903,
+          "std": 2.8541480411678952
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.1491,
+          "max": 13.3127,
+          "mean": 9.83271954954955,
+          "std": 0.8073138585289651
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -1.0052,
+          "max": 0.4013,
+          "mean": -0.0046580180180180175,
+          "std": 0.09784151417920589
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.7658,
+          "max": 1.5445,
+          "mean": -0.006384324324324324,
+          "std": 0.38709523654084
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9705,
+          "max": 1.0111,
+          "mean": 0.003980180180180179,
+          "std": 0.23444625391103205
+        },
+        "wheel_speed_m_s": {
+          "min": 0.003888888888888861,
+          "max": 14.403055555555557,
+          "mean": 9.812984734734735,
+          "std": 3.020927625728539
+        }
+      }
+    },
+    {
+      "drive_id": "Vta24",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta24\\S-Vta24.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta24\\V-vta24.csv",
+      "s_row_count": 1171,
+      "v_row_count": 1171,
+      "duration_seconds": 117.00099999999998,
+      "sampling_rate": {
+        "mean_dt": 0.100001,
+        "median_dt": 0.1,
+        "std_dt": 0.000669,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.050465,
+        "phone_lat_max": 53.051815,
+        "phone_lon_min": -1.767187,
+        "phone_lon_max": -1.758133,
+        "vehicle_lat_min": 53.0504521,
+        "vehicle_lat_max": 53.0517956,
+        "vehicle_lon_min": -1.7672031,
+        "vehicle_lon_max": -1.7581572
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.3796,
+          "max": 5.4968,
+          "mean": 0.1386350128095645,
+          "std": 1.4688580728377323
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -7.5876,
+          "max": 7.0326,
+          "mean": -0.1822814688300598,
+          "std": 1.5512233899224919
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.8311,
+          "max": 12.0628,
+          "mean": 9.846699316823228,
+          "std": 0.4014584539386973
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3819,
+          "max": 0.2755,
+          "mean": -0.0019029888983774549,
+          "std": 0.05426588199157743
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.2665,
+          "max": 0.8794,
+          "mean": -0.04097591801878736,
+          "std": 0.219901800191028
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.7222,
+          "max": 0.5362,
+          "mean": 0.0009568744662681467,
+          "std": 0.11774938434941871
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 15.658055555555555,
+          "mean": 5.930656371572256,
+          "std": 5.892848835685086
+        }
+      }
+    },
+    {
+      "drive_id": "Vta25",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta25\\S-Vta25.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta25\\V-vta25.csv",
+      "s_row_count": 646,
+      "v_row_count": 646,
+      "duration_seconds": 64.49800000000005,
+      "sampling_rate": {
+        "mean_dt": 0.099997,
+        "median_dt": 0.1,
+        "std_dt": 0.000562,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.05109,
+        "phone_lat_max": 53.051266,
+        "phone_lon_min": -1.758229,
+        "phone_lon_max": -1.756547,
+        "vehicle_lat_min": 53.05107640000001,
+        "vehicle_lat_max": 53.051262,
+        "vehicle_lon_min": -1.7581713,
+        "vehicle_lon_max": -1.7565252999999998
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -6.2109,
+          "max": 3.9899,
+          "mean": -0.15801873065015476,
+          "std": 1.319671787821161
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -4.2125,
+          "max": 6.3326,
+          "mean": -0.045148452012383905,
+          "std": 1.0825680945361718
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.3184,
+          "max": 13.3031,
+          "mean": 9.855692569659443,
+          "std": 0.4336318788953562
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4353,
+          "max": 0.2391,
+          "mean": -0.002740092879256966,
+          "std": 0.05294690790533047
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.6081,
+          "max": 0.8017,
+          "mean": -0.05350139318885449,
+          "std": 0.19836783915357628
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.4506,
+          "max": 0.2848,
+          "mean": -0.004992414860681115,
+          "std": 0.07745697753419668
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 13.496111111111112,
+          "mean": 2.4590686274509803,
+          "std": 3.6871675420160686
+        }
+      }
+    },
+    {
+      "drive_id": "Vta26",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta26\\S-Vta26.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta26\\V-vta26.csv",
+      "s_row_count": 1935,
+      "v_row_count": 1935,
+      "duration_seconds": 193.39999999999998,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000582,
+        "min_dt": 0.096,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.05122,
+        "phone_lat_max": 53.059937,
+        "phone_lon_min": -1.7591,
+        "phone_lon_max": -1.757869,
+        "vehicle_lat_min": 53.05122,
+        "vehicle_lat_max": 53.0599424,
+        "vehicle_lon_min": -1.7591566,
+        "vehicle_lon_max": -1.7578423
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -15.1024,
+          "max": 18.4688,
+          "mean": -0.047783824289405696,
+          "std": 2.8857183224685428
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -7.8297,
+          "max": 7.2015,
+          "mean": 0.04440186046511627,
+          "std": 1.429410664719668
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.4188,
+          "max": 14.9597,
+          "mean": 9.84764542635659,
+          "std": 0.8864064682048522
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.521,
+          "max": 0.6294,
+          "mean": 0.00018702842377260885,
+          "std": 0.10433493101841339
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.7889,
+          "max": 1.9039,
+          "mean": -0.013574883720930233,
+          "std": 0.3382232441369665
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.4257,
+          "max": 1.0133,
+          "mean": 0.006865788113695089,
+          "std": 0.21901977546576473
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 15.308055555555555,
+          "mean": 5.172245478036176,
+          "std": 5.294316758197956
+        }
+      }
+    },
+    {
+      "drive_id": "Vta27",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta27\\S-Vta27.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta27\\V-vta27.csv",
+      "s_row_count": 2540,
+      "v_row_count": 2540,
+      "duration_seconds": 253.9000000000001,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000533,
+        "min_dt": 0.096,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.060383,
+        "phone_lat_max": 53.083454,
+        "phone_lon_min": -1.76767,
+        "phone_lon_max": -1.759178,
+        "vehicle_lat_min": 53.0603827,
+        "vehicle_lat_max": 53.0869688,
+        "vehicle_lon_min": -1.7676883,
+        "vehicle_lon_max": -1.7592351000000002
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -18.7713,
+          "max": 18.1986,
+          "mean": -0.0552935433070866,
+          "std": 3.5959773999882856
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -11.7321,
+          "max": 15.1195,
+          "mean": 0.16236118110236222,
+          "std": 2.2684571100626867
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.4697,
+          "max": 16.2289,
+          "mean": 9.829584212598425,
+          "std": 1.214239831387512
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.6431,
+          "max": 0.6865,
+          "mean": -0.0016894488188976377,
+          "std": 0.14284651245105096
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.1088,
+          "max": 2.3,
+          "mean": 0.009671929133858267,
+          "std": 0.43078607858378387
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.4064,
+          "max": 1.0469,
+          "mean": -0.0055610236220472445,
+          "std": 0.2647926779588993
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 18.046944444444442,
+          "mean": 12.404539151356081,
+          "std": 4.318819106106743
+        }
+      }
+    },
+    {
+      "drive_id": "Vta28",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta28\\S-Vta28.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta28\\V-vta28.csv",
+      "s_row_count": 4210,
+      "v_row_count": 4210,
+      "duration_seconds": 420.9000000000001,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000582,
+        "min_dt": 0.093,
+        "max_dt": 0.107,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.08707,
+        "phone_lat_max": 53.09283,
+        "phone_lon_min": -1.79366,
+        "phone_lon_max": -1.765907,
+        "vehicle_lat_min": 53.0870987,
+        "vehicle_lat_max": 53.0928106,
+        "vehicle_lon_min": -1.7936385,
+        "vehicle_lon_max": -1.7658207
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -16.5912,
+          "max": 13.0983,
+          "mean": 0.020356104513064136,
+          "std": 2.187611960546997
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -16.5976,
+          "max": 15.1645,
+          "mean": -0.04955109263657957,
+          "std": 2.9010990471448457
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.8485,
+          "max": 14.5639,
+          "mean": 9.817841733966747,
+          "std": 0.8488912451352753
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5147,
+          "max": 0.5118,
+          "mean": -0.0007489073634204275,
+          "std": 0.1027629703403435
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.9471,
+          "max": 2.0145,
+          "mean": 0.030299976247030878,
+          "std": 0.3836942592087791
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0812,
+          "max": 1.1108,
+          "mean": -0.0062430166270783845,
+          "std": 0.22112155219637156
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 18.346944444444443,
+          "mean": 9.326922011084717,
+          "std": 5.211753851023183
+        }
+      }
+    },
+    {
+      "drive_id": "Vta29",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta29\\S-Vta29.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta29\\V-vta29.csv",
+      "s_row_count": 23705,
+      "v_row_count": 23705,
+      "duration_seconds": 2369.7780000000002,
+      "sampling_rate": {
+        "mean_dt": 0.099974,
+        "median_dt": 0.1,
+        "std_dt": 0.001716,
+        "min_dt": 0.0,
+        "max_dt": 0.111,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 4,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.089325,
+        "phone_lat_max": 53.21946,
+        "phone_lon_min": -1.908282,
+        "phone_lon_max": -1.793641,
+        "vehicle_lat_min": 53.0893228,
+        "vehicle_lat_max": 53.221340000000005,
+        "vehicle_lon_min": -1.9083286,
+        "vehicle_lon_max": -1.7936408
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -20.1757,
+          "max": 15.7041,
+          "mean": -0.3042044505378612,
+          "std": 2.5616738639044176
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -18.4758,
+          "max": 20.4405,
+          "mean": -0.20465203543556215,
+          "std": 2.6327528705747505
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.4699,
+          "max": 17.7078,
+          "mean": 9.805248968572032,
+          "std": 0.947257321476771
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.7166,
+          "max": 1.0432,
+          "mean": -0.0009407508964353514,
+          "std": 0.10422619701424912
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.4118,
+          "max": 3.154,
+          "mean": 0.00014591436405821557,
+          "std": 0.3954520085837594
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.5974,
+          "max": 1.3614,
+          "mean": -0.001917755747732546,
+          "std": 0.21006455370780727
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 28.323888888888888,
+          "mean": 10.994288581874429,
+          "std": 6.240930660519423
+        }
+      }
+    },
+    {
+      "drive_id": "Vta30",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta30\\S-Vta30.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vta (Driver E)\\Vta30\\V-vta30.csv",
+      "s_row_count": 17136,
+      "v_row_count": 17136,
+      "duration_seconds": 1713.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000732,
+        "min_dt": 0.066,
+        "max_dt": 0.134,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.223392,
+        "phone_lat_max": 53.25993,
+        "phone_lon_min": -1.938286,
+        "phone_lon_max": -1.871889,
+        "vehicle_lat_min": 53.2225445,
+        "vehicle_lat_max": 53.2598991,
+        "vehicle_lon_min": -1.9382754,
+        "vehicle_lon_max": -1.8719779
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -15.5522,
+          "max": 14.3426,
+          "mean": -0.014930555555555556,
+          "std": 1.6515041626204507
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -18.227,
+          "max": 16.356,
+          "mean": -0.11248405112044817,
+          "std": 1.6013814007750446
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.706,
+          "max": 14.177,
+          "mean": 9.85098129668534,
+          "std": 0.5690232350175354
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5076,
+          "max": 0.5117,
+          "mean": 0.001931985294117647,
+          "std": 0.06628175473924708
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.3299,
+          "max": 1.8735,
+          "mean": -0.0061108951914098965,
+          "std": 0.2475698999241635
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9758,
+          "max": 1.1117,
+          "mean": 0.0005670051353874887,
+          "std": 0.13086898570329064
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 27.79,
+          "mean": 6.854591568108725,
+          "std": 6.320528600328464
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb1",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb01\\S-Vtb1.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb01\\V-vtb1.csv",
+      "s_row_count": 32459,
+      "v_row_count": 32459,
+      "duration_seconds": 3245.799,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 3.670749,
+        "min_dt": 0.0,
+        "max_dt": 661.376,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 5456,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.184223,
+        "phone_lat_max": 53.280983,
+        "phone_lon_min": -1.910692,
+        "phone_lon_max": -1.64297,
+        "vehicle_lat_min": 53.1841811,
+        "vehicle_lat_max": 53.2809703,
+        "vehicle_lon_min": -1.9146445,
+        "vehicle_lon_max": -1.6429806
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -16.2604,
+          "max": 16.2384,
+          "mean": -0.01726726331679965,
+          "std": 2.2381302879194878
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -18.604,
+          "max": 12.8302,
+          "mean": -0.1397055577805848,
+          "std": 2.005696681027405
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 3.9123,
+          "max": 16.4816,
+          "mean": 9.83376242336486,
+          "std": 0.8121786706279075
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5281,
+          "max": 0.6347,
+          "mean": -0.00197450321944607,
+          "std": 0.09201718484580118
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.433,
+          "max": 1.9075,
+          "mean": 0.003636405927477743,
+          "std": 0.30858485201501223
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0329,
+          "max": 1.2012,
+          "mean": -0.005041184263224375,
+          "std": 0.1731464048486475
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 28.10388888888889,
+          "mean": 12.803670091500045,
+          "std": 6.38440305217238
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb2",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb02\\S-Vtb2.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb02\\V-vtb2.csv",
+      "s_row_count": 5712,
+      "v_row_count": 5712,
+      "duration_seconds": 571.1,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00065,
+        "min_dt": 0.094,
+        "max_dt": 0.107,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 1
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.170273,
+        "phone_lat_max": 53.18432,
+        "phone_lon_min": -1.684621,
+        "phone_lon_max": -1.646709,
+        "vehicle_lat_min": 53.1702936,
+        "vehicle_lat_max": 53.184182,
+        "vehicle_lon_min": -1.6846019999999997,
+        "vehicle_lon_max": -1.6464927
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.8271,
+          "max": 18.1937,
+          "mean": -0.08462214635854341,
+          "std": 2.399082106375381
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.0614,
+          "max": 13.0094,
+          "mean": -0.14062983193277312,
+          "std": 2.0342248798531233
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.7179,
+          "max": 15.9182,
+          "mean": 9.845930987394958,
+          "std": 0.7334765665166149
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4773,
+          "max": 0.8709,
+          "mean": -0.00042690826330532203,
+          "std": 0.09044909368894057
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.2285,
+          "max": 1.8857,
+          "mean": 0.004849369747899157,
+          "std": 0.3465170965927739
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.2066,
+          "max": 1.1258,
+          "mean": -0.0019150035014005604,
+          "std": 0.18894017742888072
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 16.983055555555556,
+          "mean": 7.552463186663554,
+          "std": 5.269826472894759
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb3",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb03\\S-Vtb3.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb03\\V-vtb3.csv",
+      "s_row_count": 8240,
+      "v_row_count": 8240,
+      "duration_seconds": 823.9,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00066,
+        "min_dt": 0.095,
+        "max_dt": 0.106,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.169914,
+        "phone_lat_max": 53.173943,
+        "phone_lon_min": -1.672992,
+        "phone_lon_max": -1.66641,
+        "vehicle_lat_min": 53.1699336,
+        "vehicle_lat_max": 53.171113,
+        "vehicle_lon_min": -1.6729939,
+        "vehicle_lon_max": -1.6684084
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.3489,
+          "max": 12.9528,
+          "mean": 0.06753474514563107,
+          "std": 0.7855957900755628
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -12.0625,
+          "max": 10.7723,
+          "mean": 0.1507097936893204,
+          "std": 0.9033174800268238
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.3293,
+          "max": 15.2364,
+          "mean": 9.853046480582524,
+          "std": 0.3054808976629916
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.7428,
+          "max": 0.6574,
+          "mean": -0.000664599514563107,
+          "std": 0.03906601693660337
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.761,
+          "max": 1.7291,
+          "mean": 0.003112208737864077,
+          "std": 0.1324644466961766
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0767,
+          "max": 1.0993,
+          "mean": 0.0005973665048543687,
+          "std": 0.07233422204396285
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 10.403055555555556,
+          "mean": 0.8231251685544768,
+          "std": 1.792483659872393
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb4",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb04\\S-Vtb4.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb04\\V-vtb4.csv",
+      "s_row_count": 556,
+      "v_row_count": 556,
+      "duration_seconds": 55.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000563,
+        "min_dt": 0.098,
+        "max_dt": 0.102,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 53.170605,
+        "phone_lat_max": 53.171486,
+        "phone_lon_min": -1.675215,
+        "phone_lon_max": -1.672944,
+        "vehicle_lat_min": 53.1706727,
+        "vehicle_lat_max": 53.1716386,
+        "vehicle_lon_min": -1.6752505000000002,
+        "vehicle_lon_max": -1.6728776
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.412,
+          "max": 17.0171,
+          "mean": -0.0952073741007194,
+          "std": 3.427413532890512
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -8.4753,
+          "max": 7.119,
+          "mean": -0.2857138489208634,
+          "std": 1.90789011428495
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.4634,
+          "max": 12.8414,
+          "mean": 9.8601904676259,
+          "std": 0.842267535570817
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4565,
+          "max": 0.5088,
+          "mean": -0.0007645683453237408,
+          "std": 0.11464404631269987
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.5942,
+          "max": 2.3966,
+          "mean": 0.008040827338129488,
+          "std": 0.4360240836459774
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.3797,
+          "max": 0.8366,
+          "mean": 0.011109172661870507,
+          "std": 0.2518305576604367
+        },
+        "wheel_speed_m_s": {
+          "min": 0.004999999999999999,
+          "max": 9.08,
+          "mean": 4.341321942446043,
+          "std": 2.6256209213468487
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb5",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb05\\S-Vtb5.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb05\\V-vtb5.csv",
+      "s_row_count": 64388,
+      "v_row_count": 64388,
+      "duration_seconds": 6438.701,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000864,
+        "min_dt": 0.08,
+        "max_dt": 0.119,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.58063,
+        "phone_lat_max": 53.189842,
+        "phone_lon_min": -1.684621,
+        "phone_lon_max": -1.230792,
+        "vehicle_lat_min": 52.5790267,
+        "vehicle_lat_max": 53.19002149999999,
+        "vehicle_lon_min": -1.6846469999999998,
+        "vehicle_lon_max": -1.2307461999999998
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -14.1098,
+          "max": 15.4311,
+          "mean": 0.015107827545505376,
+          "std": 1.7774542508639204
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -14.745,
+          "max": 15.4661,
+          "mean": -0.036055847362862645,
+          "std": 1.6736037960628862
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.3361,
+          "max": 16.8591,
+          "mean": 9.84508944057899,
+          "std": 0.6919954952978077
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.8504,
+          "max": 0.6183,
+          "mean": -0.00015124712679381245,
+          "std": 0.08675499077946866
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.4966,
+          "max": 2.0971,
+          "mean": 0.004462589302354477,
+          "std": 0.2525772976608616
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1535,
+          "max": 1.0668,
+          "mean": -0.0020796530409393056,
+          "std": 0.14438963371539829
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 31.37194444444444,
+          "mean": 17.320709591331717,
+          "std": 7.523794654902316
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb6",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb06\\S-Vtb6.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb06\\V-vtb6.csv",
+      "s_row_count": 498,
+      "v_row_count": 498,
+      "duration_seconds": 49.69999999999982,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.001166,
+        "min_dt": 0.088,
+        "max_dt": 0.112,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.573612,
+        "phone_lat_max": 52.578316,
+        "phone_lon_min": -1.537562,
+        "phone_lon_max": -1.528705,
+        "vehicle_lat_min": 52.5731438,
+        "vehicle_lat_max": 52.5783009,
+        "vehicle_lon_min": -1.5376289,
+        "vehicle_lon_max": -1.5278862
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -7.5497,
+          "max": 9.7552,
+          "mean": -0.11413172690763052,
+          "std": 2.0451982876022305
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -6.4627,
+          "max": 6.1004,
+          "mean": 0.14522048192771084,
+          "std": 1.6901012509589854
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.8555,
+          "max": 12.7104,
+          "mean": 9.785867469879516,
+          "std": 0.7823529552481651
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4718,
+          "max": 0.4425,
+          "mean": 0.00679718875502008,
+          "std": 0.1082660654020193
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7615,
+          "max": 1.1318,
+          "mean": 0.0011558232931726882,
+          "std": 0.25435692182107933
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.6817,
+          "max": 0.6003,
+          "mean": 2.2891566265060394e-05,
+          "std": 0.15348719619055826
+        },
+        "wheel_speed_m_s": {
+          "min": 14.63611111111111,
+          "max": 20.281944444444445,
+          "mean": 17.587692994199017,
+          "std": 1.3535014040890918
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb7",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb07\\S-Vtb7.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb07\\V-vtb7.csv",
+      "s_row_count": 461,
+      "v_row_count": 461,
+      "duration_seconds": 46.001000000000204,
+      "sampling_rate": {
+        "mean_dt": 0.100002,
+        "median_dt": 0.1,
+        "std_dt": 0.000702,
+        "min_dt": 0.096,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.56919,
+        "phone_lat_max": 52.572826,
+        "phone_lon_min": -1.527021,
+        "phone_lon_max": -1.518801,
+        "vehicle_lat_min": 52.5690665,
+        "vehicle_lat_max": 52.5727695,
+        "vehicle_lon_min": -1.5270629,
+        "vehicle_lon_max": -1.5185565
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -6.4743,
+          "max": 7.7485,
+          "mean": 0.10555553145336227,
+          "std": 1.7867503771654445
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -5.9964,
+          "max": 7.292,
+          "mean": -0.05243080260303689,
+          "std": 1.8499854322120926
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.5317,
+          "max": 12.4314,
+          "mean": 9.824395444685466,
+          "std": 0.6569817262372211
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.2507,
+          "max": 0.2945,
+          "mean": 0.0008351409978308026,
+          "std": 0.08272303778160611
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.8189,
+          "max": 0.7312,
+          "mean": -0.026095010845986984,
+          "std": 0.2592437825279558
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.5517,
+          "max": 0.422,
+          "mean": 0.016979392624728848,
+          "std": 0.1423026255847936
+        },
+        "wheel_speed_m_s": {
+          "min": 8.07,
+          "max": 19.22111111111111,
+          "mean": 15.6679989154013,
+          "std": 3.159169517418704
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb8",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb08\\S-Vtb8.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb08\\V-vtb8.csv",
+      "s_row_count": 668,
+      "v_row_count": 668,
+      "duration_seconds": 66.69999999999982,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000928,
+        "min_dt": 0.094,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.563763,
+        "phone_lat_max": 52.568546,
+        "phone_lon_min": -1.516579,
+        "phone_lon_max": -1.500333,
+        "vehicle_lat_min": 52.5634336,
+        "vehicle_lat_max": 52.5685014,
+        "vehicle_lon_min": -1.5166419,
+        "vehicle_lon_max": -1.4994729
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -6.8661,
+          "max": 8.3381,
+          "mean": -0.13713982035928143,
+          "std": 2.000574244112941
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -6.3374,
+          "max": 6.8801,
+          "mean": 0.05376377245508982,
+          "std": 2.1427894366199625
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.0686,
+          "max": 13.524,
+          "mean": 9.855533383233533,
+          "std": 0.8186177440252039
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3843,
+          "max": 0.3012,
+          "mean": 0.00423562874251497,
+          "std": 0.10012298218827062
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.2349,
+          "max": 0.8101,
+          "mean": -0.016673952095808384,
+          "std": 0.32087384716933703
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.5499,
+          "max": 0.7963,
+          "mean": 0.01078248502994012,
+          "std": 0.18152760605960572
+        },
+        "wheel_speed_m_s": {
+          "min": 16.926944444444445,
+          "max": 21.26,
+          "mean": 19.39040751829674,
+          "std": 0.9423290492446746
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb9",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb09\\S-Vtb9.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb09\\V-vtb9.csv",
+      "s_row_count": 452,
+      "v_row_count": 452,
+      "duration_seconds": 45.09900000000016,
+      "sampling_rate": {
+        "mean_dt": 0.099998,
+        "median_dt": 0.1,
+        "std_dt": 0.000694,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.559357,
+        "phone_lat_max": 52.563107,
+        "phone_lon_min": -1.498144,
+        "phone_lon_max": -1.485308,
+        "vehicle_lat_min": 52.5592966,
+        "vehicle_lat_max": 52.5630667,
+        "vehicle_lon_min": -1.4982033,
+        "vehicle_lon_max": -1.4853653999999998
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.9387,
+          "max": 6.8386,
+          "mean": 0.03514159292035398,
+          "std": 1.8848482565553084
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -7.3945,
+          "max": 6.6633,
+          "mean": 0.0029084070796460146,
+          "std": 1.983423818073715
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.4507,
+          "max": 14.5383,
+          "mean": 9.83988650442478,
+          "std": 0.8401070041492154
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4142,
+          "max": 0.4321,
+          "mean": -0.0026232300884955757,
+          "std": 0.10832019757164517
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.0428,
+          "max": 1.4046,
+          "mean": -0.01831194690265487,
+          "std": 0.3088071806184608
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.7955,
+          "max": 0.7378,
+          "mean": 0.012703097345132747,
+          "std": 0.1835473500275524
+        },
+        "wheel_speed_m_s": {
+          "min": 18.766111111111112,
+          "max": 25.56111111111111,
+          "mean": 21.412899459193707,
+          "std": 1.507475145307477
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb10",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb10\\S-Vtb10.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb10\\V-vtb10.csv",
+      "s_row_count": 196,
+      "v_row_count": 195,
+      "duration_seconds": 19.50000000000091,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000865,
+        "min_dt": 0.095,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.558567,
+        "phone_lat_max": 52.559357,
+        "phone_lon_min": -1.485308,
+        "phone_lon_max": -1.48248,
+        "vehicle_lat_min": 52.5581475,
+        "vehicle_lat_max": 52.55900320000001,
+        "vehicle_lon_min": -1.4843,
+        "vehicle_lon_max": -1.4813189
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -3.4474,
+          "max": 5.5844,
+          "mean": 0.5946755102040816,
+          "std": 1.4925389488238316
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -7.7918,
+          "max": 4.0515,
+          "mean": -0.6135551020408163,
+          "std": 1.9524296140370099
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.7406,
+          "max": 12.0425,
+          "mean": 9.813544897959183,
+          "std": 0.5567953942895368
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1823,
+          "max": 0.2754,
+          "mean": -0.0009173469387755109,
+          "std": 0.07378597604994541
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.7303,
+          "max": 0.6169,
+          "mean": -0.014663775510204083,
+          "std": 0.22838063136706918
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.5396,
+          "max": 0.3653,
+          "mean": 0.010649999999999998,
+          "std": 0.11970535214990735
+        },
+        "wheel_speed_m_s": {
+          "min": 7.238888888888888,
+          "max": 16.245,
+          "mean": 11.58816809116809,
+          "std": 2.7342848702322056
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb11",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb11\\S-Vtb11.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb11\\V-vtb11.csv",
+      "s_row_count": 361,
+      "v_row_count": 361,
+      "duration_seconds": 36.0,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00085,
+        "min_dt": 0.096,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.554585,
+        "phone_lat_max": 52.557327,
+        "phone_lon_min": -1.478358,
+        "phone_lon_max": -1.469055,
+        "vehicle_lat_min": 52.5545369,
+        "vehicle_lat_max": 52.5572961,
+        "vehicle_lon_min": -1.4784122,
+        "vehicle_lon_max": -1.4691684
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -5.9571,
+          "max": 4.7305,
+          "mean": -0.2916819944598338,
+          "std": 2.1504962925082123
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -6.9941,
+          "max": 6.5673,
+          "mean": 0.11325761772853185,
+          "std": 2.3567479740462227
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 7.499,
+          "max": 12.3546,
+          "mean": 9.806237673130195,
+          "std": 0.8060493580276539
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.2883,
+          "max": 0.2845,
+          "mean": -0.001193905817174516,
+          "std": 0.09888329465970362
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.029,
+          "max": 1.0563,
+          "mean": -0.011273407202216066,
+          "std": 0.3567046708129116
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.5201,
+          "max": 0.5382,
+          "mean": 0.006751246537396121,
+          "std": 0.19266878878545154
+        },
+        "wheel_speed_m_s": {
+          "min": 18.081944444444442,
+          "max": 20.928055555555556,
+          "mean": 19.393085564789164,
+          "std": 0.5847069872587858
+        }
+      }
+    },
+    {
+      "drive_id": "Vtb12",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb12\\S-Vtb12.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vtb (Driver E)\\Vtb12\\V-vtb12.csv",
+      "s_row_count": 447,
+      "v_row_count": 447,
+      "duration_seconds": 44.60099999999875,
+      "sampling_rate": {
+        "mean_dt": 0.100002,
+        "median_dt": 0.1,
+        "std_dt": 0.000707,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.553253,
+        "phone_lat_max": 52.554432,
+        "phone_lon_min": -1.466707,
+        "phone_lon_max": -1.461703,
+        "vehicle_lat_min": 52.553132,
+        "vehicle_lat_max": 52.5547059,
+        "vehicle_lon_min": -1.4667861,
+        "vehicle_lon_max": -1.4601857
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -4.67,
+          "max": 4.0808,
+          "mean": -0.06815055928411631,
+          "std": 1.3760992430654782
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -8.307,
+          "max": 5.1279,
+          "mean": -0.008376733780760592,
+          "std": 2.049234354373254
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 6.4734,
+          "max": 11.6567,
+          "mean": 9.816808948545862,
+          "std": 0.5602351255355821
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3534,
+          "max": 0.2964,
+          "mean": -0.002966890380313199,
+          "std": 0.07470004487271553
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.0008,
+          "max": 0.6917,
+          "mean": 0.004035346756152123,
+          "std": 0.2439454778160658
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.3145,
+          "max": 0.3966,
+          "mean": 0.008813646532438482,
+          "std": 0.1214251555518812
+        },
+        "wheel_speed_m_s": {
+          "min": 6.159999999999999,
+          "max": 19.731111111111108,
+          "mean": 11.881880437484464,
+          "std": 3.6594096765789916
+        }
+      }
+    },
+    {
+      "drive_id": "Vw1",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw01\\S-Vw1.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw01\\V-Vw1.csv",
+      "s_row_count": 20476,
+      "v_row_count": 20475,
+      "duration_seconds": 2047.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000796,
+        "min_dt": 0.084,
+        "max_dt": 0.115,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.554695,
+        "phone_lat_max": 52.554695,
+        "phone_lon_min": -1.463064,
+        "phone_lon_max": -1.463064,
+        "vehicle_lat_min": 52.5546998,
+        "vehicle_lat_max": 52.5547152,
+        "vehicle_lon_min": -1.4630719,
+        "vehicle_lon_max": -1.4630337
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -1.5375,
+          "max": 4.6399,
+          "mean": -0.010203496776714203,
+          "std": 0.2856748151760445
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -1.5141,
+          "max": 0.6607,
+          "mean": -0.025892122484860326,
+          "std": 0.27067013897873393
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 9.1191,
+          "max": 10.9666,
+          "mean": 9.845950380933775,
+          "std": 0.09302480000894761
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.1359,
+          "max": 0.3297,
+          "mean": -0.0018930601680015625,
+          "std": 0.013856950181042584
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.1341,
+          "max": 0.1479,
+          "mean": 0.004411247313928501,
+          "std": 0.029277558145728078
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.4631,
+          "max": 0.3068,
+          "mean": -0.0020844793905059585,
+          "std": 0.028671617655389028
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 0.06999999999999999,
+          "mean": 0.011361972595305924,
+          "std": 0.006348425465455527
+        }
+      }
+    },
+    {
+      "drive_id": "Vw2",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw02\\S-Vw2.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw02\\V-Vw2.csv",
+      "s_row_count": 52713,
+      "v_row_count": 52712,
+      "duration_seconds": 5271.199,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000799,
+        "min_dt": 0.077,
+        "max_dt": 0.123,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.025345,
+        "phone_lat_max": 52.555145,
+        "phone_lon_min": -1.464325,
+        "phone_lon_max": -0.602715,
+        "vehicle_lat_min": 52.0253006,
+        "vehicle_lat_max": 52.5551885,
+        "vehicle_lon_min": -1.4642955,
+        "vehicle_lon_max": -0.6026129
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.9005,
+          "max": 14.2724,
+          "mean": 0.031532223550167895,
+          "std": 2.057063127380711
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -16.8511,
+          "max": 12.0513,
+          "mean": 0.014009895092292222,
+          "std": 1.626208725337997
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 3.0041,
+          "max": 17.7223,
+          "mean": 9.849090277540643,
+          "std": 0.951773846829865
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -1.1406,
+          "max": 0.952,
+          "mean": -0.00605643199969647,
+          "std": 0.12157364777685531
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.0581,
+          "max": 2.4463,
+          "mean": 0.006526380589228463,
+          "std": 0.26653324019953556
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.3015,
+          "max": 1.2385,
+          "mean": -0.004358408741676627,
+          "std": 0.18771620019140312
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 32.06194444444444,
+          "mean": 18.70090427437986,
+          "std": 7.689108958785971
+        }
+      }
+    },
+    {
+      "drive_id": "Vw3",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw03\\S-Vw3.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw03\\V-Vw3.csv",
+      "s_row_count": 3861,
+      "v_row_count": 3861,
+      "duration_seconds": 386.0009999999993,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000742,
+        "min_dt": 0.095,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.021503,
+        "phone_lat_max": 52.049004,
+        "phone_lon_min": -0.755788,
+        "phone_lon_max": -0.733924,
+        "vehicle_lat_min": 52.0215213,
+        "vehicle_lat_max": 52.04897570000001,
+        "vehicle_lon_min": -0.7557498,
+        "vehicle_lon_max": -0.7339073
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -12.7411,
+          "max": 13.2714,
+          "mean": -0.14413307433307432,
+          "std": 2.5098816284922902
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -14.5651,
+          "max": 11.3128,
+          "mean": -0.06677451437451436,
+          "std": 2.2817536427800333
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.4875,
+          "max": 16.6887,
+          "mean": 9.818075032375033,
+          "std": 1.1582642308312419
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.6811,
+          "max": 0.7477,
+          "mean": -0.005988111888111889,
+          "std": 0.14305695628684356
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.6076,
+          "max": 1.9808,
+          "mean": -0.008478192178192179,
+          "std": 0.33676056982607194
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1594,
+          "max": 1.1581,
+          "mean": -1.0049210049210093e-05,
+          "std": 0.22246535670808756
+        },
+        "wheel_speed_m_s": {
+          "min": 0.003888888888888861,
+          "max": 21.495,
+          "mean": 12.795512460790238,
+          "std": 5.960116374822866
+        }
+      }
+    },
+    {
+      "drive_id": "Vw4",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw04\\S-Vw4.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw04\\V-Vw4.csv",
+      "s_row_count": 126526,
+      "v_row_count": 126527,
+      "duration_seconds": 12652.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000781,
+        "min_dt": 0.076,
+        "max_dt": 0.124,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 51.94643,
+        "phone_lat_max": 52.390907,
+        "phone_lon_min": -2.253461,
+        "phone_lon_max": -0.691026,
+        "vehicle_lat_min": 51.9462826,
+        "vehicle_lat_max": 52.3909102,
+        "vehicle_lon_min": -2.2535474,
+        "vehicle_lon_max": -0.6908510999999999
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -31.9922,
+          "max": 26.1168,
+          "mean": 0.1480385075004347,
+          "std": 2.464741376458541
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -26.5225,
+          "max": 18.6061,
+          "mean": -0.1760864849912271,
+          "std": 2.183372489559937
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 0.1007,
+          "max": 17.6865,
+          "mean": 9.819671526010465,
+          "std": 1.184023680103942
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -1.2511,
+          "max": 1.0883,
+          "mean": -0.0006851730079193212,
+          "std": 0.14490555940409156
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.0775,
+          "max": 3.5761,
+          "mean": -0.0040979901364146505,
+          "std": 0.3318537235532398
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.7621,
+          "max": 1.7031,
+          "mean": 0.0007964347248786808,
+          "std": 0.2235179603128751
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 36.63305555555555,
+          "mean": 16.94258363607943,
+          "std": 9.614248962376026
+        }
+      }
+    },
+    {
+      "drive_id": "Vw5",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw05\\S-Vw5.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw05\\V-Vw5.csv",
+      "s_row_count": 1012,
+      "v_row_count": 1012,
+      "duration_seconds": 101.10100000000057,
+      "sampling_rate": {
+        "mean_dt": 0.100001,
+        "median_dt": 0.1,
+        "std_dt": 0.000703,
+        "min_dt": 0.098,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.20858,
+        "phone_lat_max": 52.211346,
+        "phone_lon_min": -2.189921,
+        "phone_lon_max": -2.186995,
+        "vehicle_lat_min": 52.2085728,
+        "vehicle_lat_max": 52.2113438,
+        "vehicle_lon_min": -2.1899472,
+        "vehicle_lon_max": -2.1869161
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -11.6853,
+          "max": 7.4957,
+          "mean": -0.02718221343873517,
+          "std": 2.1219687606762023
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.7681,
+          "max": 9.7123,
+          "mean": -0.02170148221343872,
+          "std": 2.3219740148898556
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 1.5473,
+          "max": 17.6704,
+          "mean": 9.823277667984192,
+          "std": 1.023202519494744
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.7598,
+          "max": 0.9509,
+          "mean": -0.0008236166007905128,
+          "std": 0.1252506584560845
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.0939,
+          "max": 1.5653,
+          "mean": -0.03639367588932806,
+          "std": 0.3228940438601519
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.25,
+          "max": 0.8821,
+          "mean": 0.010526284584980236,
+          "std": 0.18616572693195943
+        },
+        "wheel_speed_m_s": {
+          "min": 0.003888888888888861,
+          "max": 10.38,
+          "mean": 6.58187609793588,
+          "std": 2.456515337846804
+        }
+      }
+    },
+    {
+      "drive_id": "Vw6",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw06\\S-Vw6.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw06\\V-Vw6.csv",
+      "s_row_count": 1281,
+      "v_row_count": 1281,
+      "duration_seconds": 128.0,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00067,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.211113,
+        "phone_lat_max": 52.21419,
+        "phone_lon_min": -2.188399,
+        "phone_lon_max": -2.1842,
+        "vehicle_lat_min": 52.2110328,
+        "vehicle_lat_max": 52.2141893,
+        "vehicle_lon_min": -2.1884019999999995,
+        "vehicle_lon_max": -2.1841732
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.182,
+          "max": 9.6914,
+          "mean": -0.048397814207650276,
+          "std": 2.032993711971853
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -15.0883,
+          "max": 15.2428,
+          "mean": 0.12963661202185792,
+          "std": 2.497376066099317
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 1.5029,
+          "max": 16.8906,
+          "mean": 9.788087587822014,
+          "std": 1.149140949848736
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.9795,
+          "max": 0.6136,
+          "mean": -0.003485402029664325,
+          "std": 0.13683700276531666
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.495,
+          "max": 1.3586,
+          "mean": 0.023637236533957842,
+          "std": 0.3308038494450598
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9347,
+          "max": 1.0873,
+          "mean": 0.0036572209211553465,
+          "std": 0.2133699225298535
+        },
+        "wheel_speed_m_s": {
+          "min": 1.0380555555555555,
+          "max": 11.315,
+          "mean": 8.426535475756786,
+          "std": 1.9946223260169724
+        }
+      }
+    },
+    {
+      "drive_id": "Vw7",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw07\\S-Vw7.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw07\\V-Vw7.csv",
+      "s_row_count": 1602,
+      "v_row_count": 1602,
+      "duration_seconds": 160.09900000000016,
+      "sampling_rate": {
+        "mean_dt": 0.099999,
+        "median_dt": 0.1,
+        "std_dt": 0.000713,
+        "min_dt": 0.094,
+        "max_dt": 0.106,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.201782,
+        "phone_lat_max": 52.203262,
+        "phone_lon_min": -2.201946,
+        "phone_lon_max": -2.196013,
+        "vehicle_lat_min": 52.2017813,
+        "vehicle_lat_max": 52.203283000000006,
+        "vehicle_lon_min": -2.2020549,
+        "vehicle_lon_max": -2.195652
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -8.102,
+          "max": 10.8787,
+          "mean": -0.0812305867665418,
+          "std": 2.1064566846627906
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -11.5547,
+          "max": 11.1197,
+          "mean": 0.07850087390761543,
+          "std": 2.514108225461049
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.6052,
+          "max": 15.0291,
+          "mean": 9.817141760299625,
+          "std": 1.0381566401399793
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5963,
+          "max": 0.6947,
+          "mean": -0.002447565543071162,
+          "std": 0.12796786935574436
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.3933,
+          "max": 1.066,
+          "mean": -0.006921036204744068,
+          "std": 0.3451485035564154
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.8635,
+          "max": 0.9256,
+          "mean": -0.0008525593008739077,
+          "std": 0.20705442530206536
+        },
+        "wheel_speed_m_s": {
+          "min": 0.10499999999999997,
+          "max": 11.713055555555556,
+          "mean": 7.236025974476349,
+          "std": 2.6649705871945795
+        }
+      }
+    },
+    {
+      "drive_id": "Vw8",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw08\\S-Vw8.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw08\\V-Vw8.csv",
+      "s_row_count": 1529,
+      "v_row_count": 1529,
+      "duration_seconds": 152.79999999999927,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000742,
+        "min_dt": 0.095,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.201775,
+        "phone_lat_max": 52.203125,
+        "phone_lon_min": -2.202045,
+        "phone_lon_max": -2.195737,
+        "vehicle_lat_min": 52.201789100000006,
+        "vehicle_lat_max": 52.2032518,
+        "vehicle_lon_min": -2.202046,
+        "vehicle_lon_max": -2.1956592
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -11.6649,
+          "max": 10.124,
+          "mean": 0.045275735775016326,
+          "std": 2.337363840179949
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.6245,
+          "max": 15.1217,
+          "mean": -0.041878286461739724,
+          "std": 2.524266781495514
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.0673,
+          "max": 15.1837,
+          "mean": 9.835156769130151,
+          "std": 1.1195508542755832
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.6736,
+          "max": 0.7743,
+          "mean": -0.002932112491824722,
+          "std": 0.13270416058450316
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.7114,
+          "max": 1.3631,
+          "mean": -0.017362459123610195,
+          "std": 0.3791523926974345
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9753,
+          "max": 1.0197,
+          "mean": 0.009903858731196861,
+          "std": 0.22063859359548035
+        },
+        "wheel_speed_m_s": {
+          "min": 0.008055555555555528,
+          "max": 12.896944444444445,
+          "mean": 6.938075902914032,
+          "std": 3.082924847503746
+        }
+      }
+    },
+    {
+      "drive_id": "Vw9",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw09\\S-Vw9.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw09\\V-Vw9.csv",
+      "s_row_count": 552,
+      "v_row_count": 553,
+      "duration_seconds": 55.10100000000057,
+      "sampling_rate": {
+        "mean_dt": 0.100002,
+        "median_dt": 0.1,
+        "std_dt": 0.000693,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.201527,
+        "phone_lat_max": 52.202805,
+        "phone_lon_min": -2.205823,
+        "phone_lon_max": -2.2002,
+        "vehicle_lat_min": 52.2015475,
+        "vehicle_lat_max": 52.2028035,
+        "vehicle_lon_min": -2.2057739,
+        "vehicle_lon_max": -2.2002006000000005
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -7.9517,
+          "max": 8.2417,
+          "mean": 0.4366036231884058,
+          "std": 1.7369963265018322
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -12.0333,
+          "max": 10.119,
+          "mean": -0.12956123188405796,
+          "std": 2.7720748508167317
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.612,
+          "max": 13.4143,
+          "mean": 9.793901630434783,
+          "std": 1.1371015102554767
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5397,
+          "max": 0.535,
+          "mean": -0.00548876811594203,
+          "std": 0.13800910219043136
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.3339,
+          "max": 0.993,
+          "mean": 0.024365942028985507,
+          "std": 0.3261802293704231
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.8328,
+          "max": 0.8092,
+          "mean": 0.007763043478260869,
+          "std": 0.19537890065328062
+        },
+        "wheel_speed_m_s": {
+          "min": 1.0519444444444443,
+          "max": 11.66388888888889,
+          "mean": 7.624273658830621,
+          "std": 2.2925893859328386
+        }
+      }
+    },
+    {
+      "drive_id": "Vw10",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw10\\S-Vw10.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw10\\V-Vw10.csv",
+      "s_row_count": 652,
+      "v_row_count": 652,
+      "duration_seconds": 65.10000000000036,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000681,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.201836,
+        "phone_lat_max": 52.20349,
+        "phone_lon_min": -2.201769,
+        "phone_lon_max": -2.192233,
+        "vehicle_lat_min": 52.201835,
+        "vehicle_lat_max": 52.2036576,
+        "vehicle_lon_min": -2.2017669,
+        "vehicle_lon_max": -2.1920334
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -6.318,
+          "max": 5.3588,
+          "mean": -0.09045245398773005,
+          "std": 1.6669416295764106
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -13.2084,
+          "max": 14.3996,
+          "mean": -0.05944999999999998,
+          "std": 3.153276666642204
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.1072,
+          "max": 14.8873,
+          "mean": 9.887058895705522,
+          "std": 1.3058133091678945
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.6962,
+          "max": 0.4854,
+          "mean": 0.009296012269938649,
+          "std": 0.16094919984364675
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.2834,
+          "max": 1.3658,
+          "mean": 0.03629570552147239,
+          "std": 0.33768309366629856
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9472,
+          "max": 0.9413,
+          "mean": -0.01661104294478527,
+          "std": 0.2486326775730188
+        },
+        "wheel_speed_m_s": {
+          "min": 4.183888888888888,
+          "max": 16.36,
+          "mean": 11.247333844580776,
+          "std": 3.224064766557807
+        }
+      }
+    },
+    {
+      "drive_id": "Vw11",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw11\\S-Vw11.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw11\\V-Vw11.csv",
+      "s_row_count": 4909,
+      "v_row_count": 4909,
+      "duration_seconds": 490.7999999999993,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.00078,
+        "min_dt": 0.091,
+        "max_dt": 0.109,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.20184,
+        "phone_lat_max": 52.229725,
+        "phone_lon_min": -2.191775,
+        "phone_lon_max": -2.141184,
+        "vehicle_lat_min": 52.2017944,
+        "vehicle_lat_max": 52.2310356,
+        "vehicle_lon_min": -2.191803,
+        "vehicle_lon_max": -2.1403751
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.8858,
+          "max": 10.3868,
+          "mean": 0.06101391322061519,
+          "std": 1.88125292008263
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.7984,
+          "max": 12.1797,
+          "mean": -0.04610558158484417,
+          "std": 2.1088697075747227
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": -1.2229,
+          "max": 16.2571,
+          "mean": 9.861981768180893,
+          "std": 1.0905348204736498
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.7792,
+          "max": 1.0897,
+          "mean": 0.004127928294968426,
+          "std": 0.13276159179873423
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.3851,
+          "max": 1.4168,
+          "mean": 0.006059727031982072,
+          "std": 0.27810048044277247
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.9616,
+          "max": 1.0223,
+          "mean": -0.002330291301690772,
+          "std": 0.18600736968780324
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 27.341944444444444,
+          "mean": 11.891566170978473,
+          "std": 8.363540532323665
+        }
+      }
+    },
+    {
+      "drive_id": "Vw12",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw12\\S-Vw12.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw12\\V-Vw12.csv",
+      "s_row_count": 918,
+      "v_row_count": 918,
+      "duration_seconds": 91.7,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000655,
+        "min_dt": 0.097,
+        "max_dt": 0.104,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.23328,
+        "phone_lat_max": 52.253063,
+        "phone_lon_min": -2.138977,
+        "phone_lon_max": -2.133607,
+        "vehicle_lat_min": 52.2332923,
+        "vehicle_lat_max": 52.2534681,
+        "vehicle_lon_min": -2.1389871,
+        "vehicle_lon_max": -2.1335957
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -7.8315,
+          "max": 8.4356,
+          "mean": 0.19962777777777774,
+          "std": 2.3066811588834137
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -7.463,
+          "max": 6.5032,
+          "mean": 0.32035718954248366,
+          "std": 1.706544329144859
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.1449,
+          "max": 13.6458,
+          "mean": 9.81984411764706,
+          "std": 1.139429445105884
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.4981,
+          "max": 0.5769,
+          "mean": -0.00437962962962963,
+          "std": 0.1453178748968277
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.0913,
+          "max": 1.0533,
+          "mean": 0.009688997821350761,
+          "std": 0.2973447159207936
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.7686,
+          "max": 0.7094,
+          "mean": -0.0017516339869281022,
+          "std": 0.2017079160426624
+        },
+        "wheel_speed_m_s": {
+          "min": 22.938888888888886,
+          "max": 27.058055555555555,
+          "mean": 25.113367828612922,
+          "std": 1.1971847667946787
+        }
+      }
+    },
+    {
+      "drive_id": "Vw13",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw13\\S-Vw13.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw13\\V-Vw13.csv",
+      "s_row_count": 284,
+      "v_row_count": 284,
+      "duration_seconds": 28.3,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000728,
+        "min_dt": 0.098,
+        "max_dt": 0.102,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.275085,
+        "phone_lat_max": 52.2816,
+        "phone_lon_min": -2.121993,
+        "phone_lon_max": -2.119732,
+        "vehicle_lat_min": 52.2750894,
+        "vehicle_lat_max": 52.281897,
+        "vehicle_lon_min": -2.1219935000000003,
+        "vehicle_lon_max": -2.1196186
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -9.9955,
+          "max": 8.7158,
+          "mean": 0.17321690140845072,
+          "std": 3.0995282385698846
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -6.0961,
+          "max": 7.3311,
+          "mean": 0.28767922535211277,
+          "std": 2.087562945782895
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.8491,
+          "max": 15.68,
+          "mean": 9.874630281690141,
+          "std": 1.1870194333082802
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.3041,
+          "max": 0.7799,
+          "mean": 0.028575000000000003,
+          "std": 0.14078236282910433
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.8455,
+          "max": 0.9437,
+          "mean": 0.0382112676056338,
+          "std": 0.3944749350215105
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.6905,
+          "max": 0.4775,
+          "mean": -0.027893309859154926,
+          "std": 0.2451572639946846
+        },
+        "wheel_speed_m_s": {
+          "min": 26.103055555555557,
+          "max": 31.54,
+          "mean": 27.381153169014084,
+          "std": 1.2636289749009835
+        }
+      }
+    },
+    {
+      "drive_id": "Vw14a",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw14a\\S-Vw14a.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw14a\\V-Vw14a.csv",
+      "s_row_count": 3138,
+      "v_row_count": 3138,
+      "duration_seconds": 313.70000000000005,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000755,
+        "min_dt": 0.095,
+        "max_dt": 0.106,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.285957,
+        "phone_lat_max": 52.348835,
+        "phone_lon_min": -2.121308,
+        "phone_lon_max": -2.074244,
+        "vehicle_lat_min": 52.2859629,
+        "vehicle_lat_max": 52.3485573,
+        "vehicle_lon_min": -2.1213319,
+        "vehicle_lon_max": -2.0744002000000004
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -15.217,
+          "max": 7.6444,
+          "mean": 0.14880847673677502,
+          "std": 1.9234074370448269
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -9.8934,
+          "max": 9.8594,
+          "mean": 0.14961328871892926,
+          "std": 2.030062076696805
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.7639,
+          "max": 14.5921,
+          "mean": 9.853058126195029,
+          "std": 1.1764069959501378
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.6901,
+          "max": 0.5124,
+          "mean": 0.0017298597833014652,
+          "std": 0.1477448902086513
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.1773,
+          "max": 1.6685,
+          "mean": -0.002690184831102612,
+          "std": 0.2821950224080532
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0617,
+          "max": 0.8158,
+          "mean": -0.00044643084767367696,
+          "std": 0.19639978924505147
+        },
+        "wheel_speed_m_s": {
+          "min": 17.18611111111111,
+          "max": 30.39611111111111,
+          "mean": 25.236155459953256,
+          "std": 2.171387204589713
+        }
+      }
+    },
+    {
+      "drive_id": "Vw14b",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw14b\\S-Vw14b.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw14b\\V-Vw14b.csv",
+      "s_row_count": 19588,
+      "v_row_count": 19588,
+      "duration_seconds": 1958.701,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000755,
+        "min_dt": 0.091,
+        "max_dt": 0.109,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.34756,
+        "phone_lat_max": 52.524723,
+        "phone_lon_min": -2.074244,
+        "phone_lon_max": -1.708907,
+        "vehicle_lat_min": 52.3475351,
+        "vehicle_lat_max": 52.5241614,
+        "vehicle_lon_min": -2.0742211,
+        "vehicle_lon_max": -1.7088806
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -14.3597,
+          "max": 11.5357,
+          "mean": 0.21922011435572805,
+          "std": 1.6951007989770852
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -11.3995,
+          "max": 10.6382,
+          "mean": 0.1619083724729426,
+          "std": 1.7881573824602743
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 2.6957,
+          "max": 16.5586,
+          "mean": 9.840523080457423,
+          "std": 1.0157518767816005
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.8313,
+          "max": 0.8505,
+          "mean": -0.0009511639779456811,
+          "std": 0.1294512967199132
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.4612,
+          "max": 1.5085,
+          "mean": -2.3259138247906723e-05,
+          "std": 0.24089550518512529
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1756,
+          "max": 1.4881,
+          "mean": 0.0005041658158055956,
+          "std": 0.17465875385786298
+        },
+        "wheel_speed_m_s": {
+          "min": 3.4880555555555555,
+          "max": 33.371944444444445,
+          "mean": 21.015190862319333,
+          "std": 6.097361163394997
+        }
+      }
+    },
+    {
+      "drive_id": "Vw14c",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw14c\\S-Vw14c.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw14c\\V-Vw14c.csv",
+      "s_row_count": 15826,
+      "v_row_count": 15826,
+      "duration_seconds": 1582.5,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000755,
+        "min_dt": 0.088,
+        "max_dt": 0.112,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.524723,
+        "phone_lat_max": 52.604424,
+        "phone_lon_min": -1.731564,
+        "phone_lon_max": -1.609,
+        "vehicle_lat_min": 52.5247201,
+        "vehicle_lat_max": 52.6044365,
+        "vehicle_lon_min": -1.7317667,
+        "vehicle_lon_max": -1.6089489
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.4971,
+          "max": 14.4315,
+          "mean": 0.08793731201819792,
+          "std": 1.6405611532916284
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -12.3353,
+          "max": 13.905,
+          "mean": -0.053518242133198536,
+          "std": 1.4836668790526037
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 1.9207,
+          "max": 16.9678,
+          "mean": 9.848995463161886,
+          "std": 0.8139574493225636
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.9595,
+          "max": 0.8922,
+          "mean": -3.907493997219789e-05,
+          "std": 0.10129630402551476
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.8005,
+          "max": 1.529,
+          "mean": -0.007125249589283457,
+          "std": 0.2134156845294559
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.0957,
+          "max": 1.3293,
+          "mean": 0.002038101857702515,
+          "std": 0.1450429295679971
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 27.91111111111111,
+          "mean": 10.795174642290464,
+          "std": 8.939672024727951
+        }
+      }
+    },
+    {
+      "drive_id": "Vw15",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw15\\S-Vw15.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw15\\V-Vw15.csv",
+      "s_row_count": 1380,
+      "v_row_count": 1391,
+      "duration_seconds": 137.9,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000621,
+        "min_dt": 0.097,
+        "max_dt": 0.102,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.596283,
+        "phone_lat_max": 52.596283,
+        "phone_lon_min": -1.608857,
+        "phone_lon_max": -1.608857,
+        "vehicle_lat_min": 52.5962761,
+        "vehicle_lat_max": 52.5963124,
+        "vehicle_lon_min": -1.6089551,
+        "vehicle_lon_max": -1.6088928
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -1.3312,
+          "max": 1.1099,
+          "mean": -0.009960579710144926,
+          "std": 0.1892027597307422
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -2.8192,
+          "max": 2.088,
+          "mean": -0.011256231884057971,
+          "std": 0.226063769546719
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 9.1207,
+          "max": 11.2034,
+          "mean": 9.846820000000001,
+          "std": 0.0805470974067511
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.04,
+          "max": 0.1693,
+          "mean": -0.000819855072463768,
+          "std": 0.009358601383136874
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.3186,
+          "max": 0.0897,
+          "mean": 0.001722173913043478,
+          "std": 0.03223575053235965
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.0803,
+          "max": 0.2819,
+          "mean": -0.0004489130434782608,
+          "std": 0.01941801732752972
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 0.20888888888888887,
+          "mean": 0.02264877386372713,
+          "std": 0.017146926645292302
+        }
+      }
+    },
+    {
+      "drive_id": "Vw16a",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw16a\\S-Vw16a.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw16a\\V-Vw16a.csv",
+      "s_row_count": 5879,
+      "v_row_count": 5879,
+      "duration_seconds": 587.799,
+      "sampling_rate": {
+        "mean_dt": 0.1,
+        "median_dt": 0.1,
+        "std_dt": 0.000716,
+        "min_dt": 0.095,
+        "max_dt": 0.105,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.564384,
+        "phone_lat_max": 52.596283,
+        "phone_lon_min": -1.608857,
+        "phone_lon_max": -1.502775,
+        "vehicle_lat_min": 52.5633547,
+        "vehicle_lat_max": 52.5962764,
+        "vehicle_lon_min": -1.6089375,
+        "vehicle_lon_max": -1.499184
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -10.2096,
+          "max": 11.8398,
+          "mean": 0.015705358054090842,
+          "std": 1.8618611565266039
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.5698,
+          "max": 15.8036,
+          "mean": -0.00673444463344107,
+          "std": 1.823035473168282
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 3.4854,
+          "max": 15.8806,
+          "mean": 9.855436672903556,
+          "std": 0.9993221837525675
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.8807,
+          "max": 0.8277,
+          "mean": -0.003700204116346318,
+          "std": 0.1266255744068623
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -1.5878,
+          "max": 1.7595,
+          "mean": -0.0047007994556897414,
+          "std": 0.2588578080959164
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -1.1662,
+          "max": 1.7273,
+          "mean": 0.0041926688212280995,
+          "std": 0.18439639542426556
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0011111111111111111,
+          "max": 23.188055555555557,
+          "mean": 14.418847734875547,
+          "std": 6.661002270153753
+        }
+      }
+    },
+    {
+      "drive_id": "Vw16b",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw16b\\S-Vw16b.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw16b\\V-Vw16b.csv",
+      "s_row_count": 1126,
+      "v_row_count": 1126,
+      "duration_seconds": 112.50099999999998,
+      "sampling_rate": {
+        "mean_dt": 0.100001,
+        "median_dt": 0.1,
+        "std_dt": 0.00071,
+        "min_dt": 0.098,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.55589,
+        "phone_lat_max": 52.562946,
+        "phone_lon_min": -1.49791,
+        "phone_lon_max": -1.47378,
+        "vehicle_lat_min": 52.5556237,
+        "vehicle_lat_max": 52.5629684,
+        "vehicle_lon_min": -1.4978804,
+        "vehicle_lon_max": -1.4727990999999998
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -13.1508,
+          "max": 9.8115,
+          "mean": 0.035534991119005356,
+          "std": 2.3140475125327438
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -8.7966,
+          "max": 10.7386,
+          "mean": 0.07856545293072824,
+          "std": 2.1993639276049524
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 4.631,
+          "max": 15.438,
+          "mean": 9.868366696269984,
+          "std": 1.1657742319872366
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.9326,
+          "max": 0.7384,
+          "mean": -0.0007252220248667869,
+          "std": 0.14184150216568256
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -2.0296,
+          "max": 1.5499,
+          "mean": -0.010753907637655416,
+          "std": 0.302685222864071
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.8643,
+          "max": 1.3518,
+          "mean": 0.0067305506216696264,
+          "std": 0.21346397705792292
+        },
+        "wheel_speed_m_s": {
+          "min": 0.3611111111111111,
+          "max": 23.98111111111111,
+          "mean": 16.7923411288731,
+          "std": 5.403874368522685
+        }
+      }
+    },
+    {
+      "drive_id": "Vw17",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw17\\S-Vw17.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Vw (Driver E)\\Vw17\\V-Vw17.csv",
+      "s_row_count": 329,
+      "v_row_count": 329,
+      "duration_seconds": 32.80099999999993,
+      "sampling_rate": {
+        "mean_dt": 0.100003,
+        "median_dt": 0.1,
+        "std_dt": 0.000743,
+        "min_dt": 0.097,
+        "max_dt": 0.103,
+        "estimated_frequency_hz": 10.0,
+        "vehicle_mean_dt": 0.1
+      },
+      "missing_values": {
+        "s_missing_total": 0,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.553425,
+        "phone_lat_max": 52.55524,
+        "phone_lon_min": -1.471688,
+        "phone_lon_max": -1.465492,
+        "vehicle_lat_min": 52.5531489,
+        "vehicle_lat_max": 52.5552759,
+        "vehicle_lon_min": -1.4716621,
+        "vehicle_lon_max": -1.4645459
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -7.5302,
+          "max": 5.2076,
+          "mean": -0.20573799392097264,
+          "std": 2.24351918368129
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -4.7104,
+          "max": 8.1577,
+          "mean": 0.25383586626139815,
+          "std": 2.198774009392603
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": 5.151,
+          "max": 13.051,
+          "mean": 9.852241641337386,
+          "std": 0.9758148607382149
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -0.5885,
+          "max": 0.4909,
+          "mean": 0.004939209726443771,
+          "std": 0.11734751761685024
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -0.6121,
+          "max": 0.7236,
+          "mean": 0.025591185410334345,
+          "std": 0.23212287552673008
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -0.3786,
+          "max": 0.4598,
+          "mean": -0.011617325227963526,
+          "std": 0.15362943509292132
+        },
+        "wheel_speed_m_s": {
+          "min": 8.753888888888888,
+          "max": 20.18305555555555,
+          "mean": 16.403290273556227,
+          "std": 2.1480781052605216
+        }
+      }
+    },
+    {
+      "drive_id": "Y1",
+      "s_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Y (Driver D)\\Y1\\S-Y1.csv",
+      "v_file": "raw\\iovnbd\\Synchronised V abd S datasets\\Categorised IOVNB Dataset\\Y (Driver D)\\Y1\\V-Y1.csv",
+      "s_row_count": 70285,
+      "v_row_count": 70285,
+      "duration_seconds": 6690.761,
+      "sampling_rate": {
+        "mean_dt": 0.095196,
+        "median_dt": 0.1,
+        "std_dt": 1.151319,
+        "min_dt": -303.608,
+        "max_dt": 0.112,
+        "estimated_frequency_hz": 10.5,
+        "vehicle_mean_dt": 0.109083
+      },
+      "missing_values": {
+        "s_missing_total": 98,
+        "v_missing_total": 0
+      },
+      "duplicate_timestamps": {
+        "s_duplicates": 0,
+        "v_duplicates": 0
+      },
+      "gps_bounds": {
+        "phone_lat_min": 52.394756,
+        "phone_lat_max": 52.470875,
+        "phone_lon_min": -1.545744,
+        "phone_lon_max": -1.47026,
+        "vehicle_lat_min": 52.3947335,
+        "vehicle_lat_max": 52.4708991,
+        "vehicle_lon_min": -1.5457938,
+        "vehicle_lon_max": -1.4701938
+      },
+      "sensor_ranges": {
+        "ACCELEROMETER X (m/s\u00b2)": {
+          "min": -35.619,
+          "max": 7.4589,
+          "mean": -0.015113174930639538,
+          "std": 0.6650673048024488
+        },
+        "ACCELEROMETER Y (m/s\u00b2)": {
+          "min": -10.0653,
+          "max": 17.4006,
+          "mean": 0.04641991036494274,
+          "std": 0.659768736349613
+        },
+        "ACCELEROMETER Z (m/s\u00b2)": {
+          "min": -17.1479,
+          "max": 17.0127,
+          "mean": 9.887130187095398,
+          "std": 0.6565175459263287
+        },
+        "GYROSCOPE Yaw (rad/s)": {
+          "min": -9.7277,
+          "max": 3.6466,
+          "mean": -0.00029622679092267205,
+          "std": 0.11693221510208382
+        },
+        "GYROSCOPE Pitch (rad/s)": {
+          "min": -10.8728,
+          "max": 13.9119,
+          "mean": -0.010324474638969908,
+          "std": 0.15938551484076346
+        },
+        "GYROSCOPE Roll (rad/s)": {
+          "min": -3.9086,
+          "max": 12.8719,
+          "mean": 0.002414996087358611,
+          "std": 0.1096358424237801
+        },
+        "wheel_speed_m_s": {
+          "min": 0.0,
+          "max": 24.301944444444445,
+          "mean": 8.328870147731854,
+          "std": 5.302540901568331
+        }
+      }
+    }
+  ]
+}

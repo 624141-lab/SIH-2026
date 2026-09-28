@@ -1,0 +1,48 @@
+{
+  "dataset": "IO-VNBD",
+  "window_size": 50,
+  "window_stride": 10,
+  "sampling_rate_hz": 50,
+  "splits": {
+    "train": {
+      "drives": [
+        "M_M",
+        "S1",
+        "S2",
+        "S3a",
+        "S3c",
+        "Vta16",
+        "Vta1a",
+        "Vta2",
+        "Vta29",
+        "Vtb1",
+        "Vtb5",
+        "Vw1",
+        "Vw2",
+        "Vw4"
+      ],
+      "total_windows": 68104
+    },
+    "val": {
+      "drives": [
+        "Y1"
+      ],
+      "total_windows": 7024
+    },
+    "test": {
+      "drives": [
+        "Vfa01",
+        "Vfa02"
+      ],
+      "total_windows": 7892
+    }
+  },
+  "leakage_verification": {
+    "train_test_drive_overlap": 0,
+    "val_test_drive_overlap": 0,
+    "train_val_drive_overlap": 0,
+    "cross_split_overlaps": 0,
+    "window_boundary_leakage": "NONE (windows strictly partitioned per drive)",
+    "verdict": "ZERO_LEAKAGE_VERIFIED"
+  }
+}
