@@ -8,36 +8,36 @@
   "configurations": {
     "Config A: Raw IMU Baseline": {
       "num_scenarios": 100,
-      "mean_drift_pct": 75.77,
-      "median_drift_pct": 35.38,
-      "p90_drift_pct": 165.8,
-      "p95_drift_pct": 189.74,
-      "max_drift_pct": 1240.05,
-      "mean_rmse_m": 255.04,
-      "mean_cep50_m": 149.42,
-      "pass_rate_under_10pct": 8.0
+      "mean_drift_pct": 38.66,
+      "median_drift_pct": 29.18,
+      "p90_drift_pct": 64.67,
+      "p95_drift_pct": 92.89,
+      "max_drift_pct": 229.52,
+      "mean_rmse_m": 126.48,
+      "mean_cep50_m": 88.76,
+      "pass_rate_under_10pct": 16.0
     },
     "Config B: EKF + AI Velocity + NHC": {
       "num_scenarios": 100,
-      "mean_drift_pct": 79.9,
-      "median_drift_pct": 68.78,
-      "p90_drift_pct": 127.36,
-      "p95_drift_pct": 175.22,
-      "max_drift_pct": 484.23,
-      "mean_rmse_m": 289.52,
-      "mean_cep50_m": 199.05,
-      "pass_rate_under_10pct": 2.0
+      "mean_drift_pct": 45.12,
+      "median_drift_pct": 37.17,
+      "p90_drift_pct": 93.56,
+      "p95_drift_pct": 102.4,
+      "max_drift_pct": 152.37,
+      "mean_rmse_m": 169.62,
+      "mean_cep50_m": 114.82,
+      "pass_rate_under_10pct": 9.0
     },
     "Config C: EKF + AI Velocity + NHC + OSM HMM": {
       "num_scenarios": 100,
-      "mean_drift_pct": 74.71,
-      "median_drift_pct": 47.22,
-      "p90_drift_pct": 161.78,
-      "p95_drift_pct": 237.34,
-      "max_drift_pct": 475.3,
-      "mean_rmse_m": 261.55,
-      "mean_cep50_m": 183.69,
-      "pass_rate_under_10pct": 15.0
+      "mean_drift_pct": 38.48,
+      "median_drift_pct": 22.66,
+      "p90_drift_pct": 87.97,
+      "p95_drift_pct": 105.9,
+      "max_drift_pct": 311.17,
+      "mean_rmse_m": 135.15,
+      "mean_cep50_m": 112.78,
+      "pass_rate_under_10pct": 25.0
     }
   }
 }

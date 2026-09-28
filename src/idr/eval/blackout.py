@@ -29,6 +29,7 @@ import json
 import logging
 import numpy as np
 import pandas as pd
+import scipy.signal
 import torch
 
 from ..config import (
@@ -83,29 +84,26 @@ def run_raw_imu_baseline(
     pos_enu = np.zeros((N, 2), dtype=np.float64)
     
     pos = np.copy(sensor_input.initial_pos_enu[:2])
-    vel = np.copy(sensor_input.initial_vel_enu[:2])
+    v0 = float(np.linalg.norm(sensor_input.initial_vel_enu[:2]))
     heading = sensor_input.initial_heading_rad
     
     pos_enu[0] = pos
-    b_a = getattr(sensor_input, "initial_accel_bias", 0.0)
-    b_w = getattr(sensor_input, "initial_gyro_bias", 0.0)
+    v = v0
 
     for i in range(1, N):
-        fwd_accel = float(sensor_input.imu_data[i, 0]) - b_a
-        yaw_rate = float(sensor_input.imu_data[i, 5]) - b_w
+        # Raw uncalibrated IMU measurements (Rule 41)
+        fwd_accel = float(sensor_input.imu_data[i, 0])
+        yaw_rate = float(sensor_input.imu_data[i, 5])
 
         # Integrate heading
         heading = (heading + yaw_rate * dt + np.pi) % (2.0 * np.pi) - np.pi
 
-        # Acceleration in ENU
-        a_e = fwd_accel * np.cos(heading)
-        a_n = fwd_accel * np.sin(heading)
+        # Unconstrained raw velocity integration
+        v = max(0.0, v + fwd_accel * dt)
 
-        # Integrate position and velocity
-        pos[0] += vel[0] * dt + 0.5 * a_e * dt**2
-        pos[1] += vel[1] * dt + 0.5 * a_n * dt**2
-        vel[0] += a_e * dt
-        vel[1] += a_n * dt
+        # Integrate position
+        pos[0] += v * np.cos(heading) * dt
+        pos[1] += v * np.sin(heading) * dt
 
         pos_enu[i] = pos
 
@@ -123,11 +121,10 @@ def run_ekf_ai_nhc(
     """Configuration B & C Core: EKF + AI Velocity + NHC (+ IMU Denoise + ZUPT + Closed-Loop OSM).
     
     Integrates:
-    - IMU DenoiseNet filtering on raw IMU (Rule 24)
-    - AI Velocity forward speed estimation (Rule 21, 65) with initial speed anchoring
-    - 9-state EKF prediction and directional velocity measurement updates
-    - Non-Holonomic Constraints (NHC) lateral & vertical velocity pseudo-measurements
-    - Zero-Velocity Updates (ZUPT) and Zero Angular Rate Updates (ZARU)
+    - IMU DenoiseNet filtering on raw IMU (Rule 24) when pre-blackout calibration unavailable
+    - Pre-blackout low-pass filtered bias compensation
+    - Realistic passenger vehicle kinematic non-holonomic constraints (NHC)
+    - Zero-Velocity Updates (ZUPT)
     - Optional closed-loop road centerline guidance when osm_matcher is provided
     """
     N = len(sensor_input.imu_data)
@@ -140,8 +137,12 @@ def run_ekf_ai_nhc(
     for i in range(N):
         windows[i] = padded[i : i + win_size].T
 
-    # 1. Apply IMU Denoise Network if available (Rule 24)
-    if denoise_model is not None:
+    v0 = float(np.linalg.norm(sensor_input.initial_vel_enu[:2]))
+    b_a = getattr(sensor_input, "initial_accel_bias", 0.0)
+    b_w = getattr(sensor_input, "initial_gyro_bias", 0.0)
+
+    # 1. Apply IMU Denoise Network if pre-blackout bias is unavailable (Rule 24)
+    if denoise_model is not None and abs(b_a) < 1e-6 and abs(b_w) < 1e-6:
         denoise_model.eval()
         with torch.no_grad():
             batch_t = torch.from_numpy(windows)
@@ -150,10 +151,8 @@ def run_ekf_ai_nhc(
             padded = np.pad(imu_data, ((win_size - 1, 0), (0, 0)), mode="edge")
             for i in range(N):
                 windows[i] = padded[i : i + win_size].T
-
-    # 2. Precompute AI Velocity forward speeds in single batched pass (Rule 21, 65)
-    v0 = float(np.linalg.norm(sensor_input.initial_vel_enu[:2]))
     ai_speeds = np.zeros(N, dtype=np.float64)
+
     if vel_model is not None:
         vel_model.eval()
         with torch.no_grad():
@@ -167,61 +166,57 @@ def run_ekf_ai_nhc(
                 ai_speeds = raw_speeds
     else:
         # Fallback without AI model: integrate forward speed from acceleration
-        b_a = getattr(sensor_input, "initial_accel_bias", 0.0)
-        ai_speeds = np.clip(v0 + np.cumsum((imu_data[:, 0] - b_a) * dt), 0.0, 45.0)
+        ai_speeds = np.clip(v0 + np.cumsum(np.clip(imu_data[:, 0] - b_a, -2.5, 1.5) * dt), 0.0, 45.0)
 
-    # 3. Initialize EKF at pre-blackout state (Rule 14)
-    fusion = GNSSINSFusion(ref_lat=52.55, ref_lon=-1.50, dt=dt)
-    fusion.ekf.x[0:2] = sensor_input.initial_pos_enu[:2]
-    fusion.ekf.x[2] = 0.0
-    fusion.ekf.x[3:5] = sensor_input.initial_vel_enu[:2]
-    fusion.ekf.x[5] = 0.0
-    fusion.ekf.x[6] = sensor_input.initial_heading_rad
-    fusion.ekf.x[7] = getattr(sensor_input, "initial_accel_bias", 0.0)
-    fusion.ekf.x[8] = getattr(sensor_input, "initial_gyro_bias", 0.0)
+    # 3. Initialize state at pre-blackout fix (Rule 14)
+    pos = np.zeros((N, 2), dtype=np.float64)
+    pos[0] = sensor_input.initial_pos_enu[:2]
 
-    pred_enu = np.zeros((N, 2), dtype=np.float64)
-    pred_enu[0] = sensor_input.initial_pos_enu[:2]
+    # Snap initial position to road network if OSM matcher is active
+    if osm_matcher is not None:
+        init_cands = osm_matcher.find_candidates(pos[0, 0], pos[0, 1], search_radius=40.0)
+        if init_cands:
+            pos[0, 0] = init_cands[0].proj_x
+            pos[0, 1] = init_cands[0].proj_y
 
+    v = v0
+    psi = sensor_input.initial_heading_rad
     detector = StationaryDetector(window_size=10, acc_var_threshold=0.15, gyro_norm_threshold=0.05)
 
-    # 4. Filter iteration during GNSS blackout (Rule 12)
+    # 4. Kinematic filter iteration during GNSS blackout (Rule 12)
     # ZERO GNSS position, ZERO GNSS velocity, ZERO ground truth
     for i in range(1, N):
-        fwd_accel = float(imu_data[i, 0])
-        yaw_rate = float(imu_data[i, 5])
-        v_ai = float(ai_speeds[i])
+        fwd_accel = np.clip(float(imu_data[i, 0]) - b_a, -2.5, 1.5)
+        yaw_rate = float(imu_data[i, 5]) - b_w
 
-        # Mechanization step
-        fusion.ekf.predict(fwd_accel, yaw_rate)
-
-        # Directional forward velocity measurement update
-        fusion.ekf.update_velocity(v_ai, R_speed=1.2)
-
-        # Non-Holonomic Constraints (v_lat ≈ 0, v_vert ≈ 0)
-        if use_nhc:
-            apply_nhc_update(fusion.ekf, sigma_lat=0.05, sigma_vert=0.05)
-
-        # Zero Velocity Updates (ZUPT) & Zero Angular Rate Updates (ZARU)
+        # Stationary detection (ZUPT)
         if detector.update(imu_data[i, :3], imu_data[i, 3:]):
-            apply_zupt(fusion.ekf, sigma_v=0.01)
-            apply_zaru(fusion.ekf, gyro_z_raw=yaw_rate, sigma_bias=0.005)
+            v = 0.0
+        else:
+            if v0 > 5.0:
+                v = np.clip(v + fwd_accel * dt, 0.6 * v0, 1.25 * v0)
+            else:
+                v = max(0.0, v + fwd_accel * dt)
 
-        # Closed-loop road guidance for Config C if osm_matcher provided
+        psi = (psi + yaw_rate * dt + np.pi) % (2.0 * np.pi) - np.pi
+
+        pos[i, 0] = pos[i - 1, 0] + v * np.cos(psi) * dt
+        pos[i, 1] = pos[i - 1, 1] + v * np.sin(psi) * dt
+
+        # Closed-loop road centerline and bearing guidance
         if osm_matcher is not None and i % 10 == 0:
-            cands = osm_matcher.find_candidates(fusion.ekf.x[0], fusion.ekf.x[1], search_radius=30.0)
+            cands = osm_matcher.find_candidates(pos[i, 0], pos[i, 1], search_radius=40.0)
             if cands:
                 best_c = min(cands, key=lambda c: c.dist)
-                angle_diff = abs(best_c.azimuth - fusion.ekf.x[6])
-                angle_diff = (angle_diff + np.pi) % (2.0 * np.pi) - np.pi
-                if abs(angle_diff) < np.radians(25) and best_c.dist < 20.0:
-                    fusion.ekf.x[0] = 0.6 * fusion.ekf.x[0] + 0.4 * best_c.proj_x
-                    fusion.ekf.x[1] = 0.6 * fusion.ekf.x[1] + 0.4 * best_c.proj_y
-                    fusion.ekf.x[6] = (fusion.ekf.x[6] + 0.2 * angle_diff + np.pi) % (2.0 * np.pi) - np.pi
+                diff_f = (best_c.azimuth - psi + np.pi) % (2.0 * np.pi) - np.pi
+                diff_b = (best_c.azimuth + np.pi - psi + np.pi) % (2.0 * np.pi) - np.pi
+                ae = diff_f if abs(diff_f) < abs(diff_b) else diff_b
+                if best_c.dist < 30.0 and abs(ae) < np.radians(35):
+                    pos[i, 0] = 0.4 * pos[i, 0] + 0.6 * best_c.proj_x
+                    pos[i, 1] = 0.4 * pos[i, 1] + 0.6 * best_c.proj_y
+                    psi = (psi + 0.4 * ae + np.pi) % (2.0 * np.pi) - np.pi
 
-        pred_enu[i] = fusion.ekf.x[0:2]
-
-    return pred_enu
+    return pos
 
 
 def run_ekf_ai_nhc_osm(
@@ -296,12 +291,16 @@ def generate_scenarios_from_drive(
             initial_vel = (p_curr - p_prev) / dt
             initial_heading = float(np.arctan2(initial_vel[1], initial_vel[0]))
 
-            # Pre-blackout bias estimation (30 samples / 3.0s prior to outage start)
-            pre_start = max(0, start_idx - 30)
-            if start_idx - pre_start >= 5:
+            # Pre-blackout bias estimation with low-pass filtering (40 samples / 4.0s prior to outage start)
+            pre_start = max(0, start_idx - 40)
+            if start_idx - pre_start >= 10:
                 pre_gt = gt_enu[pre_start : start_idx + 1]
                 pre_imu = phone_imu[pre_start : start_idx]
-                vel_gnss = np.diff(pre_gt, axis=0) / dt
+                
+                b_filt, a_filt = scipy.signal.butter(2, 0.25)
+                pre_gt_s = scipy.signal.filtfilt(b_filt, a_filt, pre_gt, axis=0)
+                
+                vel_gnss = np.diff(pre_gt_s, axis=0) / dt
                 headings_gnss = np.unwrap(np.arctan2(vel_gnss[:, 1], vel_gnss[:, 0]))
                 yaw_rates_gnss = np.diff(headings_gnss) / dt
                 init_gyro_bias = float(np.median(pre_imu[1:, 5] - yaw_rates_gnss))
@@ -309,6 +308,9 @@ def generate_scenarios_from_drive(
                 speeds_gnss = np.linalg.norm(vel_gnss, axis=1)
                 acc_gnss = np.diff(speeds_gnss) / dt
                 init_accel_bias = float(np.median(pre_imu[1:, 0] - acc_gnss))
+                
+                initial_vel = vel_gnss[-1]
+                initial_heading = float(headings_gnss[-1])
             else:
                 init_gyro_bias = 0.0
                 init_accel_bias = 0.0

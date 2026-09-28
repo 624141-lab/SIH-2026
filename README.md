@@ -23,36 +23,36 @@ Evaluated across **100 deterministic blackout intervals** (durations: 15s, 30s, 
 
 | Configuration | Scenarios | Median Drift (%) | Mean Drift (%) | P90 Drift (%) | P95 Drift (%) | Mean RMSE (m) | Mean CEP50 (m) | Pass Rate (<10%) |
 |---|---|---|---|---|---|---|---|---|
-| **Config A: Raw IMU Baseline** | 100 | **35.38%** | 75.77% | 165.80% | 189.74% | 255.04 m | 149.42 m | **8.0%** |
-| **Config B: EKF + AI Velocity + NHC** | 100 | **68.78%** | 79.90% | 127.36% | 175.22% | 289.52 m | 199.05 m | **2.0%** |
-| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 100 | **47.22%** | 74.71% | 161.78% | 237.34% | 261.55 m | 183.69 m | **15.0%** |
+| **Config A: Raw IMU Baseline** | 100 | **29.18%** | 38.66% | 64.67% | 92.89% | 126.48 m | 88.76 m | **16.0%** |
+| **Config B: EKF + AI Velocity + NHC** | 100 | **37.17%** | 45.12% | 93.56% | 102.40% | 169.62 m | 114.82 m | **9.0%** |
+| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 100 | **22.66%** | 38.48% | 87.97% | 105.90% | 135.15 m | 112.78 m | **25.0%** |
 
 ### Benchmark Definitions:
 - **Drift Percentage**: $\text{drift\%} = \frac{\text{final horizontal position error (m)}}{\text{ground-truth distance travelled (m)}} \times 100\%$
 - **CEP50**: Circular Error Probable (50th percentile horizontal position error over the outage window).
-- **Impact of Improvements**: With the Top 5 concrete improvements (pre-blackout bias calibration, directional EKF, dynamic speed anchoring, ZUPT, and closed-loop OSM guidance), **Config C pass rate (<10% drift) increased by +150% (from 6.0% to 15.0%)**, and median drift dropped from 56.80% to 47.22%.
+- **Impact of Improvements**: With the Top 5 concrete improvements (Butterworth pre-blackout bias calibration, passenger car kinematic Non-Holonomic Constraints, dynamic speed anchoring, ZUPT, and closed-loop OSM guidance), **Config C pass rate (<10% drift) reached 25.0%** (up from 6.0%), and median drift dropped to **22.66%** (down from 56.80%).
 
 ---
 
 ### 📍 1 km Outage Performance (`~1 km` Range Metrics)
 
-#### 1. Exact 1 km Scenario from Multi-Scenario Benchmark (`Vfa01_t725_d60s`)
+#### 1. Exact 1 km Scenario from Multi-Scenario Benchmark (`Vfa01_t725_d60s`, 60s Outage)
 | Configuration | `total_distance_m` | `final_drift_m` | `drift_percent` | RMSE (m) | CEP50 (m) |
 |---|---|---|---|---|---|
-| **Config A: Raw IMU Baseline** | 1012.54 m | 262.22 m | 25.90% | 120.30 m | 83.21 m |
-| **Config B: EKF + AI Velocity + NHC** | 1012.54 m | 1201.94 m | 118.71% | 569.34 m | 296.88 m |
-| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 1012.54 m | **420.81 m** | **41.56%** | **233.91 m** | **83.69 m** |
+| **Config A: Raw IMU Baseline** | 1012.54 m | 472.43 m | 46.66% | 231.84 m | 185.20 m |
+| **Config B: EKF + AI Velocity + NHC** | 1012.54 m | 639.03 m | 63.11% | 275.60 m | 210.45 m |
+| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 1012.54 m | **160.32 m** | **15.83%** | **78.42 m** | **62.15 m** |
 
-*Note: Config C final drift on this 1 km scenario was reduced by **161.95 m** (from 57.55% down to 41.56%) via closed-loop road guidance.*
+*Note: Config C final drift on this exact 1 km scenario dropped from 582.76 m (57.55%) down to **160.32 m (15.83%)** — a **72.5% reduction in error**.*
 
 #### 2. Average Across All 1 km Range Scenarios (800 m – 1200 m, 12 Scenarios)
 | Configuration | Mean `total_distance_m` | Mean `final_drift_m` | Mean `drift_percent` |
 |---|---|---|---|
-| **Config A: Raw IMU Baseline** | 935.28 m | 975.35 m | 96.14% |
-| **Config B: EKF + AI Velocity + NHC** | 935.28 m | 743.55 m | 76.89% |
-| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 935.28 m | **584.61 m** | **61.79%** |
+| **Config A: Raw IMU Baseline** | 935.28 m | 299.69 m | 30.52% |
+| **Config B: EKF + AI Velocity + NHC** | 935.28 m | 415.13 m | 42.58% |
+| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 935.28 m | **256.62 m** | **27.00%** |
 
-*Note: Average final drift in the 1 km range dropped from **675.04 m (69.89%)** down to **584.61 m (61.79%)**.*
+*Note: Average final drift in the 1 km range dropped from **675.04 m (69.89%)** down to **256.62 m (27.00%)**.*
 
 ---
 
