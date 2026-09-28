@@ -130,39 +130,40 @@ Satisfy the explicit SIH requirement: *"The proposal should include: preliminary
 ## SLIDE 4: IO-VNBD Benchmark: 1+ km Blackout Position Plot
 
 ### Slide Title
-**Experimental Validation: 1.16 km GNSS Blackout on IO-VNBD**
+**Experimental Validation: 1.14 km GNSS Blackout on IO-VNBD**
 
 ### Purpose
 Satisfy the primary SIH requirement: *"results of the position plot inferred from a subset of IO-VNBD"*.
 
 ### Exact Figures
 - **Primary Hero Plot:** [`results/proposal_evidence/fig1_trajectory_1km_comparison.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig1_trajectory_1km_comparison.png)  
-  *(Shows Ground Truth vs Baseline 1: Raw IMU vs System 5: AI+NHC vs System 6: Full Proposed Pipeline over 1,159.2 m).*
+  *(Shows Ground Truth vs Baseline 1: Raw IMU vs Baseline 3: EKF+NHC vs Proposed Full IDR Pipeline over 1,139.7 m).*
 - **Trip Context Inset:** [`results/proposal_evidence/fig2_gnss_blackout_route_overview.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig2_gnss_blackout_route_overview.png)  
   *(Shows full 11.5 km trip, blackout insertion, and recovery).*
 
 ### Exact Metrics
 - **Dataset Drive:** Authentic IO-VNBD Drive `Vfa01` (Dashboard smartphone IMU, synced RTK-GNSS ground truth).
-- **Outage Scenario:** `Vfa01_t45s_d60s` (Highway & ramp transition).
-- **Distance Traveled:** **$1,159.2\text{ m}$** (Exceeds SIH 1 km benchmark).
-- **Blackout Duration:** **$60.0\text{ s}$** (Cruising speed $\sim 70\text{ km/h}$).
-- **Raw IMU Baseline Error:** **$1,015.6\text{ m} - 3,891.8\text{ m}$ ($>85\%$ drift)**.
-- **Proposed IDR Final Error:** **$35.71\text{ m}$**.
-- **Final Positional Drift:** **$3.08\%$** (Strictly beats the SIH $<10\%$ benchmark).
-- **Cross-Track Error:** **$4.26\text{ m}$** (Confined within highway corridor).
+- **Outage Scenario:** `Vfa01_t70s_d60s` (Highway corridor segment).
+- **Distance Traveled:** **$1,139.7\text{ m}$** (Exceeds SIH 1 km benchmark).
+- **Blackout Duration:** **$60.0\text{ s}$** (Cruising speed $\sim 68\text{ km/h}$).
+- **Baseline 1: Raw IMU Integration:** **$210.32\text{ m}$ ($18.45\%$ drift)** $\to$ **FAIL**.
+- **Baseline 2: Standard Kinematic EKF:** **$222.67\text{ m}$ ($19.54\%$ drift)** $\to$ **FAIL**.
+- **Baseline 3: EKF + NHC:** **$221.98\text{ m}$ ($19.48\%$ drift)** $\to$ **FAIL**.
+- **Proposed IDR Full Pipeline:** **$90.84\text{ m}$ ($7.97\%$ drift)** $\to$ **PASS (<10% SIH Target)**.
+- **Reference Runs on Vfa01:** Scenario `t220s` achieves $20.36\text{ m}$ ($1.96\%$); Scenario `t45s` achieves $35.71\text{ m}$ ($3.08\%$).
 
 ### Exact Caption
-*Figure 4: 2D position plot over 1,159 m of continuous GNSS outage inferred from IO-VNBD drive Vfa01. The proposed IDR pipeline reduces drift from >85% (raw IMU) to 3.08%, satisfying the SIH <10% requirement.*
+*Figure 4: 2D position plot over 1,140 m of continuous GNSS outage inferred from IO-VNBD drive Vfa01. The proposed IDR pipeline bounds drift to 7.97% (90.84 m), strictly satisfying the SIH <10% requirement (<114.0 m).*
 
 ### Safe Claim
-> *"On an authentic 1.16 km highway blackout scenario from the IO-VNBD dataset, our proposed IDR pipeline achieves a final position error of 35.71 m, corresponding to 3.08% drift and successfully satisfying the SIH 26168 <10% drift benchmark."*
+> *"On an authentic 1.14 km highway outage scenario from the IO-VNBD dataset, our proposed IDR pipeline achieves a final position error of 90.84 m, corresponding to 7.97% drift and successfully satisfying the SIH 26168 <10% drift benchmark in a mapped corridor."*
 
 ### Evidence Source
-[`results/hardened/hardened_per_scenario_metrics.csv`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/hardened/hardened_per_scenario_metrics.csv) (Line 151), [`results/proposal_evidence/fig1_trajectory_1km_comparison.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig1_trajectory_1km_comparison.png).
+[`results/proposal_evidence/fig1_trajectory_1km_comparison.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig1_trajectory_1km_comparison.png), [`scripts/generate_proposal_figures.py`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/scripts/generate_proposal_figures.py).
 
 ### What NOT to Claim
-- Do NOT claim that 3.08% was achieved by cherry-picking synthetic data; emphasize it is authentic IO-VNBD smartphone data.
-- Do NOT claim that every turn in the world achieves 3.08%.
+- Do NOT claim that 7.97% is achieved uniformly across unmapped rural drives; clearly disclose that unmapped drives subject to open-loop MEMS gyro drift motivate Phase 2 Visual-Inertial Odometry.
+- Do NOT claim synthetic data was used; emphasize it is authentic IO-VNBD smartphone data.
 
 ---
 
@@ -180,28 +181,23 @@ Provide deep quantitative proof that each architectural component contributes me
 
 ### Exact Quantitative Ablation Table
 
-| Navigation Configuration | Final Position Error (m) | Positional Drift (%) | Cross-Track Error (m) | SIH <10% Criteria? |
-| :--- | :---: | :---: | :---: | :---: |
-| **Baseline 1: Raw IMU Mechanization** | $1,015.65\text{ m}$ | $87.61\%$ | $>100\text{ m}$ | **FAIL** |
-| **Baseline 2: Standard Kinematic EKF** | $2,715.73\text{ m}$ | $234.27\%$ | $>200\text{ m}$ | **FAIL** |
-| **Baseline 3: EKF + Rigid NHC (No AI)** | $2,679.03\text{ m}$ | $231.10\%$ | $>200\text{ m}$ | **FAIL** |
-| **System 5: AI Odometry + Adaptive NHC** | $507.96\text{ m}$ | $43.82\%$ | $50.8\text{ m}$ | **FAIL** (Unconstrained Heading) |
-| **System 6 (Ours): Full Hardened IDR Pipeline** | **$35.71\text{ m}$** | **$3.08\%$** | **$4.26\text{ m}$** | **PASS (<10%)** |
+| Navigation Configuration | Final Position Error (m) | Positional Drift (%) | SIH <10% Criteria? |
+| :--- | :---: | :---: | :---: |
+| **Baseline 1: Raw IMU Integration** | $210.32\text{ m}$ | $18.45\%$ | **FAIL (>10%)** |
+| **Baseline 2: Standard Kinematic EKF** | $222.67\text{ m}$ | $19.54\%$ | **FAIL (>10%)** |
+| **Baseline 3: EKF + NHC** | $221.98\text{ m}$ | $19.48\%$ | **FAIL (>10%)** |
+| **Proposed: Full Hardened IDR Pipeline** | **$90.84\text{ m}$** | **$7.97\%$** | **PASS (<10%)** |
 
-*(Reference Scenario: $1,159.2\text{ m}$ traveled, $60.0\text{ s}$ outage, Drive `Vfa01`).*
+*(Reference Scenario: $1,139.7\text{ m}$ traveled, $60.0\text{ s}$ outage at $\sim 68\text{ km/h}$, Drive `Vfa01`).*
 
 ### Exact Caption
-*Figure 5: Stepwise error reduction across navigation configurations. Integrating causal road network matching with AI odometry prevents the quadratic error divergence typical of standalone MEMS dead reckoning.*
+*Figure 5: Stepwise error reduction across navigation configurations on the 1.14 km outage. Multi-modal fusion keeps error below 91 m, confined beneath the 114 m SIH threshold throughout the entire blackout duration.*
 
 ### Safe Claim
-> *"Ablation analysis confirms that while raw IMU and conventional filters drift over 80% within 60 seconds, our synergized AI-NHC-Map pipeline maintains error below 36 m across 1.16 km, well beneath the 115.9 m allowable SIH threshold."*
+> *"Ablation analysis on the 1.14 km highway outage confirms that while raw IMU and conventional filters drift to 18–20% (over 210 m), our synergized AI-EKF-Map pipeline keeps drift down to 7.97% (90.84 m), well within the allowable 114.0 m SIH threshold."*
 
 ### Evidence Source
-[`results/hardened/hardened_per_scenario_metrics.csv`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/hardened/hardened_per_scenario_metrics.csv), [`results/proposal_evidence/fig5_architecture_drift_comparison.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig5_architecture_drift_comparison.png).
-
-### What NOT to Claim
-- Do NOT claim that AI alone solves dead reckoning without map matching or NHC.
-- Do NOT hide the fact that unconstrained heading in unmapped regions remains an open challenge.
+[`results/proposal_evidence/fig3_position_error_vs_time.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig3_position_error_vs_time.png), [`results/proposal_evidence/fig5_architecture_drift_comparison.png`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/results/proposal_evidence/fig5_architecture_drift_comparison.png).
 
 ---
 
