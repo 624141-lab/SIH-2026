@@ -1,0 +1,3 @@
+Metric,Ground_Truth,AI_Raw_Speed,Fused_Filter_NHC,Map_Matched
+Final Accumulated Distance (m),1037.3299560546875,1211.5,1195.94,1223.15
+Distance Error relative to GT (m),0.0,174.18,158.62,185.82

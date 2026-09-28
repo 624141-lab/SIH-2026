@@ -1,0 +1,15 @@
+{
+  "scenario_id": "Vfa01_t45s_d60s",
+  "first_failure_timestamp_s": 7.5,
+  "first_failure_abs_timestamp_s": 52.5,
+  "first_failure_pos_err_m": 10.11,
+  "first_failure_heading_err_deg": 1.89,
+  "peak_heading_err_deg": 53.22,
+  "final_heading_err_deg": 29.88,
+  "final_pos_err_pre_map_m": 607.21,
+  "final_pos_err_post_map_m": 894.75,
+  "nhc_gated_steps": 0,
+  "max_meas_yaw_rate_deg_s": 14.4,
+  "max_gt_yaw_rate_deg_s": 18.43,
+  "max_centripetal_accel_mps2": 5.552
+}

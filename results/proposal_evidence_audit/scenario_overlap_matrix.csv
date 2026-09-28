@@ -1,0 +1,9 @@
+Scenario_A,Scenario_B,Drive,Duration_s,Overlap_Steps,Overlap_Pct,Classification
+Vfa01_t5_d60s,Vfa01_t50_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t140_d60s,Vfa01_t185_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t275_d60s,Vfa01_t320_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t410_d60s,Vfa01_t455_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t545_d60s,Vfa01_t590_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t680_d60s,Vfa01_t725_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t815_d60s,Vfa01_t860_d60s,Vfa01,60,150,25.0,partial
+Vfa01_t950_d60s,Vfa01_t995_d60s,Vfa01,60,150,25.0,partial

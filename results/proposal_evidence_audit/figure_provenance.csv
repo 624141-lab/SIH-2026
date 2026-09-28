@@ -1,0 +1,6 @@
+Figure,Raw_Dataset,Drive,Scenario,Start_Idx,End_Idx,Duration_s,Distance_m,Eval_Script,Configuration,Source_CSV,Reproducible
+fig1_trajectory_1km_comparison.png,IO-VNBD,Vfa01,Vfa01_t70s_d60s,700,1300,60,1139.7,generate_proposal_figures.py -> evaluate_hardened_pipeline.run_single_hardened_scenario(),"All 6 configs (B1, B2, B3, B4, S5, S6)",S-Vfa01.csv + V-Vfa01.csv,YES (deterministic with seed=42)
+fig2_gnss_blackout_route_overview.png,IO-VNBD,Vfa01,Vfa01_t70s_d60s (highlighted on full trip),700,1300,60,1139.7,generate_proposal_figures.py,Full trip + S6 overlay,S-Vfa01.csv + V-Vfa01.csv,YES
+fig3_position_error_vs_time.png,IO-VNBD,Vfa01,Vfa01_t70s_d60s,700,1300,60,1139.7,generate_proposal_figures.py -> run_single_hardened_scenario(),"B1, B3, S6",S-Vfa01.csv + V-Vfa01.csv,YES
+fig4_ai_speed_estimation_tracking.png,IO-VNBD,Vfa01,Vfa01_t70s_d60s,700,1300,60,1139.7,generate_proposal_figures.py (direct InertialOdomNet inference),InertialOdomNet only,S-Vfa01.csv + V-Vfa01.csv,YES
+fig5_architecture_drift_comparison.png,IO-VNBD,Vfa01,Vfa01_t70s_d60s,700,1300,60,1139.7,generate_proposal_figures.py -> run_single_hardened_scenario(),"B1, B2, B3, S6",S-Vfa01.csv + V-Vfa01.csv,YES

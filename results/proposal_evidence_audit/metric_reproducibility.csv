@@ -1,0 +1,16 @@
+Metric,Figure_or_Report,Reported_Value,Recomputed_Value,Absolute_Difference,Relative_Difference,Status
+Travel Distance (Vfa01_t70s_d60s),fig1; fig2; fig3; PPT Slide 4,1139.7 m,1139.7 m,0.0 m,0.00%,EXACT MATCH
+S6 Final Position Error,fig1; fig3; fig5; PPT Slide 4 & 5,90.84 m,90.84 m,0.0 m,0.00%,EXACT MATCH
+S6 Positional Drift %,fig1; fig5; PPT Slide 4 & 5; Matrix,7.97%,7.97%,0.00%,0.00%,EXACT MATCH
+B1 Raw IMU Final Position Error,fig1; fig3; fig5; PPT Slide 5,210.32 m,210.32 m,0.0 m,0.00%,EXACT MATCH
+B1 Raw IMU Positional Drift %,fig1; fig5; PPT Slide 5,18.45%,18.45%,0.00%,0.00%,EXACT MATCH
+B2 Standard EKF Position Error,PPT Slide 5; MUST doc,222.67 m,222.67 m,0.0 m,0.00%,EXACT MATCH
+B2 Standard EKF Positional Drift %,fig5; PPT Slide 5,19.54%,19.54%,0.00%,0.00%,EXACT MATCH
+B3 EKF + NHC Position Error,fig1; fig3; PPT Slide 5,221.98 m,221.98 m,0.0 m,0.00%,EXACT MATCH
+B3 EKF + NHC Positional Drift %,fig1; fig5; PPT Slide 5,19.48%,19.48%,0.00%,0.00%,EXACT MATCH
+AI Speed Inference MAE,fig4_ai_speed_estimation_tracking.png,3.84 km/h,3.84 km/h,0.0 km/h,0.00%,EXACT MATCH
+Reference Scenario t45s S6 Error,PPT Slide 4; MUST doc,35.71 m,35.71 m,0.0 m,0.00%,EXACT MATCH
+Reference Scenario t45s S6 Drift,PPT Slide 4; MUST doc,3.08%,3.08%,0.00%,0.00%,EXACT MATCH
+Reference Scenario t30s S6 Error,DO_NOT_CLAIM doc,30.02 m,30.02 m,0.0 m,0.00%,EXACT MATCH
+Reference Scenario t30s S6 Drift,DO_NOT_CLAIM doc,2.58%,2.58%,0.00%,0.00%,EXACT MATCH
+Obsolete 3.02m / 0.29% Hero Metric,Historical forensic reports,3.02 m / 0.29%,Purged from PPT,N/A,N/A,PURGED (Retrospective HMM)

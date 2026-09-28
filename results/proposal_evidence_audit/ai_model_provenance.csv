@@ -1,0 +1,2 @@
+Model,Checkpoint,Size_KB,Training_Drives,Validation_Drive,Test_Drive,Architecture,Input,Output,ONNX_Export
+InertialOdomNet,models/inertial_odom.pt,1775.6,"M, S, Vta, Vtb",Vfa01,Vfa02,1D-CNN + GRU,6-axis IMU (50-sample window @ 10Hz),"2D displacement (dx, dy) + log-variances",True

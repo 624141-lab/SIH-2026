@@ -1,0 +1,17 @@
+Statistic,Value,Notes
+Total Evaluated Scenarios,50,"Full hardened benchmark (Vfa01 validation + Vfa02 untouched test)"
+Mean Drift (%),58.13%,Average drift across all 50 scenarios
+Median Drift (%),31.06%,Median drift across all 50 scenarios
+P25 Drift (%),11.50%,25th percentile drift
+P75 Drift (%),65.20%,75th percentile drift
+P90 Drift (%),163.85%,90th percentile drift
+Minimum Drift (%),0.80%,Best scenario: Vfa02_t110s_d60s (Straight highway segment)
+Maximum Drift (%),311.19%,Worst scenario: Vfa02_t10s_d30s (Complex urban turn outside map)
+Pass Rate (<10% Drift),22.0%,11 out of 50 scenarios strictly meet SIH benchmark
+Count Within 10% Drift,11 scenarios,22.0% of evaluated scenarios
+Count Within 15% Drift,15 scenarios,30.0% of evaluated scenarios
+Count Within 20% Drift,18 scenarios,36.0% of evaluated scenarios
+Best Scenario ID,Vfa02_t110s_d60s,0.80% drift (Vfa01 highway best: Vfa01_t30s_d60s at 2.58%)
+Median Scenario ID,Vfa01_t110s_d15s,31.65% drift
+Worst Scenario ID,Vfa02_t10s_d30s,311.19% drift (High-speed cornering without map priors)
+Proposal Demonstration Scenario,Vfa01_t70s_d60s,7.97% drift (90.84 m error over 1139.7 m; 60.0s blackout)

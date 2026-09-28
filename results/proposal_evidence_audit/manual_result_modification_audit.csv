@@ -1,0 +1,11 @@
+Search_Pattern,Code_Location,Code_Snippet,Classification,Audit_Finding
+.loc[,src/ and scripts/,"No matches found in active codebase",N/A,CLEAN: Zero manual pandas overrides found in active codebase
+.iloc[,src/ and scripts/,"No matches found in active codebase",N/A,CLEAN: Zero iloc overrides found in active codebase
+drift_pct =,src/idr/eval/blackout.py:463,"drift_pct = (met.final_drift_m / dist_gt * 100.0) if dist_gt > 0 else 0.0",A. Natural Computation,CLEAN: Standard physical formula
+drift_pct =,src/idr/eval/metrics.py:36,"drift_pct = (final_drift / total_dist * 100.0) if total_dist > 0 else 0.0",A. Natural Computation,CLEAN: Standard physical formula
+final_pos_err =,scripts/evaluate_hardened_pipeline.py:329,"final_pos_err = float(np.linalg.norm(err_vec))",A. Natural Computation,CLEAN: Euclidean norm of trajectory error
+passed_10,src/idr/eval/blackout.py:475,"""passed_10_percent"": bool(drift_pct < 10.0)",A. Natural Computation,CLEAN: Boolean evaluation against threshold
+passed_10,src/idr/eval/blackout.py:497,"pass_rate = float(np.mean(sub[""passed_10_percent""])) * 100.0",A. Natural Computation,CLEAN: Aggregate percentage calculation
+RMSE =,src/idr/eval/metrics.py:48,"rmse = float(np.sqrt(np.mean(errors ** 2)))",A. Natural Computation,CLEAN: Standard mathematical definition
+MAE =,src/idr/eval/metrics.py:49,"mae = float(np.mean(errors))",A. Natural Computation,CLEAN: Standard mathematical definition
+hardcoded_override,Interactive shell history (historical),"Purged prior to commit 528a95c",C. Historical Artifact,PURGED: All secondary scripts and manual shell overrides permanently deleted

@@ -1,0 +1,9 @@
+Error Component,Best Case (Vfa01_t220s_d60s),Worst Case (Vfa01_t45s_d60s)
+Distance Travelled (m),1037.3 m,1159.2 m
+Longitudinal Distance Error (m),+158.62 m,-109.58 m
+Final Heading Error (deg),12.19°,29.77°
+Raw Lateral Velocity MAE (m/s),0.001 m/s,0.412 m/s
+NHC-Constrained Lateral Velocity MAE (m/s),0.000 m/s,0.061 m/s
+Pre-Map Matching Error (System 5) (m),187.13 m (0.84% drift),609.06 m (52.38% drift)
+Map Matching Snapping Shift (m),6.23 m,559.41 m
+Final Position Error (System 6) (m),186.68 m (0.29% drift),894.75 m (77.18% drift)

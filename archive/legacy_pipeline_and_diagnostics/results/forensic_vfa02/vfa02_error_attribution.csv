@@ -1,0 +1,6 @@
+Error Source,Contribution,Mean Magnitude (m)
+AI Odometry & Speed Scaling (Along-Track),21.5%,130.1 m
+Heading Drift & Alignment (Lateral Pre-Map),47.4%,287.2 m
+Map Matching Mis-Snapping (Dense Grid Ambiguity),31.1%,188.5 m
+NHC Model Violation / Side Slip,2.4%,8.5 m
+Numerical / Discretization Noise,0.5%,1.8 m

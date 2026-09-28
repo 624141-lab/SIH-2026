@@ -1,0 +1,12 @@
+Failure Mode,Number of Scenarios,Percentage
+Straight Road Odometry Failure,9,37.5%
+Speed Scale Failure,11,45.8%
+Heading Drift,11,45.8%
+Sharp Turn Failure,6,25.0%
+Phone Alignment Failure,0,0.0%
+Nhc Failure,0,0.0%
+Road Ambiguity,0,0.0%
+Parallel Road Confusion,14,58.3%
+Map Matcher Failure,15,62.5%
+Numerical Instability,0,0.0%
+Dataset Distribution Shift,0,0.0%

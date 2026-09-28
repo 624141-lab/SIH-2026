@@ -1,0 +1,5 @@
+Configuration,Final Error (m),Drift (%)
+AI only (Config A),210.58,20.3
+AI + NHC (Config B),187.13,18.04
+AI + Map (Config C),206.09,19.87
+AI + NHC + Map (Config D),186.68,18.0

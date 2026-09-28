@@ -1,0 +1,364 @@
+{
+  "top_10_worst": [
+    {
+      "scenario_id": "Vfa02_t10s_d30s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 30,
+      "distance_m": 175.5,
+      "initial_speed_mps": 0.01,
+      "final_speed_mps": 13.28,
+      "heading_change_deg": 126.45,
+      "maneuver_type": "Complex Urban / Ramps",
+      "final_pos_error_m": 546.11,
+      "along_track_m": 240.84,
+      "cross_track_m": 490.14,
+      "rmse_m": 487.99,
+      "mae_m": 487.68,
+      "cep50_m": 479.63,
+      "drift_pct": 311.19,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t50s_d15s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 15,
+      "distance_m": 169.0,
+      "initial_speed_mps": 13.26,
+      "final_speed_mps": 13.18,
+      "heading_change_deg": 2.58,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 392.44,
+      "along_track_m": 51.5,
+      "cross_track_m": 389.04,
+      "rmse_m": 398.95,
+      "mae_m": 398.92,
+      "cep50_m": 398.96,
+      "drift_pct": 232.16,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t30s_d15s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 15,
+      "distance_m": 183.7,
+      "initial_speed_mps": 9.16,
+      "final_speed_mps": 14.23,
+      "heading_change_deg": 9.61,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 415.92,
+      "along_track_m": 71.74,
+      "cross_track_m": 409.69,
+      "rmse_m": 435.48,
+      "mae_m": 435.27,
+      "cep50_m": 433.12,
+      "drift_pct": 226.43,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t70s_d15s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 15,
+      "distance_m": 200.3,
+      "initial_speed_mps": 13.22,
+      "final_speed_mps": 13.85,
+      "heading_change_deg": 0.86,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 388.65,
+      "along_track_m": 8.55,
+      "cross_track_m": 388.55,
+      "rmse_m": 387.28,
+      "mae_m": 387.28,
+      "cep50_m": 387.22,
+      "drift_pct": 193.99,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t10s_d60s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 60,
+      "distance_m": 550.3,
+      "initial_speed_mps": 0.01,
+      "final_speed_mps": 13.35,
+      "heading_change_deg": 129.6,
+      "maneuver_type": "Complex Urban / Ramps",
+      "final_pos_error_m": 999.22,
+      "along_track_m": 843.88,
+      "cross_track_m": 535.07,
+      "rmse_m": 645.73,
+      "mae_m": 624.4,
+      "cep50_m": 546.78,
+      "drift_pct": 181.58,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t90s_d15s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 15,
+      "distance_m": 248.8,
+      "initial_speed_mps": 15.02,
+      "final_speed_mps": 16.19,
+      "heading_change_deg": 0.17,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 402.82,
+      "along_track_m": 32.29,
+      "cross_track_m": 401.52,
+      "rmse_m": 396.99,
+      "mae_m": 396.98,
+      "cep50_m": 397.24,
+      "drift_pct": 161.88,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t110s_d15s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 15,
+      "distance_m": 264.2,
+      "initial_speed_mps": 16.96,
+      "final_speed_mps": 18.74,
+      "heading_change_deg": 1.22,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 418.76,
+      "along_track_m": 20.22,
+      "cross_track_m": 418.27,
+      "rmse_m": 412.03,
+      "mae_m": 412.01,
+      "cep50_m": 411.61,
+      "drift_pct": 158.49,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t30s_d30s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 30,
+      "distance_m": 361.1,
+      "initial_speed_mps": 9.16,
+      "final_speed_mps": 11.83,
+      "heading_change_deg": 10.57,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 404.54,
+      "along_track_m": 111.93,
+      "cross_track_m": 388.75,
+      "rmse_m": 422.21,
+      "mae_m": 421.89,
+      "cep50_m": 415.85,
+      "drift_pct": 112.02,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t130s_d15s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 15,
+      "distance_m": 260.5,
+      "initial_speed_mps": 16.62,
+      "final_speed_mps": 19.6,
+      "heading_change_deg": 38.18,
+      "maneuver_type": "Moderate Maneuvers",
+      "final_pos_error_m": 291.75,
+      "along_track_m": 291.62,
+      "cross_track_m": 8.62,
+      "rmse_m": 366.94,
+      "mae_m": 364.82,
+      "cep50_m": 372.68,
+      "drift_pct": 111.99,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    },
+    {
+      "scenario_id": "Vfa02_t50s_d30s",
+      "drive_id": "Vfa02",
+      "split": "UNTOUCHED_TEST",
+      "configuration": "System 6: Full Hardened Pipeline",
+      "duration_s": 30,
+      "distance_m": 367.1,
+      "initial_speed_mps": 13.26,
+      "final_speed_mps": 13.58,
+      "heading_change_deg": 2.11,
+      "maneuver_type": "Straight / Highway",
+      "final_pos_error_m": 395.61,
+      "along_track_m": 78.78,
+      "cross_track_m": 387.69,
+      "rmse_m": 395.33,
+      "mae_m": 395.3,
+      "cep50_m": 393.29,
+      "drift_pct": 107.78,
+      "passed_10pct": false,
+      "within_15pct": false,
+      "within_20pct": false
+    }
+  ],
+  "map_impact_summary": {
+    "total_scenarios": 24,
+    "fixes_count": 9,
+    "fixes_pct": "37.5%",
+    "unchanged_count": 0,
+    "unchanged_pct": "0.0%",
+    "worsens_count": 15,
+    "worsens_pct": "62.5%",
+    "mean_pre_map_err_m": 241.27,
+    "mean_post_map_err_m": 350.89,
+    "mean_change_m": 109.62
+  },
+  "vfa02_ablation": [
+    {
+      "Configuration": "Baseline 1: Raw IMU",
+      "Median Drift (%)": 41.69,
+      "Mean Drift (%)": 88.5,
+      "P90 Drift (%)": 222.08,
+      "Pass Rate (<10%)": "4.2%"
+    },
+    {
+      "Configuration": "Baseline 2: Standard EKF",
+      "Median Drift (%)": 40.84,
+      "Mean Drift (%)": 85.1,
+      "P90 Drift (%)": 222.96,
+      "Pass Rate (<10%)": "4.2%"
+    },
+    {
+      "Configuration": "Baseline 3: EKF + NHC",
+      "Median Drift (%)": 41.26,
+      "Mean Drift (%)": 85.09,
+      "P90 Drift (%)": 222.47,
+      "Pass Rate (<10%)": "4.2%"
+    },
+    {
+      "Configuration": "Baseline 4: EKF + NHC + Causal Map",
+      "Median Drift (%)": 108.08,
+      "Mean Drift (%)": 139.44,
+      "P90 Drift (%)": 241.93,
+      "Pass Rate (<10%)": "0.0%"
+    },
+    {
+      "Configuration": "System 5: AI Odom + EKF + Adaptive NHC",
+      "Median Drift (%)": 29.68,
+      "Mean Drift (%)": 55.67,
+      "P90 Drift (%)": 152.73,
+      "Pass Rate (<10%)": "0.0%"
+    },
+    {
+      "Configuration": "System 6: Full Hardened Pipeline",
+      "Median Drift (%)": 74.97,
+      "Mean Drift (%)": 101.8,
+      "P90 Drift (%)": 216.7,
+      "Pass Rate (<10%)": "8.3%"
+    }
+  ],
+  "mode_summary": [
+    {
+      "Failure Mode": "Straight Road Odometry Failure",
+      "Number of Scenarios": 9,
+      "Percentage": "37.5%"
+    },
+    {
+      "Failure Mode": "Speed Scale Failure",
+      "Number of Scenarios": 11,
+      "Percentage": "45.8%"
+    },
+    {
+      "Failure Mode": "Heading Drift",
+      "Number of Scenarios": 11,
+      "Percentage": "45.8%"
+    },
+    {
+      "Failure Mode": "Sharp Turn Failure",
+      "Number of Scenarios": 6,
+      "Percentage": "25.0%"
+    },
+    {
+      "Failure Mode": "Phone Alignment Failure",
+      "Number of Scenarios": 0,
+      "Percentage": "0.0%"
+    },
+    {
+      "Failure Mode": "Nhc Failure",
+      "Number of Scenarios": 0,
+      "Percentage": "0.0%"
+    },
+    {
+      "Failure Mode": "Road Ambiguity",
+      "Number of Scenarios": 0,
+      "Percentage": "0.0%"
+    },
+    {
+      "Failure Mode": "Parallel Road Confusion",
+      "Number of Scenarios": 14,
+      "Percentage": "58.3%"
+    },
+    {
+      "Failure Mode": "Map Matcher Failure",
+      "Number of Scenarios": 15,
+      "Percentage": "62.5%"
+    },
+    {
+      "Failure Mode": "Numerical Instability",
+      "Number of Scenarios": 0,
+      "Percentage": "0.0%"
+    },
+    {
+      "Failure Mode": "Dataset Distribution Shift",
+      "Number of Scenarios": 0,
+      "Percentage": "0.0%"
+    }
+  ],
+  "error_attribution": [
+    {
+      "Error Source": "AI Odometry & Speed Scaling (Along-Track)",
+      "Contribution": "21.5%",
+      "Mean Magnitude (m)": "130.1 m"
+    },
+    {
+      "Error Source": "Heading Drift & Alignment (Lateral Pre-Map)",
+      "Contribution": "47.4%",
+      "Mean Magnitude (m)": "287.2 m"
+    },
+    {
+      "Error Source": "Map Matching Mis-Snapping (Dense Grid Ambiguity)",
+      "Contribution": "31.1%",
+      "Mean Magnitude (m)": "188.5 m"
+    },
+    {
+      "Error Source": "NHC Model Violation / Side Slip",
+      "Contribution": "2.4%",
+      "Mean Magnitude (m)": "8.5 m"
+    },
+    {
+      "Error Source": "Numerical / Discretization Noise",
+      "Contribution": "0.5%",
+      "Mean Magnitude (m)": "1.8 m"
+    }
+  ]
+}

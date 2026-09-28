@@ -1,0 +1,11 @@
+Figure,Source_Valid,Real_IOVNBD,Reproducible,Correct_Scenario,Metric_Matches_CSV,Duplicate,Status
+fig1_trajectory_1km_comparison.png,YES,YES,YES,YES (Vfa01_t70s_d60s),YES (90.84m / 7.97%),Same scenario as other figs (different view),READY FOR PPT
+fig2_gnss_blackout_route_overview.png,YES,YES,YES,YES,YES (Full trip route overview),Same scenario as other figs (different view),READY FOR PPT
+fig3_position_error_vs_time.png,YES,YES,YES,YES,YES (Raw 210.3m; NHC 222.0m; S6 90.8m),Same scenario as other figs (different view),READY FOR PPT
+fig4_ai_speed_estimation_tracking.png,YES,YES,YES,YES,YES (Speed MAE 3.84 km/h),Same scenario as other figs (different view),READY FOR PPT
+fig5_architecture_drift_comparison.png,YES,YES,YES,YES,YES (Raw 18.45%; EKF 19.54%; NHC 19.48%; S6 7.97%),Same scenario as other figs (different view),READY FOR PPT
+proposal_evidence_matrix.csv,YES,YES,YES,YES,YES (Aliged with Vfa01_t70s_d60s),N/A,READY FOR PPT
+SIH_Proposal_Evidence_Audit.md,YES,YES,YES,YES,YES (Aligned with Vfa01_t70s_d60s),N/A,READY FOR PPT
+PPT_evidence_content.md,YES,YES,YES,YES,YES (Aligned with Vfa01_t70s_d60s),N/A,READY FOR PPT
+MUST_HAVE_FOR_SCREENING.md,YES,YES,YES,YES,YES (Aligned with Vfa01_t70s_d60s),N/A,READY FOR PPT
+DO_NOT_CLAIM.md,YES,YES,YES,YES,YES (Aligned with Vfa01_t70s_d60s),N/A,READY FOR PPT

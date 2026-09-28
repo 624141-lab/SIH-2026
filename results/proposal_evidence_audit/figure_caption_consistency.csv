@@ -1,0 +1,7 @@
+Figure,Caption_Claims,Actual_Metric,Status
+fig1,90.84m / 7.97%,90.84m / 7.97%,VERIFIED & MATCHED (Live-computed)
+fig2,Full route with 1140m blackout,1139.7m / 90.84m,VERIFIED & MATCHED (Live-computed)
+fig3,Raw: 210.32m; NHC: 221.98m; S6: 90.84m (7.97%),Raw: 210.32m; NHC: 221.98m; S6: 90.84m (7.97%),VERIFIED & MATCHED (Live-computed)
+fig4,Speed MAE = 3.84 km/h,Speed MAE = 3.84 km/h,VERIFIED & MATCHED (Live-computed)
+fig5,Raw: 18.45%; EKF: 19.54%; NHC: 19.48%; S6: 7.97%,Raw: 18.45%; EKF: 19.54%; NHC: 19.48%; S6: 7.97%,VERIFIED & MATCHED (Live-computed)
+Evidence Matrix Row 4,t70s: 90.84m / 7.97%,t70s: 90.84m / 7.97%,VERIFIED & MATCHED

@@ -1,0 +1,6 @@
+Figure,Scenario,Description,Source_Script,Unique_Scenario,Same_Data_Different_View
+fig1_trajectory_1km_comparison.png,Vfa01_t70s_d60s,2D trajectory map + reacquisition,generate_proposal_figures.py,NO - All 5 figures use same scenario,YES
+fig2_gnss_blackout_route_overview.png,Vfa01_t70s_d60s,Full trip overview with blackout highlight,generate_proposal_figures.py,NO - All 5 figures use same scenario,YES
+fig3_position_error_vs_time.png,Vfa01_t70s_d60s,Position error growth curves,generate_proposal_figures.py,NO - All 5 figures use same scenario,YES
+fig4_ai_speed_estimation_tracking.png,Vfa01_t70s_d60s,AI speed vs ground truth,generate_proposal_figures.py,NO - All 5 figures use same scenario,YES
+fig5_architecture_drift_comparison.png,Vfa01_t70s_d60s,Ablation bar chart,generate_proposal_figures.py,NO - All 5 figures use same scenario,YES
