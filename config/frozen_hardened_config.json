@@ -1,0 +1,73 @@
+{
+  "system_version": "2.0.0-hardened",
+  "freeze_timestamp": "2026-09-28T17:55:00+05:30",
+  "audit_compliance": "SIH_26168_STRICT",
+  "model": {
+    "architecture": "InertialOdomNet",
+    "weights_path": "models/inertial_odom.pt",
+    "in_channels": 6,
+    "window_size": 50,
+    "hidden_dim": 128,
+    "prediction_target": "body_2d_displacement_with_heteroscedastic_uncertainty",
+    "speed_stratified_training": true,
+    "training_drives": ["M", "S1", "S2", "S3a", "S3b", "S3c", "S4", "Vta1-30", "Vtb1-12"],
+    "validation_drive": "Vfa01",
+    "untouched_test_drive": "Vfa02"
+  },
+  "alignment": {
+    "algorithm": "CausalAttitudeAligner",
+    "automatic_stationarity_detection": true,
+    "acc_grav_tol_mps2": 0.45,
+    "gyro_thresh_radps": 0.06,
+    "var_acc_thresh": 0.04,
+    "var_gyro_thresh": 0.005,
+    "min_stationary_duration_s": 1.5,
+    "fallback_status": "ALIGNMENT_UNCERTAIN",
+    "use_vehicle_speed": false,
+    "use_ecu_speed": false,
+    "use_ground_truth": false
+  },
+  "preprocessing": {
+    "sampling_period_dt_s": 0.1,
+    "vibration_filter_window": 10,
+    "vibration_acc_thresh_mps2": 0.8,
+    "vibration_gyro_thresh_radps": 0.08
+  },
+  "ekf": {
+    "dt": 0.1,
+    "state_dim": 8,
+    "state_names": ["x", "y", "z", "vx", "vy", "vz", "psi", "bias_gyro_z"],
+    "sigma_pos_proc": 0.01,
+    "sigma_vel_proc": 0.1,
+    "sigma_acc_proc": 0.5,
+    "sigma_heading_proc": 0.005,
+    "sigma_bias_proc": 0.0001,
+    "R_speed_min": 0.1,
+    "speed_blend_weight": 0.15
+  },
+  "nhc": {
+    "adaptive": true,
+    "sigma_lat_base": 0.05,
+    "k_turn": 0.5,
+    "vibration_covariance_scale": true
+  },
+  "map_matching": {
+    "matcher_type": "CausalHMMMapMatcher",
+    "lookahead_s": 0.0,
+    "fixed_lag_steps": 15,
+    "sigma_z_m": 8.0,
+    "beta_m": 4.0,
+    "max_search_radius_m": 60.0,
+    "max_distance_gate_m": 30.0,
+    "min_road_confidence": 0.20,
+    "confidence_scoring": {
+      "candidate_distance_weight": 0.35,
+      "heading_consistency_weight": 0.25,
+      "transition_consistency_weight": 0.25,
+      "road_continuity_weight": 0.15
+    },
+    "out_of_corridor_rejection_behavior": "RETAIN_DEAD_RECKONING_NO_SNAP"
+  },
+  "tuning_dataset": "Vfa01_VALIDATION_ONLY",
+  "test_dataset": "Vfa02_FINAL_TEST_UNTOUCHED"
+}

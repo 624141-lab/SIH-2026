@@ -1,0 +1,26 @@
+{
+  "drive_id": "Vfa01",
+  "evaluation_duration_s": 60.0,
+  "distance_travelled_m": 1167.8,
+  "nhc_evaluation": {
+    "mean_v_lat_no_nhc_mps": 12.797,
+    "mean_v_lat_after_nhc_mps": 0.0,
+    "max_v_lat_no_nhc_mps": 25.368,
+    "max_v_lat_after_nhc_mps": 0.001,
+    "v_lat_suppression_pct": 100.0,
+    "chi2_gating_events": 0,
+    "drift_without_nhc_m": 612.6,
+    "drift_with_nhc_m": 1367.7,
+    "nhc_drift_reduction_pct": -123.3
+  },
+  "map_matching_evaluation": {
+    "mean_cross_track_error_before_mm_m": 594.19,
+    "mean_cross_track_error_after_mm_m": 237.49,
+    "max_cross_track_error_before_mm_m": 1171.66,
+    "max_cross_track_error_after_mm_m": 1233.14,
+    "cross_track_reduction_pct": 60.0,
+    "final_position_drift_after_mm_m": 713.2,
+    "final_drift_pct_after_mm": 61.08,
+    "mean_hmm_step_latency_ms": 1.6
+  }
+}

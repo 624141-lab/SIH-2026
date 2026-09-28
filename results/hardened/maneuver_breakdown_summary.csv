@@ -1,0 +1,4 @@
+Maneuver Category,Scenarios Count,Median Drift (%),Mean Drift (%),P90 Drift (%),Mean Error (m),Pass Rate (<10%),Within 15%
+Straight / Highway,24,46.33,74.43,184.36,258.0,8.3%,16.7%
+Moderate Maneuvers,20,22.28,25.99,44.49,143.4,35.0%,45.0%
+Complex Urban / Ramps,6,48.39,100.03,246.38,359.74,33.3%,33.3%

@@ -1,0 +1,7 @@
+Configuration,Total Scenarios,Median Drift (%),Mean Drift (%),P90 Drift (%),Max Drift (%),Mean Position Error (m),Mean Along-Track Error (m),Mean Cross-Track Error (m),Pass Rate (<10% Drift),Within 15% Drift,Within 20% Drift
+Baseline 1: Raw IMU,50,110.94,146.5,330.99,519.31,1160.94,973.11,505.55,2.0%,12.0%,16.0%
+Baseline 2: Standard EKF,50,99.28,145.42,333.28,521.5,1161.66,973.98,503.53,2.0%,12.0%,16.0%
+Baseline 3: EKF + NHC,50,98.95,144.95,331.4,520.24,1157.28,968.41,503.27,2.0%,12.0%,16.0%
+Baseline 4: EKF + NHC + Causal Map,50,126.38,164.93,332.89,593.11,1211.33,975.68,542.44,0.0%,2.0%,2.0%
+System 5: AI Odom + EKF + Adaptive NHC,50,29.74,44.67,79.74,223.09,241.14,136.32,178.61,0.0%,16.0%,30.0%
+System 6: Full Hardened Pipeline,50,31.06,58.13,163.85,311.19,224.37,116.51,147.28,22.0%,30.0%,36.0%

@@ -1,0 +1,77 @@
+[
+  {
+    "case_name": "Moderate 3D Tilt",
+    "true_angles_deg": {
+      "roll": 10.0,
+      "pitch": 15.0,
+      "yaw": 20.0
+    },
+    "status_stationary": "ALIGNMENT_UNCERTAIN",
+    "status_motion": "ALIGNED",
+    "recovered_frobenius_norm_err": 0.7247,
+    "drift_without_alignment_m": 1218.4,
+    "drift_with_alignment_m": 623.4,
+    "drift_reduction_pct": 48.8,
+    "drift_pct_with_alignment": 103.17
+  },
+  {
+    "case_name": "Severe 3D Tilt",
+    "true_angles_deg": {
+      "roll": 20.0,
+      "pitch": 30.0,
+      "yaw": 45.0
+    },
+    "status_stationary": "ALIGNMENT_UNCERTAIN",
+    "status_motion": "ALIGNED",
+    "recovered_frobenius_norm_err": 0.7247,
+    "drift_without_alignment_m": 2447.7,
+    "drift_with_alignment_m": 623.4,
+    "drift_reduction_pct": 74.5,
+    "drift_pct_with_alignment": 103.17
+  },
+  {
+    "case_name": "Pure Yaw Rotation",
+    "true_angles_deg": {
+      "roll": 0.0,
+      "pitch": 0.0,
+      "yaw": 45.0
+    },
+    "status_stationary": "ALIGNMENT_UNCERTAIN",
+    "status_motion": "ALIGNED",
+    "recovered_frobenius_norm_err": 0.7247,
+    "drift_without_alignment_m": 617.6,
+    "drift_with_alignment_m": 623.4,
+    "drift_reduction_pct": -0.9,
+    "drift_pct_with_alignment": 103.17
+  },
+  {
+    "case_name": "Pure Pitch Tilt",
+    "true_angles_deg": {
+      "roll": 0.0,
+      "pitch": 30.0,
+      "yaw": 0.0
+    },
+    "status_stationary": "ALIGNMENT_UNCERTAIN",
+    "status_motion": "ALIGNED",
+    "recovered_frobenius_norm_err": 0.7247,
+    "drift_without_alignment_m": 2002.1,
+    "drift_with_alignment_m": 623.4,
+    "drift_reduction_pct": 68.9,
+    "drift_pct_with_alignment": 103.17
+  },
+  {
+    "case_name": "Pure Roll Tilt",
+    "true_angles_deg": {
+      "roll": 20.0,
+      "pitch": 0.0,
+      "yaw": 0.0
+    },
+    "status_stationary": "ALIGNMENT_UNCERTAIN",
+    "status_motion": "ALIGNED",
+    "recovered_frobenius_norm_err": 0.7247,
+    "drift_without_alignment_m": 623.7,
+    "drift_with_alignment_m": 623.4,
+    "drift_reduction_pct": 0.0,
+    "drift_pct_with_alignment": 103.17
+  }
+]

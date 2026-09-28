@@ -1,0 +1,19 @@
+{
+  "drive_id": "Vfa01",
+  "evaluation_samples": 800,
+  "mean_pothole_velocity_jump_unfiltered_mps": 2.31,
+  "mean_pothole_velocity_jump_filtered_mps": 0.64,
+  "shock_jump_reduction_pct": 72.1,
+  "potholes_detected_as_shock": 88,
+  "phone_motion_detected": 50,
+  "vibration_detected": 164,
+  "state_distribution": {
+    "ACCELERATION": 111,
+    "BRAKING": 69,
+    "NORMAL_DRIVING": 274,
+    "PHONE_MOTION": 50,
+    "SHOCK_POTHOLE": 88,
+    "TURNING": 44,
+    "VIBRATION_DISTURBANCE": 164
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "requirement": "Requirement 1 - Automatic GNSS Blackout & Degradation Detection",
+  "status": "PASS",
+  "total_simulated_seconds": 100.0,
+  "outage_detection_latency_sec": 0.0,
+  "outage_detection_latency_frames": 0,
+  "recovery_detection_latency_sec": 0.9,
+  "recovery_detection_latency_frames": 9,
+  "false_positive_count": 0,
+  "false_positive_rate_pct": 0.0,
+  "missed_detection_frames": 0,
+  "missed_detection_rate_pct": 0.0
+}

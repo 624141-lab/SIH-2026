@@ -1,0 +1,301 @@
+scenario_id,drive_id,split,configuration,duration_s,distance_m,initial_speed_mps,final_speed_mps,heading_change_deg,maneuver_type,final_pos_error_m,along_track_m,cross_track_m,rmse_m,mae_m,cep50_m,drift_pct,passed_10pct,within_15pct,within_20pct
+Vfa01_t10s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,248.6,15.04,17.58,4.53,Straight / Highway,347.17,330.99,104.75,172.39,131.44,107.59,139.65,False,False,False
+Vfa01_t10s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,248.6,15.04,17.58,4.53,Straight / Highway,346.36,329.98,105.24,171.65,130.73,106.66,139.33,False,False,False
+Vfa01_t10s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,248.6,15.04,17.58,4.53,Straight / Highway,345.83,329.32,105.58,171.4,130.55,106.52,139.11,False,False,False
+Vfa01_t10s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,248.6,15.04,17.58,4.53,Straight / Highway,271.85,260.88,76.45,127.35,90.73,84.28,109.35,False,False,False
+Vfa01_t10s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,248.6,15.04,17.58,4.53,Straight / Highway,186.29,158.64,97.66,114.97,92.86,92.34,74.94,False,False,False
+Vfa01_t10s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,248.6,15.04,17.58,4.53,Straight / Highway,108.7,107.65,15.06,76.72,55.87,19.65,43.73,False,False,False
+Vfa01_t30s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,294.7,18.01,21.46,11.77,Straight / Highway,231.61,217.95,78.37,107.32,83.66,68.47,78.59,False,False,False
+Vfa01_t30s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,294.7,18.01,21.46,11.77,Straight / Highway,232.06,218.37,78.54,107.26,83.43,68.01,78.75,False,False,False
+Vfa01_t30s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,294.7,18.01,21.46,11.77,Straight / Highway,230.34,217.06,77.07,106.5,82.88,67.6,78.16,False,False,False
+Vfa01_t30s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,294.7,18.01,21.46,11.77,Straight / Highway,231.01,230.46,15.93,101.32,77.13,62.04,78.39,False,False,False
+Vfa01_t30s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,294.7,18.01,21.46,11.77,Straight / Highway,87.79,74.76,46.02,55.38,47.99,55.94,29.79,False,False,False
+Vfa01_t30s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,294.7,18.01,21.46,11.77,Straight / Highway,75.76,75.68,3.44,48.02,41.17,49.36,25.71,False,False,False
+Vfa01_t50s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,295.9,19.91,20.09,32.37,Moderate Maneuvers,302.21,228.82,197.41,138.42,103.99,79.62,102.13,False,False,False
+Vfa01_t50s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,295.9,19.91,20.09,32.37,Moderate Maneuvers,301.22,227.91,196.96,137.73,103.29,78.77,101.8,False,False,False
+Vfa01_t50s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,295.9,19.91,20.09,32.37,Moderate Maneuvers,300.88,227.53,196.88,137.58,103.17,78.67,101.68,False,False,False
+Vfa01_t50s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,295.9,19.91,20.09,32.37,Moderate Maneuvers,132.59,126.49,39.74,98.4,79.0,70.28,44.81,False,False,False
+Vfa01_t50s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,295.9,19.91,20.09,32.37,Moderate Maneuvers,126.77,71.09,104.97,73.34,59.65,60.64,42.84,False,False,False
+Vfa01_t50s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,295.9,19.91,20.09,32.37,Moderate Maneuvers,95.52,56.72,76.85,72.45,58.08,53.44,32.28,False,False,False
+Vfa01_t70s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,266.3,19.35,19.95,6.58,Straight / Highway,180.34,180.23,6.12,85.19,66.0,55.32,67.71,False,False,False
+Vfa01_t70s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,266.3,19.35,19.95,6.58,Straight / Highway,179.8,179.71,5.63,84.83,65.65,54.96,67.51,False,False,False
+Vfa01_t70s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,266.3,19.35,19.95,6.58,Straight / Highway,179.28,179.21,5.22,84.64,65.52,54.89,67.32,False,False,False
+Vfa01_t70s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,266.3,19.35,19.95,6.58,Straight / Highway,179.36,179.36,0.26,84.7,66.01,54.97,67.35,False,False,False
+Vfa01_t70s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,266.3,19.35,19.95,6.58,Straight / Highway,67.86,66.76,12.16,44.5,37.67,41.52,25.48,False,False,False
+Vfa01_t70s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,266.3,19.35,19.95,6.58,Straight / Highway,66.9,66.88,1.77,44.35,37.99,41.6,25.12,False,False,False
+Vfa01_t90s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,291.5,20.64,18.97,23.3,Moderate Maneuvers,244.81,186.21,158.93,97.08,65.09,31.82,83.99,False,False,False
+Vfa01_t90s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,291.5,20.64,18.97,23.3,Moderate Maneuvers,244.0,185.38,158.64,96.66,64.76,31.59,83.71,False,False,False
+Vfa01_t90s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,291.5,20.64,18.97,23.3,Moderate Maneuvers,243.33,184.43,158.73,96.38,64.56,31.47,83.48,False,False,False
+Vfa01_t90s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,291.5,20.64,18.97,23.3,Moderate Maneuvers,199.16,191.02,56.34,84.42,54.35,23.61,68.33,False,False,False
+Vfa01_t90s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,291.5,20.64,18.97,23.3,Moderate Maneuvers,113.03,49.05,101.83,50.63,36.15,21.66,38.78,False,False,False
+Vfa01_t90s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,291.5,20.64,18.97,23.3,Moderate Maneuvers,79.01,77.4,15.88,26.49,18.81,15.24,27.11,False,False,False
+Vfa01_t110s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,284.3,19.07,21.15,4.18,Straight / Highway,243.53,223.12,97.59,107.46,75.57,48.04,85.64,False,False,False
+Vfa01_t110s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,284.3,19.07,21.15,4.18,Straight / Highway,242.78,222.52,97.09,107.02,75.17,47.62,85.38,False,False,False
+Vfa01_t110s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,284.3,19.07,21.15,4.18,Straight / Highway,242.07,221.94,96.66,106.74,74.98,47.51,85.13,False,False,False
+Vfa01_t110s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,284.3,19.07,21.15,4.18,Straight / Highway,229.18,227.66,26.33,99.82,68.0,30.14,80.6,False,False,False
+Vfa01_t110s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,284.3,19.07,21.15,4.18,Straight / Highway,120.29,84.2,85.9,65.77,48.62,38.0,42.3,False,False,False
+Vfa01_t110s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,284.3,19.07,21.15,4.18,Straight / Highway,89.99,89.9,3.96,48.5,35.25,20.69,31.65,False,False,False
+Vfa01_t130s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,295.8,19.77,18.54,28.29,Moderate Maneuvers,137.9,46.36,129.87,53.94,35.74,11.79,46.62,False,False,False
+Vfa01_t130s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,295.8,19.77,18.54,28.29,Moderate Maneuvers,138.26,46.67,130.15,54.05,35.81,11.83,46.74,False,False,False
+Vfa01_t130s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,295.8,19.77,18.54,28.29,Moderate Maneuvers,137.74,45.84,129.89,53.83,35.66,11.71,46.57,False,False,False
+Vfa01_t130s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,295.8,19.77,18.54,28.29,Moderate Maneuvers,31.81,31.8,0.56,16.24,12.27,9.08,10.75,False,True,True
+Vfa01_t130s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,295.8,19.77,18.54,28.29,Moderate Maneuvers,92.5,23.06,89.58,38.1,25.96,7.69,31.27,False,False,False
+Vfa01_t130s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,295.8,19.77,18.54,28.29,Moderate Maneuvers,16.69,16.62,1.53,6.11,4.69,2.74,5.64,True,True,True
+Vfa01_t150s_d15s,Vfa01,VALIDATION,Baseline 1: Raw IMU,15,300.2,17.97,22.97,10.48,Straight / Highway,294.05,288.47,57.01,133.54,101.47,80.14,97.94,False,False,False
+Vfa01_t150s_d15s,Vfa01,VALIDATION,Baseline 2: Standard EKF,15,300.2,17.97,22.97,10.48,Straight / Highway,293.83,288.21,57.18,133.19,101.02,79.53,97.87,False,False,False
+Vfa01_t150s_d15s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,15,300.2,17.97,22.97,10.48,Straight / Highway,292.8,287.06,57.71,132.73,100.67,79.27,97.53,False,False,False
+Vfa01_t150s_d15s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,15,300.2,17.97,22.97,10.48,Straight / Highway,257.99,251.56,57.24,123.04,95.2,78.89,85.93,False,False,False
+Vfa01_t150s_d15s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,15,300.2,17.97,22.97,10.48,Straight / Highway,94.95,92.14,22.93,64.14,54.45,61.79,31.63,False,False,False
+Vfa01_t150s_d15s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,15,300.2,17.97,22.97,10.48,Straight / Highway,85.97,85.46,9.33,62.71,53.46,61.11,28.63,False,False,False
+Vfa01_t10s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,528.3,15.04,20.23,23.33,Moderate Maneuvers,1069.39,956.1,479.03,511.69,400.54,348.75,202.41,False,False,False
+Vfa01_t10s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,528.3,15.04,20.23,23.33,Moderate Maneuvers,1072.2,958.02,481.46,511.98,400.35,347.95,202.94,False,False,False
+Vfa01_t10s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,528.3,15.04,20.23,23.33,Moderate Maneuvers,1068.07,952.62,482.99,510.48,399.31,347.41,202.16,False,False,False
+Vfa01_t10s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,528.3,15.04,20.23,23.33,Moderate Maneuvers,974.81,814.49,535.6,519.8,381.0,273.4,184.51,False,False,False
+Vfa01_t10s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,528.3,15.04,20.23,23.33,Moderate Maneuvers,216.58,105.38,189.21,161.77,145.08,182.88,40.99,False,False,False
+Vfa01_t10s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,528.3,15.04,20.23,23.33,Moderate Maneuvers,79.0,78.87,4.48,92.04,80.27,106.8,14.95,False,True,True
+Vfa01_t30s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,594.6,18.01,19.85,10.96,Straight / Highway,989.65,985.96,85.33,434.37,323.29,233.19,166.45,False,False,False
+Vfa01_t30s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,594.6,18.01,19.85,10.96,Straight / Highway,994.83,991.11,85.93,436.36,324.46,233.65,167.32,False,False,False
+Vfa01_t30s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,594.6,18.01,19.85,10.96,Straight / Highway,988.39,984.24,90.54,433.4,322.24,231.91,166.24,False,False,False
+Vfa01_t30s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,594.6,18.01,19.85,10.96,Straight / Highway,964.76,962.78,61.84,435.7,320.43,236.52,162.26,False,False,False
+Vfa01_t30s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,594.6,18.01,19.85,10.96,Straight / Highway,73.31,58.63,44.01,74.07,68.35,78.43,12.33,False,True,True
+Vfa01_t30s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,594.6,18.01,19.85,10.96,Straight / Highway,66.25,65.13,12.11,62.06,57.23,67.14,11.14,False,True,True
+Vfa01_t50s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,566.9,19.91,17.8,32.92,Moderate Maneuvers,1086.76,731.14,804.03,506.85,384.41,304.11,191.7,False,False,False
+Vfa01_t50s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,566.9,19.91,17.8,32.92,Moderate Maneuvers,1087.23,732.11,803.8,506.53,383.8,303.14,191.78,False,False,False
+Vfa01_t50s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,566.9,19.91,17.8,32.92,Moderate Maneuvers,1085.45,730.45,802.9,505.79,383.27,302.79,191.47,False,False,False
+Vfa01_t50s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,566.9,19.91,17.8,32.92,Moderate Maneuvers,858.87,826.21,234.6,438.74,325.6,148.96,151.5,False,False,False
+Vfa01_t50s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,566.9,19.91,17.8,32.92,Moderate Maneuvers,266.08,2.23,266.07,146.45,124.41,127.06,46.94,False,False,False
+Vfa01_t50s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,566.9,19.91,17.8,32.92,Moderate Maneuvers,145.31,139.38,41.07,81.69,72.19,67.64,25.63,False,False,False
+Vfa01_t70s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,563.5,19.35,19.48,37.93,Moderate Maneuvers,674.84,615.92,275.77,306.81,233.76,181.44,119.75,False,False,False
+Vfa01_t70s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,563.5,19.35,19.48,37.93,Moderate Maneuvers,675.99,616.34,277.64,306.96,233.65,180.91,119.95,False,False,False
+Vfa01_t70s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,563.5,19.35,19.48,37.93,Moderate Maneuvers,672.56,611.97,278.99,305.65,232.74,180.39,119.34,False,False,False
+Vfa01_t70s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,563.5,19.35,19.48,37.93,Moderate Maneuvers,679.98,637.6,236.3,307.39,233.08,180.47,120.66,False,False,False
+Vfa01_t70s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,563.5,19.35,19.48,37.93,Moderate Maneuvers,64.05,57.04,29.13,57.53,52.88,65.78,11.37,False,True,True
+Vfa01_t70s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,563.5,19.35,19.48,37.93,Moderate Maneuvers,56.03,55.97,2.53,53.31,49.34,57.26,9.94,True,True,True
+Vfa01_t90s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,570.5,20.64,18.44,23.62,Moderate Maneuvers,974.2,849.53,476.82,438.95,321.41,246.83,170.77,False,False,False
+Vfa01_t90s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,570.5,20.64,18.44,23.62,Moderate Maneuvers,976.82,852.1,477.6,439.54,321.54,246.01,171.23,False,False,False
+Vfa01_t90s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,570.5,20.64,18.44,23.62,Moderate Maneuvers,973.53,847.72,478.68,438.13,320.54,245.34,170.66,False,False,False
+Vfa01_t90s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,570.5,20.64,18.44,23.62,Moderate Maneuvers,753.59,750.84,64.24,371.24,275.48,201.24,132.1,False,False,False
+Vfa01_t90s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,570.5,20.64,18.44,23.62,Moderate Maneuvers,150.26,29.89,147.26,99.61,83.71,113.96,26.34,False,False,False
+Vfa01_t90s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,570.5,20.64,18.44,23.62,Moderate Maneuvers,61.0,60.27,9.37,52.41,41.77,35.86,10.69,False,True,True
+Vfa01_t110s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,585.8,19.07,20.21,17.31,Moderate Maneuvers,882.44,804.16,363.35,414.45,310.9,245.15,150.65,False,False,False
+Vfa01_t110s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,585.8,19.07,20.21,17.31,Moderate Maneuvers,886.32,807.95,364.38,415.35,311.19,244.4,151.31,False,False,False
+Vfa01_t110s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,585.8,19.07,20.21,17.31,Moderate Maneuvers,882.37,805.37,360.51,413.81,310.09,243.69,150.64,False,False,False
+Vfa01_t110s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,585.8,19.07,20.21,17.31,Moderate Maneuvers,863.42,854.86,121.34,361.82,264.24,227.75,147.4,False,False,False
+Vfa01_t110s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,585.8,19.07,20.21,17.31,Moderate Maneuvers,133.33,32.59,129.28,99.64,86.55,116.21,22.76,False,False,False
+Vfa01_t110s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,585.8,19.07,20.21,17.31,Moderate Maneuvers,25.81,25.78,1.42,65.17,54.99,55.53,4.41,True,True,True
+Vfa01_t130s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,575.0,19.77,21.49,37.88,Moderate Maneuvers,840.25,294.52,786.94,346.32,237.76,139.08,146.14,False,False,False
+Vfa01_t130s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,575.0,19.77,21.49,37.88,Moderate Maneuvers,843.13,296.63,789.22,347.23,238.34,139.45,146.64,False,False,False
+Vfa01_t130s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,575.0,19.77,21.49,37.88,Moderate Maneuvers,839.04,291.11,786.92,345.64,237.28,138.93,145.93,False,False,False
+Vfa01_t130s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,575.0,19.77,21.49,37.88,Moderate Maneuvers,581.68,557.67,165.4,201.51,109.82,31.78,101.17,False,False,False
+Vfa01_t130s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,575.0,19.77,21.49,37.88,Moderate Maneuvers,374.6,171.13,333.22,174.06,126.62,93.13,65.15,False,False,False
+Vfa01_t130s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,575.0,19.77,21.49,37.88,Moderate Maneuvers,196.49,195.64,18.18,73.13,47.71,16.81,34.17,False,False,False
+Vfa01_t150s_d30s,Vfa01,VALIDATION,Baseline 1: Raw IMU,30,656.7,17.97,24.48,29.75,Moderate Maneuvers,1155.84,948.15,661.04,527.08,395.15,296.05,176.0,False,False,False
+Vfa01_t150s_d30s,Vfa01,VALIDATION,Baseline 2: Standard EKF,30,656.7,17.97,24.48,29.75,Moderate Maneuvers,1160.83,952.2,663.95,528.66,395.88,295.84,176.76,False,False,False
+Vfa01_t150s_d30s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,30,656.7,17.97,24.48,29.75,Moderate Maneuvers,1156.91,946.23,665.66,526.87,394.54,294.81,176.17,False,False,False
+Vfa01_t150s_d30s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,30,656.7,17.97,24.48,29.75,Moderate Maneuvers,935.93,927.95,121.96,470.11,352.48,259.34,142.52,False,False,False
+Vfa01_t150s_d30s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,30,656.7,17.97,24.48,29.75,Moderate Maneuvers,157.12,42.26,151.33,91.58,82.55,91.84,23.93,False,False,False
+Vfa01_t150s_d30s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,30,656.7,17.97,24.48,29.75,Moderate Maneuvers,41.5,41.44,2.23,55.39,46.62,44.28,6.32,True,True,True
+Vfa01_t10s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1132.6,15.04,19.47,3.53,Straight / Highway,4019.91,4000.03,399.37,1827.46,1390.85,1072.43,354.94,False,False,False
+Vfa01_t10s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1132.6,15.04,19.47,3.53,Straight / Highway,4054.6,4034.8,400.19,1840.65,1399.16,1075.27,358.0,False,False,False
+Vfa01_t10s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1132.6,15.04,19.47,3.53,Straight / Highway,4034.43,4017.46,369.6,1832.04,1393.02,1071.12,356.22,False,False,False
+Vfa01_t10s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1132.6,15.04,19.47,3.53,Straight / Highway,3756.3,3492.71,1382.29,1734.24,1310.42,975.75,331.66,False,False,False
+Vfa01_t10s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1132.6,15.04,19.47,3.53,Straight / Highway,212.17,123.55,172.49,209.53,196.25,215.85,18.73,False,False,True
+Vfa01_t10s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1132.6,15.04,19.47,3.53,Straight / Highway,217.56,190.47,105.13,132.55,108.33,107.9,19.21,False,False,True
+Vfa01_t30s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1162.5,18.01,20.73,18.51,Moderate Maneuvers,3841.42,3481.11,1624.3,1758.07,1313.2,993.1,330.46,False,False,False
+Vfa01_t30s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1162.5,18.01,20.73,18.51,Moderate Maneuvers,3869.17,3508.47,1631.29,1769.48,1321.14,998.31,332.84,False,False,False
+Vfa01_t30s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1162.5,18.01,20.73,18.51,Moderate Maneuvers,3845.94,3474.2,1649.6,1758.98,1313.17,991.86,330.85,False,False,False
+Vfa01_t30s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1162.5,18.01,20.73,18.51,Moderate Maneuvers,3756.18,3588.61,1109.41,1755.71,1311.78,970.22,323.12,False,False,False
+Vfa01_t30s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1162.5,18.01,20.73,18.51,Moderate Maneuvers,218.78,30.04,216.7,97.53,84.73,79.6,18.82,False,False,True
+Vfa01_t30s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1162.5,18.01,20.73,18.51,Moderate Maneuvers,30.02,29.99,1.33,51.22,44.24,47.13,2.58,True,True,True
+Vfa01_t50s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1149.1,19.91,18.96,27.32,Moderate Maneuvers,3743.84,2443.41,2836.57,1731.56,1328.79,1089.94,325.8,False,False,False
+Vfa01_t50s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1149.1,19.91,18.96,27.32,Moderate Maneuvers,3761.33,2458.79,2846.4,1737.08,1331.93,1090.42,327.32,False,False,False
+Vfa01_t50s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1149.1,19.91,18.96,27.32,Moderate Maneuvers,3748.79,2449.92,2837.48,1732.09,1328.47,1088.63,326.23,False,False,False
+Vfa01_t50s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1149.1,19.91,18.96,27.32,Moderate Maneuvers,4282.16,2784.68,3253.06,1891.4,1340.81,861.22,372.64,False,False,False
+Vfa01_t50s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1149.1,19.91,18.96,27.32,Moderate Maneuvers,566.97,152.7,546.02,328.13,278.18,266.65,49.34,False,False,False
+Vfa01_t50s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1149.1,19.91,18.96,27.32,Moderate Maneuvers,44.35,44.07,5.02,76.6,62.51,59.39,3.86,True,True,True
+Vfa01_t70s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1139.7,19.35,19.67,5.32,Straight / Highway,3198.72,3160.69,491.74,1383.07,1011.83,677.38,280.66,False,False,False
+Vfa01_t70s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1139.7,19.35,19.67,5.32,Straight / Highway,3220.23,3182.4,492.15,1390.28,1016.13,678.53,282.55,False,False,False
+Vfa01_t70s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1139.7,19.35,19.67,5.32,Straight / Highway,3202.45,3169.0,461.65,1382.96,1010.96,675.09,280.99,False,False,False
+Vfa01_t70s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1139.7,19.35,19.67,5.32,Straight / Highway,3312.24,3133.34,1073.82,1361.97,993.91,682.39,290.62,False,False,False
+Vfa01_t70s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1139.7,19.35,19.67,5.32,Straight / Highway,143.64,54.67,132.83,69.97,64.65,66.59,12.6,False,True,True
+Vfa01_t70s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1139.7,19.35,19.67,5.32,Straight / Highway,44.66,44.47,4.15,43.09,37.56,37.09,3.92,True,True,True
+Vfa01_t90s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1157.5,20.64,18.0,40.75,Moderate Maneuvers,3682.62,2647.23,2560.05,1687.75,1267.51,977.54,318.16,False,False,False
+Vfa01_t90s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1157.5,20.64,18.0,40.75,Moderate Maneuvers,3715.45,2672.6,2581.04,1699.4,1274.82,980.18,321.0,False,False,False
+Vfa01_t90s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1157.5,20.64,18.0,40.75,Moderate Maneuvers,3697.94,2648.54,2580.69,1691.98,1269.53,976.89,319.48,False,False,False
+Vfa01_t90s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1157.5,20.64,18.0,40.75,Moderate Maneuvers,4194.27,3419.93,2428.16,1741.01,1252.09,755.86,362.36,False,False,False
+Vfa01_t90s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1157.5,20.64,18.0,40.75,Moderate Maneuvers,229.12,104.35,203.98,136.83,124.14,138.12,19.79,False,False,True
+Vfa01_t90s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1157.5,20.64,18.0,40.75,Moderate Maneuvers,65.68,65.54,4.2,55.4,46.75,44.7,5.67,True,True,True
+Vfa01_t110s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1188.2,19.07,23.32,16.75,Moderate Maneuvers,3628.6,3156.85,1789.14,1595.22,1188.83,885.09,305.39,False,False,False
+Vfa01_t110s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1188.2,19.07,23.32,16.75,Moderate Maneuvers,3662.76,3188.41,1802.75,1607.69,1196.84,889.0,308.27,False,False,False
+Vfa01_t110s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1188.2,19.07,23.32,16.75,Moderate Maneuvers,3640.88,3176.99,1778.4,1598.76,1190.59,885.04,306.42,False,False,False
+Vfa01_t110s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1188.2,19.07,23.32,16.75,Moderate Maneuvers,4086.39,3897.25,1228.84,1652.34,1162.29,865.8,343.92,False,False,False
+Vfa01_t110s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1188.2,19.07,23.32,16.75,Moderate Maneuvers,581.48,107.62,571.44,272.86,215.57,136.49,48.94,False,False,False
+Vfa01_t110s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1188.2,19.07,23.32,16.75,Moderate Maneuvers,346.5,333.8,92.93,133.52,96.79,71.78,29.16,False,False,False
+Vfa01_t130s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1284.3,19.77,23.65,16.94,Moderate Maneuvers,3664.62,2774.37,2394.23,1626.44,1179.55,843.51,285.35,False,False,False
+Vfa01_t130s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1284.3,19.77,23.65,16.94,Moderate Maneuvers,3695.7,2801.7,2410.11,1637.83,1186.92,846.4,287.77,False,False,False
+Vfa01_t130s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1284.3,19.77,23.65,16.94,Moderate Maneuvers,3674.28,2768.84,2415.34,1628.87,1180.61,842.3,286.1,False,False,False
+Vfa01_t130s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1284.3,19.77,23.65,16.94,Moderate Maneuvers,3667.97,3507.74,1072.3,1615.39,1024.27,584.09,285.61,False,False,False
+Vfa01_t130s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1284.3,19.77,23.65,16.94,Moderate Maneuvers,868.96,401.28,770.75,465.37,373.14,375.51,67.66,False,False,False
+Vfa01_t130s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1284.3,19.77,23.65,16.94,Moderate Maneuvers,391.3,391.15,11.14,331.74,246.27,197.55,30.47,False,False,False
+Vfa01_t150s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1348.0,17.97,23.56,11.92,Straight / Highway,4008.15,3990.51,375.62,1882.38,1434.79,1159.4,297.33,False,False,False
+Vfa01_t150s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1348.0,17.97,23.56,11.92,Straight / Highway,4050.03,4032.32,378.33,1897.99,1445.05,1164.42,300.44,False,False,False
+Vfa01_t150s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1348.0,17.97,23.56,11.92,Straight / Highway,4030.61,4010.46,402.5,1889.78,1439.09,1160.49,299.0,False,False,False
+Vfa01_t150s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1348.0,17.97,23.56,11.92,Straight / Highway,4069.54,4067.06,141.83,1927.59,1427.07,938.59,301.89,False,False,False
+Vfa01_t150s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1348.0,17.97,23.56,11.92,Straight / Highway,360.5,139.79,332.29,218.95,185.41,157.56,26.74,False,False,False
+Vfa01_t150s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1348.0,17.97,23.56,11.92,Straight / Highway,169.38,169.38,0.78,113.86,94.75,83.81,12.56,False,True,True
+Vfa01_t45s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1159.2,21.4,18.97,7.11,Straight / Highway,3891.78,3502.04,1697.55,1824.55,1394.75,1142.05,335.72,False,False,False
+Vfa01_t45s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1159.2,21.4,18.97,7.11,Straight / Highway,3909.62,3519.67,1702.07,1830.42,1398.15,1142.73,337.26,False,False,False
+Vfa01_t45s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1159.2,21.4,18.97,7.11,Straight / Highway,3899.46,3498.6,1722.08,1826.75,1395.62,1141.44,336.38,False,False,False
+Vfa01_t45s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1159.2,21.4,18.97,7.11,Straight / Highway,4355.21,3920.07,1897.61,2010.6,1434.21,931.22,375.69,False,False,False
+Vfa01_t45s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1159.2,21.4,18.97,7.11,Straight / Highway,507.96,84.81,500.83,292.56,243.2,217.53,43.82,False,False,False
+Vfa01_t45s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1159.2,21.4,18.97,7.11,Straight / Highway,35.71,35.46,4.26,89.19,76.95,73.34,3.08,True,True,True
+Vfa01_t220s_d60s,Vfa01,VALIDATION,Baseline 1: Raw IMU,60,1037.3,21.89,18.13,7.06,Straight / Highway,3537.85,3447.75,793.33,1565.61,1152.56,836.96,341.05,False,False,False
+Vfa01_t220s_d60s,Vfa01,VALIDATION,Baseline 2: Standard EKF,60,1037.3,21.89,18.13,7.06,Straight / Highway,3571.14,3481.12,796.76,1578.01,1160.87,841.44,344.26,False,False,False
+Vfa01_t220s_d60s,Vfa01,VALIDATION,Baseline 3: EKF + NHC,60,1037.3,21.89,18.13,7.06,Straight / Highway,3549.36,3459.14,795.18,1569.08,1154.42,837.01,342.16,False,False,False
+Vfa01_t220s_d60s,Vfa01,VALIDATION,Baseline 4: EKF + NHC + Causal Map,60,1037.3,21.89,18.13,7.06,Straight / Highway,2334.52,2300.08,399.5,1302.3,996.32,842.18,225.05,False,False,False
+Vfa01_t220s_d60s,Vfa01,VALIDATION,System 5: AI Odom + EKF + Adaptive NHC,60,1037.3,21.89,18.13,7.06,Straight / Highway,252.03,118.97,222.18,105.08,88.6,71.0,24.3,False,False,False
+Vfa01_t220s_d60s,Vfa01,VALIDATION,System 6: Full Hardened Pipeline,60,1037.3,21.89,18.13,7.06,Straight / Highway,161.97,160.36,22.78,68.9,58.8,55.78,15.61,False,False,True
+Vfa02_t30s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,183.7,9.16,14.23,9.61,Straight / Highway,22.38,4.68,21.88,15.45,13.21,16.19,12.18,False,True,True
+Vfa02_t30s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,183.7,9.16,14.23,9.61,Straight / Highway,22.24,5.08,21.65,15.34,13.08,16.03,12.11,False,True,True
+Vfa02_t30s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,183.7,9.16,14.23,9.61,Straight / Highway,22.14,4.05,21.77,15.18,12.95,15.82,12.05,False,True,True
+Vfa02_t30s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,183.7,9.16,14.23,9.61,Straight / Highway,415.62,64.47,410.59,435.26,435.06,432.97,226.26,False,False,False
+Vfa02_t30s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,183.7,9.16,14.23,9.61,Straight / Highway,31.38,23.86,20.39,19.88,16.6,18.86,17.08,False,False,True
+Vfa02_t30s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,183.7,9.16,14.23,9.61,Straight / Highway,415.92,71.74,409.69,435.48,435.27,433.12,226.43,False,False,False
+Vfa02_t50s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,169.0,13.26,13.18,2.58,Straight / Highway,10.54,10.31,2.21,12.7,11.2,13.93,6.24,True,True,True
+Vfa02_t50s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,169.0,13.26,13.18,2.58,Straight / Highway,11.14,10.97,1.93,12.95,11.41,14.26,6.59,True,True,True
+Vfa02_t50s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,169.0,13.26,13.18,2.58,Straight / Highway,10.63,10.5,1.68,13.06,11.49,14.25,6.29,True,True,True
+Vfa02_t50s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,169.0,13.26,13.18,2.58,Straight / Highway,390.5,22.64,389.84,398.56,398.53,398.72,231.01,False,False,False
+Vfa02_t50s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,169.0,13.26,13.18,2.58,Straight / Highway,40.7,40.67,1.45,25.05,20.68,20.99,24.08,False,False,False
+Vfa02_t50s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,169.0,13.26,13.18,2.58,Straight / Highway,392.44,51.5,389.04,398.95,398.92,398.96,232.16,False,False,False
+Vfa02_t70s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,200.3,13.22,13.85,0.86,Straight / Highway,25.61,18.25,17.96,11.61,8.69,6.25,12.78,False,True,True
+Vfa02_t70s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,200.3,13.22,13.85,0.86,Straight / Highway,25.46,17.82,18.18,11.54,8.62,6.19,12.71,False,True,True
+Vfa02_t70s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,200.3,13.22,13.85,0.86,Straight / Highway,25.48,17.67,18.36,11.55,8.62,6.18,12.72,False,True,True
+Vfa02_t70s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,200.3,13.22,13.85,0.86,Straight / Highway,388.71,26.05,387.84,387.31,387.31,387.25,194.02,False,False,False
+Vfa02_t70s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,200.3,13.22,13.85,0.86,Straight / Highway,26.5,16.98,20.34,11.32,8.24,5.59,13.23,False,True,True
+Vfa02_t70s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,200.3,13.22,13.85,0.86,Straight / Highway,388.65,8.55,388.55,387.28,387.28,387.22,193.99,False,False,False
+Vfa02_t90s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,248.8,15.02,16.19,0.17,Straight / Highway,32.58,6.62,31.9,17.76,14.05,13.23,13.09,False,True,True
+Vfa02_t90s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,248.8,15.02,16.19,0.17,Straight / Highway,32.61,4.9,32.24,17.93,14.2,13.4,13.11,False,True,True
+Vfa02_t90s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,248.8,15.02,16.19,0.17,Straight / Highway,33.22,7.09,32.45,18.01,14.18,13.23,13.35,False,True,True
+Vfa02_t90s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,248.8,15.02,16.19,0.17,Straight / Highway,402.74,29.01,401.69,396.97,396.95,397.24,161.85,False,False,False
+Vfa02_t90s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,248.8,15.02,16.19,0.17,Straight / Highway,32.52,10.46,30.79,17.45,13.65,12.53,13.07,False,True,True
+Vfa02_t90s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,248.8,15.02,16.19,0.17,Straight / Highway,402.82,32.29,401.52,396.99,396.98,397.24,161.88,False,False,False
+Vfa02_t110s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,264.2,16.96,18.74,1.22,Straight / Highway,28.83,23.93,16.08,11.87,9.49,7.98,10.91,False,True,True
+Vfa02_t110s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,264.2,16.96,18.74,1.22,Straight / Highway,28.09,22.84,16.36,11.69,9.4,8.09,10.63,False,True,True
+Vfa02_t110s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,264.2,16.96,18.74,1.22,Straight / Highway,28.35,23.06,16.5,11.64,9.4,8.29,10.73,False,True,True
+Vfa02_t110s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,264.2,16.96,18.74,1.22,Straight / Highway,418.89,22.55,418.28,412.05,412.03,411.62,158.53,False,False,False
+Vfa02_t110s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,264.2,16.96,18.74,1.22,Straight / Highway,26.5,20.73,16.5,11.28,9.09,7.75,10.03,False,True,True
+Vfa02_t110s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,264.2,16.96,18.74,1.22,Straight / Highway,418.76,20.22,418.27,412.03,412.01,411.61,158.49,False,False,False
+Vfa02_t130s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,260.5,16.62,19.6,38.18,Moderate Maneuvers,111.65,62.04,92.83,49.78,37.4,27.0,42.86,False,False,False
+Vfa02_t130s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,260.5,16.62,19.6,38.18,Moderate Maneuvers,112.04,61.99,93.33,49.89,37.41,26.99,43.01,False,False,False
+Vfa02_t130s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,260.5,16.62,19.6,38.18,Moderate Maneuvers,112.48,62.48,93.53,50.06,37.51,26.98,43.18,False,False,False
+Vfa02_t130s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,260.5,16.62,19.6,38.18,Moderate Maneuvers,291.75,291.62,8.62,366.92,364.8,372.74,111.99,False,False,False
+Vfa02_t130s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,260.5,16.62,19.6,38.18,Moderate Maneuvers,112.43,63.12,93.04,49.89,37.11,25.82,43.16,False,False,False
+Vfa02_t130s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,260.5,16.62,19.6,38.18,Moderate Maneuvers,291.75,291.62,8.62,366.94,364.82,372.68,111.99,False,False,False
+Vfa02_t150s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,223.9,19.21,8.32,22.64,Moderate Maneuvers,226.72,210.45,84.34,82.74,52.77,17.49,101.25,False,False,False
+Vfa02_t150s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,223.9,19.21,8.32,22.64,Moderate Maneuvers,225.47,209.21,84.07,82.17,52.36,17.38,100.7,False,False,False
+Vfa02_t150s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,223.9,19.21,8.32,22.64,Moderate Maneuvers,224.73,208.35,84.22,81.87,52.18,17.42,100.37,False,False,False
+Vfa02_t150s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,223.9,19.21,8.32,22.64,Moderate Maneuvers,157.1,154.09,30.62,116.21,105.63,102.1,70.16,False,False,False
+Vfa02_t150s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,223.9,19.21,8.32,22.64,Moderate Maneuvers,101.82,95.89,34.24,43.12,30.77,16.8,45.47,False,False,False
+Vfa02_t150s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,223.9,19.21,8.32,22.64,Moderate Maneuvers,82.88,82.16,10.87,100.88,89.02,81.87,37.01,False,False,False
+Vfa02_t170s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,15,144.8,8.32,14.77,129.95,Complex Urban / Ramps,206.59,141.95,150.1,125.41,105.3,112.33,142.69,False,False,False
+Vfa02_t170s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,15,144.8,8.32,14.77,129.95,Complex Urban / Ramps,206.94,142.14,150.39,125.55,105.3,112.2,142.93,False,False,False
+Vfa02_t170s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,15,144.8,8.32,14.77,129.95,Complex Urban / Ramps,207.89,142.74,151.14,125.94,105.56,112.24,143.59,False,False,False
+Vfa02_t170s_d15s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,15,144.8,8.32,14.77,129.95,Complex Urban / Ramps,53.25,43.8,30.29,34.53,31.3,37.81,36.78,False,False,False
+Vfa02_t170s_d15s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,15,144.8,8.32,14.77,129.95,Complex Urban / Ramps,250.64,170.86,183.38,137.79,113.77,114.95,173.12,False,False,False
+Vfa02_t170s_d15s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,15,144.8,8.32,14.77,129.95,Complex Urban / Ramps,53.25,43.8,30.29,34.53,31.3,37.81,36.78,False,False,False
+Vfa02_t10s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,175.5,0.01,13.28,126.45,Complex Urban / Ramps,235.24,220.37,82.3,96.22,64.29,34.25,134.04,False,False,False
+Vfa02_t10s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,175.5,0.01,13.28,126.45,Complex Urban / Ramps,154.68,139.4,67.03,68.53,53.99,43.03,88.14,False,False,False
+Vfa02_t10s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,175.5,0.01,13.28,126.45,Complex Urban / Ramps,154.05,136.62,71.19,68.86,54.44,44.17,87.78,False,False,False
+Vfa02_t10s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,175.5,0.01,13.28,126.45,Complex Urban / Ramps,438.63,29.71,437.62,465.71,465.48,476.0,249.94,False,False,False
+Vfa02_t10s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,175.5,0.01,13.28,126.45,Complex Urban / Ramps,391.5,307.2,242.69,174.07,120.64,72.92,223.09,False,False,False
+Vfa02_t10s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,175.5,0.01,13.28,126.45,Complex Urban / Ramps,546.11,240.84,490.14,487.99,487.68,479.63,311.19,False,False,False
+Vfa02_t30s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,361.1,9.16,11.83,10.57,Straight / Highway,47.95,16.72,44.93,26.87,23.5,22.43,13.28,False,True,True
+Vfa02_t30s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,361.1,9.16,11.83,10.57,Straight / Highway,48.42,18.45,44.76,26.89,23.45,22.29,13.41,False,True,True
+Vfa02_t30s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,361.1,9.16,11.83,10.57,Straight / Highway,47.47,15.78,44.77,26.62,23.25,22.19,13.14,False,True,True
+Vfa02_t30s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,361.1,9.16,11.83,10.57,Straight / Highway,396.39,57.07,392.26,420.19,419.78,415.51,109.77,False,False,False
+Vfa02_t30s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,361.1,9.16,11.83,10.57,Straight / Highway,107.24,98.73,41.85,50.26,40.3,31.5,29.7,False,False,False
+Vfa02_t30s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,361.1,9.16,11.83,10.57,Straight / Highway,404.54,111.93,388.75,422.21,421.89,415.85,112.02,False,False,False
+Vfa02_t50s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,367.1,13.26,13.58,2.11,Straight / Highway,64.21,63.11,11.83,24.89,19.1,15.6,17.49,False,False,True
+Vfa02_t50s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,367.1,13.26,13.58,2.11,Straight / Highway,62.16,61.05,11.7,24.12,18.64,15.74,16.93,False,False,True
+Vfa02_t50s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,367.1,13.26,13.58,2.11,Straight / Highway,63.24,62.32,10.72,24.56,18.92,16.04,17.23,False,False,True
+Vfa02_t50s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,367.1,13.26,13.58,2.11,Straight / Highway,390.51,48.05,387.54,393.76,393.71,390.5,106.39,False,False,False
+Vfa02_t50s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,367.1,13.26,13.58,2.11,Straight / Highway,83.43,81.58,17.47,44.69,38.47,40.44,22.73,False,False,False
+Vfa02_t50s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,367.1,13.26,13.58,2.11,Straight / Highway,395.61,78.78,387.69,395.33,395.3,393.29,107.78,False,False,False
+Vfa02_t70s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,437.3,13.22,16.9,0.83,Straight / Highway,99.0,90.4,40.35,45.58,34.22,25.78,22.64,False,False,False
+Vfa02_t70s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,437.3,13.22,16.9,0.83,Straight / Highway,97.2,88.2,40.84,44.92,33.78,25.62,22.23,False,False,False
+Vfa02_t70s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,437.3,13.22,16.9,0.83,Straight / Highway,98.11,89.08,41.11,45.02,33.76,25.64,22.44,False,False,False
+Vfa02_t70s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,437.3,13.22,16.9,0.83,Straight / Highway,409.08,109.74,394.09,392.31,392.25,388.74,93.55,False,False,False
+Vfa02_t70s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,437.3,13.22,16.9,0.83,Straight / Highway,51.36,23.37,45.73,30.05,24.4,26.69,11.74,False,True,True
+Vfa02_t70s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,437.3,13.22,16.9,0.83,Straight / Highway,399.41,2.23,399.41,390.53,390.51,388.67,91.34,False,False,False
+Vfa02_t90s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,499.7,15.02,17.89,2.12,Straight / Highway,86.26,46.83,72.44,42.31,34.5,32.67,17.26,False,False,True
+Vfa02_t90s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,499.7,15.02,17.89,2.12,Straight / Highway,84.29,41.81,73.19,41.69,34.15,32.7,16.87,False,False,True
+Vfa02_t90s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,499.7,15.02,17.89,2.12,Straight / Highway,86.85,44.1,74.82,42.92,35.0,33.31,17.38,False,False,True
+Vfa02_t90s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,499.7,15.02,17.89,2.12,Straight / Highway,416.99,81.64,408.92,402.98,402.92,402.78,83.45,False,False,False
+Vfa02_t90s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,499.7,15.02,17.89,2.12,Straight / Highway,77.14,20.55,74.35,39.52,32.53,32.6,15.44,False,False,True
+Vfa02_t90s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,499.7,15.02,17.89,2.12,Straight / Highway,414.84,58.2,410.74,402.68,402.62,402.87,83.02,False,False,False
+Vfa02_t110s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,518.7,16.96,17.31,37.02,Moderate Maneuvers,183.2,178.72,40.25,79.35,55.01,29.11,35.32,False,False,False
+Vfa02_t110s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,518.7,16.96,17.31,37.02,Moderate Maneuvers,180.77,176.99,36.81,77.94,53.99,28.37,34.85,False,False,False
+Vfa02_t110s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,518.7,16.96,17.31,37.02,Moderate Maneuvers,180.07,176.36,36.4,77.51,53.74,28.63,34.72,False,False,False
+Vfa02_t110s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,518.7,16.96,17.31,37.02,Moderate Maneuvers,392.03,106.35,377.33,413.59,413.55,414.58,75.58,False,False,False
+Vfa02_t110s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,518.7,16.96,17.31,37.02,Moderate Maneuvers,97.68,85.17,47.82,41.18,31.54,26.72,18.83,False,False,True
+Vfa02_t110s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,518.7,16.96,17.31,37.02,Moderate Maneuvers,347.17,230.06,260.0,406.46,406.13,411.27,66.93,False,False,False
+Vfa02_t130s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,531.5,16.62,10.95,52.49,Complex Urban / Ramps,353.2,192.73,295.98,171.9,132.75,112.35,66.45,False,False,False
+Vfa02_t130s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,531.5,16.62,10.95,52.49,Complex Urban / Ramps,354.43,192.24,297.77,172.48,133.14,112.73,66.68,False,False,False
+Vfa02_t130s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,531.5,16.62,10.95,52.49,Complex Urban / Ramps,355.49,196.23,296.42,173.13,133.62,113.17,66.88,False,False,False
+Vfa02_t130s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,531.5,16.62,10.95,52.49,Complex Urban / Ramps,189.87,117.29,149.3,289.01,265.37,290.76,35.72,False,False,False
+Vfa02_t130s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,531.5,16.62,10.95,52.49,Complex Urban / Ramps,333.05,232.27,238.69,168.7,130.75,113.11,62.66,False,False,False
+Vfa02_t130s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,531.5,16.62,10.95,52.49,Complex Urban / Ramps,52.43,35.89,38.23,288.15,263.9,290.76,9.86,True,True,True
+Vfa02_t150s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,30,350.1,19.21,8.96,8.84,Straight / Highway,1282.98,1258.25,250.66,572.9,395.36,229.04,366.48,False,False,False
+Vfa02_t150s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,30,350.1,19.21,8.96,8.84,Straight / Highway,1283.36,1258.81,249.82,572.31,394.64,227.79,366.59,False,False,False
+Vfa02_t150s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,30,350.1,19.21,8.96,8.84,Straight / Highway,1280.72,1256.99,245.41,571.08,393.73,227.05,365.84,False,False,False
+Vfa02_t150s_d30s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,30,350.1,19.21,8.96,8.84,Straight / Highway,733.14,361.89,637.6,308.84,243.87,157.61,209.42,False,False,False
+Vfa02_t150s_d30s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,30,350.1,19.21,8.96,8.84,Straight / Highway,368.19,358.73,82.93,185.08,137.36,102.46,105.17,False,False,False
+Vfa02_t150s_d30s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,30,350.1,19.21,8.96,8.84,Straight / Highway,171.3,161.26,57.79,134.34,124.07,136.25,48.93,False,False,False
+Vfa02_t10s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,550.3,0.01,13.35,129.6,Complex Urban / Ramps,714.44,663.82,264.14,363.5,275.24,236.12,129.83,False,False,False
+Vfa02_t10s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,550.3,0.01,13.35,129.6,Complex Urban / Ramps,520.55,515.97,68.84,255.7,196.89,155.27,94.6,False,False,False
+Vfa02_t10s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,550.3,0.01,13.35,129.6,Complex Urban / Ramps,514.65,507.02,88.25,252.97,195.27,154.63,93.52,False,False,False
+Vfa02_t10s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,550.3,0.01,13.35,129.6,Complex Urban / Ramps,608.35,428.6,431.73,487.11,485.35,476.56,110.55,False,False,False
+Vfa02_t10s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,550.3,0.01,13.35,129.6,Complex Urban / Ramps,1059.44,799.83,694.76,549.26,427.22,392.87,192.53,False,False,False
+Vfa02_t10s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,550.3,0.01,13.35,129.6,Complex Urban / Ramps,999.22,843.88,535.07,645.73,624.4,546.78,181.58,False,False,False
+Vfa02_t30s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,762.9,9.16,15.05,10.3,Straight / Highway,172.53,139.54,101.46,71.16,56.72,48.03,22.62,False,False,False
+Vfa02_t30s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,762.9,9.16,15.05,10.3,Straight / Highway,168.01,132.75,102.97,69.78,55.91,48.51,22.02,False,False,False
+Vfa02_t30s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,762.9,9.16,15.05,10.3,Straight / Highway,174.48,142.11,101.24,72.29,57.29,47.56,22.87,False,False,False
+Vfa02_t30s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,762.9,9.16,15.05,10.3,Straight / Highway,414.91,145.73,388.47,407.21,406.76,400.98,54.39,False,False,False
+Vfa02_t30s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,762.9,9.16,15.05,10.3,Straight / Highway,226.27,183.67,132.14,125.19,103.15,107.48,29.66,False,False,False
+Vfa02_t30s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,762.9,9.16,15.05,10.3,Straight / Highway,430.69,165.21,397.74,417.85,417.62,412.07,56.45,False,False,False
+Vfa02_t50s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,837.6,13.26,16.78,4.3,Straight / Highway,348.54,343.94,56.45,149.24,105.73,64.53,41.61,False,False,False
+Vfa02_t50s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,837.6,13.26,16.78,4.3,Straight / Highway,341.4,336.67,56.6,146.06,103.41,62.48,40.76,False,False,False
+Vfa02_t50s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,837.6,13.26,16.78,4.3,Straight / Highway,346.96,342.97,52.45,148.16,104.8,63.56,41.43,False,False,False
+Vfa02_t50s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,837.6,13.26,16.78,4.3,Straight / Highway,536.87,380.41,378.84,419.28,417.54,400.61,64.1,False,False,False
+Vfa02_t50s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,837.6,13.26,16.78,4.3,Straight / Highway,140.04,111.7,84.47,90.25,78.57,83.6,16.72,False,False,True
+Vfa02_t50s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,837.6,13.26,16.78,4.3,Straight / Highway,419.53,79.19,411.99,401.94,401.83,399.88,50.09,False,False,False
+Vfa02_t70s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,953.7,13.22,16.63,2.05,Straight / Highway,398.29,394.25,56.59,170.94,128.26,99.29,41.76,False,False,False
+Vfa02_t70s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,953.7,13.22,16.63,2.05,Straight / Highway,390.35,385.95,58.5,166.96,125.43,97.48,40.93,False,False,False
+Vfa02_t70s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,953.7,13.22,16.63,2.05,Straight / Highway,391.87,387.45,58.7,167.79,126.04,98.39,41.09,False,False,False
+Vfa02_t70s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,953.7,13.22,16.63,2.05,Straight / Highway,575.8,382.64,430.27,432.87,429.96,409.19,60.37,False,False,False
+Vfa02_t70s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,953.7,13.22,16.63,2.05,Straight / Highway,114.91,18.31,113.44,61.24,51.73,51.44,12.05,False,True,True
+Vfa02_t70s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,953.7,13.22,16.63,2.05,Straight / Highway,414.65,39.7,412.75,400.43,400.28,399.45,43.48,False,False,False
+Vfa02_t90s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,1036.9,15.02,19.24,40.67,Moderate Maneuvers,460.86,460.72,11.37,197.06,142.6,86.51,44.45,False,False,False
+Vfa02_t90s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,1036.9,15.02,19.24,40.67,Moderate Maneuvers,453.93,453.92,2.18,192.62,139.34,84.53,43.78,False,False,False
+Vfa02_t90s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,1036.9,15.02,19.24,40.67,Moderate Maneuvers,459.25,459.24,1.02,195.69,141.95,87.1,44.29,False,False,False
+Vfa02_t90s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,1036.9,15.02,19.24,40.67,Moderate Maneuvers,399.98,80.99,391.7,421.89,421.27,414.66,38.57,False,False,False
+Vfa02_t90s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,1036.9,15.02,19.24,40.67,Moderate Maneuvers,376.47,276.79,255.18,142.29,105.2,77.32,36.31,False,False,False
+Vfa02_t90s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,1036.9,15.02,19.24,40.67,Moderate Maneuvers,196.29,196.04,9.89,386.56,383.19,402.34,18.93,False,False,True
+Vfa02_t110s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,974.6,16.96,8.36,90.19,Complex Urban / Ramps,521.22,500.82,144.37,270.25,208.2,183.69,53.48,False,False,False
+Vfa02_t110s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,974.6,16.96,8.36,90.19,Complex Urban / Ramps,527.99,505.62,152.06,270.54,207.78,181.27,54.17,False,False,False
+Vfa02_t110s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,974.6,16.96,8.36,90.19,Complex Urban / Ramps,533.84,513.49,145.99,271.8,208.39,180.57,54.77,False,False,False
+Vfa02_t110s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,974.6,16.96,8.36,90.19,Complex Urban / Ramps,237.43,16.66,236.85,335.13,302.73,391.64,24.36,False,False,False
+Vfa02_t110s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,974.6,16.96,8.36,90.19,Complex Urban / Ramps,483.58,480.6,53.53,250.61,179.56,98.22,49.62,False,False,False
+Vfa02_t110s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,974.6,16.96,8.36,90.19,Complex Urban / Ramps,7.8,7.15,3.12,313.82,274.68,346.55,0.8,True,True,True
+Vfa02_t130s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,832.9,16.62,10.43,62.19,Complex Urban / Ramps,2133.15,69.99,2132.0,905.29,638.67,354.44,256.1,False,False,False
+Vfa02_t130s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,832.9,16.62,10.43,62.19,Complex Urban / Ramps,2142.77,73.08,2141.53,909.01,641.11,355.68,257.26,False,False,False
+Vfa02_t130s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,832.9,16.62,10.43,62.19,Complex Urban / Ramps,2134.63,38.59,2134.29,906.24,639.77,356.73,256.28,False,False,False
+Vfa02_t130s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,832.9,16.62,10.43,62.19,Complex Urban / Ramps,2054.11,378.6,2018.92,888.94,675.24,396.75,246.61,False,False,False
+Vfa02_t130s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,832.9,16.62,10.43,62.19,Complex Urban / Ramps,652.59,356.75,546.44,356.72,299.0,333.96,78.35,False,False,False
+Vfa02_t130s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,832.9,16.62,10.43,62.19,Complex Urban / Ramps,499.65,28.96,498.81,299.85,268.99,289.89,59.99,False,False,False
+Vfa02_t150s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 1: Raw IMU,60,656.4,19.21,0.71,31.41,Moderate Maneuvers,3408.6,3045.53,1530.79,1722.97,1338.67,1286.01,519.31,False,False,False
+Vfa02_t150s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 2: Standard EKF,60,656.4,19.21,0.71,31.41,Moderate Maneuvers,3422.96,3057.41,1539.11,1727.74,1341.4,1286.4,521.5,False,False,False
+Vfa02_t150s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 3: EKF + NHC,60,656.4,19.21,0.71,31.41,Moderate Maneuvers,3414.71,3040.81,1553.62,1723.62,1338.22,1283.76,520.24,False,False,False
+Vfa02_t150s_d60s,Vfa02,UNTOUCHED_TEST,Baseline 4: EKF + NHC + Causal Map,60,656.4,19.21,0.71,31.41,Moderate Maneuvers,3893.01,3461.32,1781.81,2101.81,1417.57,734.96,593.11,False,False,False
+Vfa02_t150s_d60s,Vfa02,UNTOUCHED_TEST,System 5: AI Odom + EKF + Adaptive NHC,60,656.4,19.21,0.71,31.41,Moderate Maneuvers,605.21,501.62,338.61,345.84,291.99,364.77,92.21,False,False,False
+Vfa02_t150s_d60s,Vfa02,UNTOUCHED_TEST,System 6: Full Hardened Pipeline,60,656.4,19.21,0.71,31.41,Moderate Maneuvers,275.69,240.88,134.1,194.82,181.43,185.83,42.0,False,False,False

@@ -1,0 +1,52 @@
+| scenario_id | split | duration_s | distance_m | final_pos_error_m | along_track_m | cross_track_m | drift_pct | maneuver_type | passed_10pct |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Vfa01_t10s_d15s | VALIDATION | 15 | 248.6 | 108.7 | 107.65 | 15.06 | 43.73 | Straight / Highway | False |
+| Vfa01_t30s_d15s | VALIDATION | 15 | 294.7 | 75.76 | 75.68 | 3.44 | 25.71 | Straight / Highway | False |
+| Vfa01_t50s_d15s | VALIDATION | 15 | 295.9 | 95.52 | 56.72 | 76.85 | 32.28 | Moderate Maneuvers | False |
+| Vfa01_t70s_d15s | VALIDATION | 15 | 266.3 | 66.9 | 66.88 | 1.77 | 25.12 | Straight / Highway | False |
+| Vfa01_t90s_d15s | VALIDATION | 15 | 291.5 | 79.01 | 77.4 | 15.88 | 27.11 | Moderate Maneuvers | False |
+| Vfa01_t110s_d15s | VALIDATION | 15 | 284.3 | 89.99 | 89.9 | 3.96 | 31.65 | Straight / Highway | False |
+| Vfa01_t130s_d15s | VALIDATION | 15 | 295.8 | 16.69 | 16.62 | 1.53 | 5.64 | Moderate Maneuvers | True |
+| Vfa01_t150s_d15s | VALIDATION | 15 | 300.2 | 85.97 | 85.46 | 9.33 | 28.63 | Straight / Highway | False |
+| Vfa01_t10s_d30s | VALIDATION | 30 | 528.3 | 79.0 | 78.87 | 4.48 | 14.95 | Moderate Maneuvers | False |
+| Vfa01_t30s_d30s | VALIDATION | 30 | 594.6 | 66.25 | 65.13 | 12.11 | 11.14 | Straight / Highway | False |
+| Vfa01_t50s_d30s | VALIDATION | 30 | 566.9 | 145.31 | 139.38 | 41.07 | 25.63 | Moderate Maneuvers | False |
+| Vfa01_t70s_d30s | VALIDATION | 30 | 563.5 | 56.03 | 55.97 | 2.53 | 9.94 | Moderate Maneuvers | True |
+| Vfa01_t90s_d30s | VALIDATION | 30 | 570.5 | 61.0 | 60.27 | 9.37 | 10.69 | Moderate Maneuvers | False |
+| Vfa01_t110s_d30s | VALIDATION | 30 | 585.8 | 25.81 | 25.78 | 1.42 | 4.41 | Moderate Maneuvers | True |
+| Vfa01_t130s_d30s | VALIDATION | 30 | 575.0 | 196.49 | 195.64 | 18.18 | 34.17 | Moderate Maneuvers | False |
+| Vfa01_t150s_d30s | VALIDATION | 30 | 656.7 | 41.5 | 41.44 | 2.23 | 6.32 | Moderate Maneuvers | True |
+| Vfa01_t10s_d60s | VALIDATION | 60 | 1132.6 | 217.56 | 190.47 | 105.13 | 19.21 | Straight / Highway | False |
+| Vfa01_t30s_d60s | VALIDATION | 60 | 1162.5 | 30.02 | 29.99 | 1.33 | 2.58 | Moderate Maneuvers | True |
+| Vfa01_t50s_d60s | VALIDATION | 60 | 1149.1 | 44.35 | 44.07 | 5.02 | 3.86 | Moderate Maneuvers | True |
+| Vfa01_t70s_d60s | VALIDATION | 60 | 1139.7 | 44.66 | 44.47 | 4.15 | 3.92 | Straight / Highway | True |
+| Vfa01_t90s_d60s | VALIDATION | 60 | 1157.5 | 65.68 | 65.54 | 4.2 | 5.67 | Moderate Maneuvers | True |
+| Vfa01_t110s_d60s | VALIDATION | 60 | 1188.2 | 346.5 | 333.8 | 92.93 | 29.16 | Moderate Maneuvers | False |
+| Vfa01_t130s_d60s | VALIDATION | 60 | 1284.3 | 391.3 | 391.15 | 11.14 | 30.47 | Moderate Maneuvers | False |
+| Vfa01_t150s_d60s | VALIDATION | 60 | 1348.0 | 169.38 | 169.38 | 0.78 | 12.56 | Straight / Highway | False |
+| Vfa01_t45s_d60s | VALIDATION | 60 | 1159.2 | 35.71 | 35.46 | 4.26 | 3.08 | Straight / Highway | True |
+| Vfa01_t220s_d60s | VALIDATION | 60 | 1037.3 | 161.97 | 160.36 | 22.78 | 15.61 | Straight / Highway | False |
+| Vfa02_t30s_d15s | UNTOUCHED_TEST | 15 | 183.7 | 415.92 | 71.74 | 409.69 | 226.43 | Straight / Highway | False |
+| Vfa02_t50s_d15s | UNTOUCHED_TEST | 15 | 169.0 | 392.44 | 51.5 | 389.04 | 232.16 | Straight / Highway | False |
+| Vfa02_t70s_d15s | UNTOUCHED_TEST | 15 | 200.3 | 388.65 | 8.55 | 388.55 | 193.99 | Straight / Highway | False |
+| Vfa02_t90s_d15s | UNTOUCHED_TEST | 15 | 248.8 | 402.82 | 32.29 | 401.52 | 161.88 | Straight / Highway | False |
+| Vfa02_t110s_d15s | UNTOUCHED_TEST | 15 | 264.2 | 418.76 | 20.22 | 418.27 | 158.49 | Straight / Highway | False |
+| Vfa02_t130s_d15s | UNTOUCHED_TEST | 15 | 260.5 | 291.75 | 291.62 | 8.62 | 111.99 | Moderate Maneuvers | False |
+| Vfa02_t150s_d15s | UNTOUCHED_TEST | 15 | 223.9 | 82.88 | 82.16 | 10.87 | 37.01 | Moderate Maneuvers | False |
+| Vfa02_t170s_d15s | UNTOUCHED_TEST | 15 | 144.8 | 53.25 | 43.8 | 30.29 | 36.78 | Complex Urban / Ramps | False |
+| Vfa02_t10s_d30s | UNTOUCHED_TEST | 30 | 175.5 | 546.11 | 240.84 | 490.14 | 311.19 | Complex Urban / Ramps | False |
+| Vfa02_t30s_d30s | UNTOUCHED_TEST | 30 | 361.1 | 404.54 | 111.93 | 388.75 | 112.02 | Straight / Highway | False |
+| Vfa02_t50s_d30s | UNTOUCHED_TEST | 30 | 367.1 | 395.61 | 78.78 | 387.69 | 107.78 | Straight / Highway | False |
+| Vfa02_t70s_d30s | UNTOUCHED_TEST | 30 | 437.3 | 399.41 | 2.23 | 399.41 | 91.34 | Straight / Highway | False |
+| Vfa02_t90s_d30s | UNTOUCHED_TEST | 30 | 499.7 | 414.84 | 58.2 | 410.74 | 83.02 | Straight / Highway | False |
+| Vfa02_t110s_d30s | UNTOUCHED_TEST | 30 | 518.7 | 347.17 | 230.06 | 260.0 | 66.93 | Moderate Maneuvers | False |
+| Vfa02_t130s_d30s | UNTOUCHED_TEST | 30 | 531.5 | 52.43 | 35.89 | 38.23 | 9.86 | Complex Urban / Ramps | True |
+| Vfa02_t150s_d30s | UNTOUCHED_TEST | 30 | 350.1 | 171.3 | 161.26 | 57.79 | 48.93 | Straight / Highway | False |
+| Vfa02_t10s_d60s | UNTOUCHED_TEST | 60 | 550.3 | 999.22 | 843.88 | 535.07 | 181.58 | Complex Urban / Ramps | False |
+| Vfa02_t30s_d60s | UNTOUCHED_TEST | 60 | 762.9 | 430.69 | 165.21 | 397.74 | 56.45 | Straight / Highway | False |
+| Vfa02_t50s_d60s | UNTOUCHED_TEST | 60 | 837.6 | 419.53 | 79.19 | 411.99 | 50.09 | Straight / Highway | False |
+| Vfa02_t70s_d60s | UNTOUCHED_TEST | 60 | 953.7 | 414.65 | 39.7 | 412.75 | 43.48 | Straight / Highway | False |
+| Vfa02_t90s_d60s | UNTOUCHED_TEST | 60 | 1036.9 | 196.29 | 196.04 | 9.89 | 18.93 | Moderate Maneuvers | False |
+| Vfa02_t110s_d60s | UNTOUCHED_TEST | 60 | 974.6 | 7.8 | 7.15 | 3.12 | 0.8 | Complex Urban / Ramps | True |
+| Vfa02_t130s_d60s | UNTOUCHED_TEST | 60 | 832.9 | 499.65 | 28.96 | 498.81 | 59.99 | Complex Urban / Ramps | False |
+| Vfa02_t150s_d60s | UNTOUCHED_TEST | 60 | 656.4 | 275.69 | 240.88 | 134.1 | 42.0 | Moderate Maneuvers | False |

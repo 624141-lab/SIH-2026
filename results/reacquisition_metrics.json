@@ -1,0 +1,14 @@
+{
+  "drive_id": "Vfa01",
+  "outage_duration_s": 30.0,
+  "snap_jump_m": 99.588,
+  "smooth_step_jump_m": 3.696,
+  "jump_reduction_pct": 96.3,
+  "snap_max_vel_spike_mps": 995.88,
+  "smooth_max_vel_spike_mps": 40.72,
+  "snap_acc_spike_mps2": 9753.24,
+  "smooth_acc_spike_mps2": 3.79,
+  "correction_duration_s": 1.5,
+  "recovery_error_snap_m": 8.41,
+  "recovery_error_smooth_m": 428.16
+}

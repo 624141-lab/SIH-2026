@@ -12,15 +12,19 @@ except ImportError:
 from .ekf import ExtendedKalmanFilter
 from .nhc import apply_nhc_update
 from .zupt import StationaryDetector, apply_zupt, apply_zaru
+from .gnss_monitor import GNSSDeficitDetector, GNSSStatus
+from ..eval.transition import ReacquisitionSmoother
 
 class GNSSINSFusion:
-    """Manages coordinate transformations, GNSS blackout transitions, and Dead Reckoning."""
+    """Manages coordinate transformations, automatic GNSS deficit detection, blackout transitions, and Dead Reckoning."""
 
     def __init__(self, ref_lat: float, ref_lon: float, dt: float = 0.1):
         self.dt = dt
         self.ref_lat = ref_lat
         self.ref_lon = ref_lon
         self.stationary_detector = StationaryDetector(window_size=10, acc_var_threshold=0.15)
+        self.gnss_detector = GNSSDeficitDetector(dt=dt)
+        self.reacquisition_smoother = ReacquisitionSmoother(blend_duration_sec=1.5, dt=dt)
         
         # Local ENU projection centered at initial GPS point
         if HAS_PYPROJ:
@@ -72,10 +76,13 @@ class GNSSINSFusion:
         yaw_rate: float,
         gnss_pos: Optional[Tuple[float, float]] = None,
         ai_velocity: Optional[object] = None,
-        is_gnss_denied: bool = False,
+        ai_uncertainty: Optional[np.ndarray] = None,
+        is_gnss_denied: Optional[bool] = None,
         use_nhc: bool = True,
         acc_3d: Optional[np.ndarray] = None,
         gyro_3d: Optional[np.ndarray] = None,
+        hdop: float = 1.0,
+        pos_std: float = 2.0,
     ) -> np.ndarray:
         """Single 10 Hz filter integration step.
         
@@ -84,10 +91,12 @@ class GNSSINSFusion:
             yaw_rate: Yaw rate in vehicle body frame (rad/s)
             gnss_pos: (lat, lon) or None
             ai_velocity: Forward velocity (float) or 2D velocity [v_fwd, v_lat] from AI model
-            is_gnss_denied: True if currently inside simulated blackout
+            is_gnss_denied: Optional manual flag (overrides automatic detection if provided)
             use_nhc: Whether to apply non-holonomic constraints
             acc_3d: Optional 3-axis accel for stationary ZUPT detection
             gyro_3d: Optional 3-axis gyro for stationary ZARU detection
+            hdop: Horizontal Dilution of Precision
+            pos_std: Positional standard deviation in meters
         """
         # 1. IMU Prediction step
         self.ekf.predict(fwd_accel, yaw_rate)
@@ -98,15 +107,44 @@ class GNSSINSFusion:
                 apply_zupt(self.ekf, sigma_v=0.01)
                 apply_zaru(self.ekf, gyro_z_raw=float(gyro_3d[2]) if len(gyro_3d) > 2 else yaw_rate)
 
-        # 3. Measurement updates
-        if not is_gnss_denied and gnss_pos is not None:
-            if self.in_blackout:
-                self.in_blackout = False
-
+        # 3. Automatic GNSS Deficit & Reacquisition Detection (Requirement 1 & 3)
+        gnss_enu = None
+        innov_vec = None
+        innov_cov = None
+        if gnss_pos is not None:
             east, north, up = self.latlon_to_enu(gnss_pos[0], gnss_pos[1])
-            self.ekf.update_gnss_pos(np.array([east, north, up]))
+            gnss_enu = np.array([east, north, up], dtype=np.float64)
+            innov_vec = gnss_enu - self.ekf.x[0:3]
+            innov_cov = self.ekf.P[0:3, 0:3] + np.eye(3) * (pos_std**2)
+
+        self.gnss_detector.update(
+            gnss_pos=gnss_pos,
+            hdop=hdop,
+            pos_std=pos_std,
+            innovation_vector=innov_vec,
+            innovation_cov=innov_cov,
+            force_denied=is_gnss_denied,
+        )
+
+        # 4. Measurement updates based on automatic detector state
+        if not self.gnss_detector.is_blackout() and gnss_enu is not None:
+            # Check if transitioning from blackout to healthy (Requirement 3: Reacquisition)
+            if self.in_blackout or self.gnss_detector.is_recovering():
+                if self.in_blackout:
+                    self.in_blackout = False
+                    self.reacquisition_smoother.trigger_reacquisition(self.ekf.x[:2], gnss_enu[:2])
+
+                # Apply smooth cosine bell blend (eliminates position teleports & velocity spikes)
+                smoothed_xy = self.reacquisition_smoother.apply_smoothing(self.ekf.x[:2], gnss_enu[:2])
+                gnss_to_update = np.array([smoothed_xy[0], smoothed_xy[1], gnss_enu[2]])
+            else:
+                self.in_blackout = False
+                gnss_to_update = gnss_enu
+
+            self.ekf.update_gnss_pos(gnss_to_update, R_cov=np.eye(3) * (pos_std**2))
 
             # Course Over Ground (COG) heading and GNSS velocity updates
+            east, north = float(gnss_to_update[0]), float(gnss_to_update[1])
             if self.prev_gnss_enu is not None:
                 de = east - self.prev_gnss_enu[0]
                 dn = north - self.prev_gnss_enu[1]
@@ -121,16 +159,21 @@ class GNSSINSFusion:
             self.in_blackout = True
             self.prev_gnss_enu = None
 
-            # 4. Apply Non-Holonomic Constraints (NHC) during blackout
+            # Non-Holonomic Constraints (NHC) during blackout
             if use_nhc:
                 apply_nhc_update(self.ekf, sigma_lat=0.05, sigma_vert=0.05)
 
-            # 5. Apply AI Velocity update (scalar or 2D displacement/velocity)
+            # AI Velocity update (scalar or 2D displacement/velocity)
             if ai_velocity is not None:
                 if isinstance(ai_velocity, (tuple, list, np.ndarray)) and len(ai_velocity) >= 2:
-                    self.ekf.update_velocity_2d(float(ai_velocity[0]), float(ai_velocity[1]))
+                    r_cov = None
+                    if ai_uncertainty is not None:
+                        if isinstance(ai_uncertainty, (tuple, list, np.ndarray)) and len(ai_uncertainty) >= 2:
+                            r_cov = np.diag([float(max(1e-4, ai_uncertainty[0])), float(max(1e-4, ai_uncertainty[1]))])
+                    self.ekf.update_velocity_2d(float(ai_velocity[0]), float(ai_velocity[1]), R_cov=r_cov)
                 else:
-                    self.ekf.update_velocity(float(ai_velocity), R_speed=0.5)
+                    r_speed = float(ai_uncertainty) if (ai_uncertainty is not None and np.isscalar(ai_uncertainty)) else 0.5
+                    self.ekf.update_velocity(float(ai_velocity), R_speed=max(0.01, r_speed))
 
         current_state = self.ekf.x.copy()
         self.trajectory_history.append(current_state)
