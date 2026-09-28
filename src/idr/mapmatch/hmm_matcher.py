@@ -89,14 +89,14 @@ class HMMMapMatcher:
             self.kdtree = None
         logger.info(f"HMMMapMatcher initialized with {len(self.edges)} road segments (spatial index ready).")
 
-    def find_candidates(self, x: float, y: float) -> List[RoadCandidate]:
+    def find_candidates(self, x: float, y: float, search_radius: Optional[float] = None) -> List[RoadCandidate]:
         """Find candidate road segments within search radius using fast spatial indexing."""
         if not self.edges or self.kdtree is None:
             # Fallback when no graph edges exist
             return [RoadCandidate(0, 0, 0, 0, x, y, 0.0, 0.0)]
 
         p = Point(x, y)
-        r = self.max_search_radius
+        r = search_radius if search_radius is not None else self.max_search_radius
 
         # Fast spatial query: query top-15 nearest edge midpoints
         k_query = min(15, len(self.edges))

@@ -11,9 +11,9 @@
 
 | Configuration | Scenarios | Median Drift (%) | Mean Drift (%) | P90 Drift (%) | P95 Drift (%) | Mean RMSE (m) | Mean CEP50 (m) | Pass Rate (<10%) |
 |---|---|---|---|---|---|---|---|---|
-| **Config A: Raw IMU Baseline** | 100 | **29.63%** | 38.55% | 66.53% | 125.26% | 123.98 m | 85.69 m | **14.0%** |
-| **Config B: EKF + AI Velocity + NHC** | 100 | **72.05%** | 89.36% | 159.07% | 210.15% | 307.82 m | 206.37 m | **2.0%** |
-| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 100 | **56.80%** | 81.91% | 171.33% | 241.52% | 290.33 m | 204.11 m | **6.0%** |
+| **Config A: Raw IMU Baseline** | 100 | **35.38%** | 75.77% | 165.80% | 189.74% | 255.04 m | 149.42 m | **8.0%** |
+| **Config B: EKF + AI Velocity + NHC** | 100 | **68.78%** | 79.90% | 127.36% | 175.22% | 289.52 m | 199.05 m | **2.0%** |
+| **Config C: EKF + AI Velocity + NHC + OSM HMM** | 100 | **47.22%** | 74.71% | 161.78% | 237.34% | 261.55 m | 183.69 m | **15.0%** |
 
 ---
 

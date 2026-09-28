@@ -118,24 +118,33 @@ class ExtendedKalmanFilter:
         self.P = (I - K @ H) @ self.P @ (I - K @ H).T + K @ R @ K.T
 
     def update_velocity(self, fwd_speed: float, R_speed: float = 0.5):
-        """Update with deep learning estimated forward speed: z = sqrt(v_e^2 + v_n^2)."""
+        """Update with deep learning estimated forward speed: z = v_e*cos(psi) + v_n*sin(psi)."""
         ve, vn = self.x[3], self.x[4]
-        v_norm = np.sqrt(ve**2 + vn**2) + 1e-6
+        psi = self.x[6]
+        cos_psi = np.cos(psi)
+        sin_psi = np.sin(psi)
 
-        # H = [0, 0, 0, ve/v_norm, vn/v_norm, 0, 0, 0, 0]
+        # Forward velocity prediction along vehicle heading
+        v_fwd = ve * cos_psi + vn * sin_psi
+        v_lat = -ve * sin_psi + vn * cos_psi
+
+        # Jacobian H with respect to [ve, vn, psi]
         H = np.zeros((1, self.dim_x), dtype=np.float64)
-        H[0, 3] = ve / v_norm
-        H[0, 4] = vn / v_norm
+        H[0, 3] = cos_psi
+        H[0, 4] = sin_psi
+        H[0, 6] = v_lat
 
-        y = np.array([fwd_speed - v_norm])
+        y = np.array([fwd_speed - v_fwd])
         R = np.array([[R_speed**2]])
 
         S = H @ self.P @ H.T + R
         K = self.P @ H.T @ np.linalg.inv(S)
 
         self.x = self.x + (K @ y).flatten()
+        self.x[6] = (self.x[6] + np.pi) % (2 * np.pi) - np.pi
         I = np.eye(self.dim_x)
         self.P = (I - K @ H) @ self.P @ (I - K @ H).T + K @ R @ K.T
+
 
     def update_gnss_vel(self, vel_enu: np.ndarray, R_cov: np.ndarray = None):
         """Update with GNSS velocity vector [v_East, v_North, v_Up].
