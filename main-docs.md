@@ -71,6 +71,58 @@ Infers v_fwd + σ²                ▲
 
 ---
 
+## 3. Chronological Processing for a Single Timestep ($t_k$)
+
+Here is the exact step-by-step lifecycle of a single sensor observation as it flows through the executable code 
+```text
+1. Sensor Arrival (10 Hz):
+   phone_imu[k] = [ax, ay, az, gx, gy, gz]
+   │
+   ▼
+2. Coordinate Transformation (Phone -> Vehicle):
+   acc_v[k], gyro_v[k] = aligner.transform_imu(acc_p, gyro_p)
+   │
+   ▼
+3. Vibration & Gravity Separation:
+   s_acc, s_gyro, state, cov_scale = vfilter.process(acc_v[k], gyro_v[k])
+   fwd_acc = s_acc[0], yaw_rate = s_gyro[2]
+   │
+   ▼
+4. AI Odometry Inference (Sliding Window):
+   window = phone_imu[k-50 : k]  (shape: 6 x 50)
+   dx_body, dy_body, log_var_x, log_var_y = odom_model(window)
+   v_ai = dx_body / (50 * dt)
+   sig_x = exp(0.5 * log_var_x)
+   │
+   ▼
+5. Kinematic Filter State Prediction:
+   ekf.predict(fwd_acc, yaw_rate)
+   Propagates: x_pred = f(x_{k-1}, u_k),  P_pred = F * P * F^T + Q
+   │
+   ▼
+6. Adaptive NHC Pseudo-Measurement Update:
+   apply_adaptive_nhc_update(ekf, yaw_rate, sigma_lat_base, k_turn)
+   y = [-v_lat_pred, -v_vert_pred]
+   Constrains lateral slip based on centripetal acceleration
+   │
+   ▼
+7. AI Velocity Measurement Update:
+   v_ai_tracking = 0.85 * (v_ai_tracking + fwd_acc * dt) + 0.15 * v_ai
+   ekf.update_velocity(v_ai_tracking, R_speed = max(0.1, sig_x * sqrt(cov_scale)))
+   Adjusts forward velocity and position in ENU state
+   │
+   ▼
+8. Spatial Road Prior (Causal HMM Map Matching):
+   match_output = causal_matcher.step(ekf.x[0], ekf.x[1], motion_heading = ekf.x[6])
+   Projects onto OSM centerline if confidence >= 0.20 and dist <= 30.0m
+   │
+   ▼
+9. Output Navigation Coordinate:
+   p_nav[k] = [match_output.provisional_x, match_output.provisional_y]
+```
+
+---
+
 ## 4. What Each Block Actually Does (In Simple Terms)
 
 1. **Stage 1 (Ingestion):** Reads the phone's 3-axis accelerometer and 3-axis gyroscope at a steady $10\text{ Hz}$ clock ($0.1\text{ s}$ intervals).
