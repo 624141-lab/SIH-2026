@@ -4,8 +4,7 @@
 
 ## 1. Chronological Processing for a Single Timestep ($t_k$)
 
-Here is the exact step-by-step lifecycle of a single sensor observation as it flows through the executable code in [`scripts/evaluate_hardened_pipeline.py`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/scripts/evaluate_hardened_pipeline.py) and [`src/idr/`](file:///c:/Users/varshith/Downloads/AI_gemini_pro/src/idr/):
-
+Here is the exact step-by-step lifecycle of a single sensor observation as it flows through the executable code 
 ```text
 1. Sensor Arrival (10 Hz):
    phone_imu[k] = [ax, ay, az, gx, gy, gz]
@@ -70,10 +69,3 @@ Here is the exact step-by-step lifecycle of a single sensor observation as it fl
 | **9** | Reacquisition Smoothing | `src/idr/eval/transition.py`<br>`apply_smoothing()` | `current_dr_enu`, `raw_gnss_enu` | `smoothed_enu` (2,) | Applied after blackout ends: smoothly merges DR position to restored GNSS fix over 3.5 s |
 
 ---
-
-## 3. What Happens Between Timesteps?
-
-* **Time Stepping:** The loop advances by $\Delta t = 0.1\text{ s}$ ($10\text{ Hz}$).
-* **Filter Persistence:** The state vector $\mathbf{x} = [p_e, p_n, p_u, v_e, v_n, v_u, \psi, b_a, b_\omega]^T$ and covariance matrix $\mathbf{P}$ persist from timestep $k-1$ to $k$.
-* **Sliding Window:** At timestep $k+1$, the oldest sample in the 50-step AI buffer is dropped, and the new sample is appended.
-* **Trellis Continuity:** The HMM road candidate list and Viterbi state probabilities carry forward to penalize unrealistic road jumps between frames.
