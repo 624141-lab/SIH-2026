@@ -1,123 +1,85 @@
-# 01 — PROJECT FROM ZERO: INERTIAL NAVIGATION FUNDAMENTALS
+# 00 — SYSTEM OVERVIEW: THE IDR PROJECT
 
 ---
 
-## 1. Introduction: The Core Concepts
+## 1. What Problem Is This Project Solving?
 
-To defend this project, you need an intuitive understanding of navigation physics. Here are the core building blocks:
+Every modern navigation app on your phone (Google Maps, Apple Maps, Waze) relies on **GNSS** (Global Navigation Satellite Systems, like GPS, GLONASS, or Galileo). Satellites orbit thousands of kilometers above Earth, beaming radio signals that tell your phone its exact location.
 
-### 1. GNSS (Global Navigation Satellite System)
-* **What it is:** A constellation of satellites (GPS, GLONASS, Galileo, NavIC) sending timestamped radio signals.
-* **How it works:** Your phone calculates the distance to at least 4 satellites by measuring signal travel time, triangulating your latitude, longitude, and altitude.
-* **Limitation:** Requires a direct line-of-sight to space. Blocked by concrete, rock, steel, and dense buildings.
+### The Real-World Problem: The "Blackout"
+When a vehicle enters an underground tunnel, a multi-tier expressway flyover, a parking structure, or a dense urban canyon between skyscrapers:
+1. Satellite signals are physically blocked (**GNSS outage**).
+2. The blue navigation dot on your phone freezes, spins wildly, or jumps across city blocks (**multipath reflection**).
+3. The driver misses critical highway exits, turns onto the wrong ramp, or loses turn-by-turn guidance.
 
-### 2. IMU (Inertial Measurement Unit)
-* **What it is:** A tiny microchip inside your phone containing Micro-Electro-Mechanical Systems (MEMS).
-* **Two primary sensors:**
-  1. **Accelerometer:** Measures linear acceleration ($m/s^2$) along 3 orthogonal axes ($X, Y, Z$). *Important:* It also continuously measures Earth's gravity ($9.81\text{ m/s}^2$).
-  2. **Gyroscope:** Measures angular velocity / rate of rotation ($\text{rad/s}$ or $\text{deg/s}$) around 3 orthogonal axes.
-
-### 3. Kinematic Quantities (From Acceleration to Position)
-* **Acceleration ($a$):** How quickly velocity is changing (e.g. stepping on the gas pedal: $2.0\text{ m/s}^2$).
-* **Velocity ($v$):** Speed with direction (e.g. traveling East at $20\text{ m/s} = 72\text{ km/h}$).
-* **Displacement ($\Delta p$):** How far you moved during a specific time step $\Delta t$.
-* **Position ($p$):** Where you are in the world (e.g., East = $450\text{ m}$, North = $1,200\text{ m}$).
-* **Heading / Yaw ($\psi$):** The compass direction the vehicle's nose is pointing (e.g., $0^\circ$ = East, $90^\circ$ = North).
+### The Standard Industry Solution vs. Our Challenge
+* **Automotive OEMs (Tesla, Mercedes):** Tap directly into the vehicle's internal computer (CAN-bus / OBD-II port) to read the car's wheel speed sensors and steering angle.
+* **The SIH 26168 Challenge:** **We are NOT allowed to touch the car's wiring or OBD port.** The entire navigation system must run purely on an ordinary smartphone resting in a dashboard cradle, using low-cost internal MEMS sensors (accelerometer and gyroscope) to track the car through complete satellite blackouts exceeding **1 kilometer (>60 seconds)** with **less than 10% drift** (<100 meters error per 1,000 meters traveled).
 
 ---
 
-## 2. Dead Reckoning: Navigating Without Satellites
+## 2. Why Is This Extremely Difficult? (The "Sensor Trap")
 
-### The Concept
-Imagine walking in a completely pitch-black room with your eyes closed. If you know:
-1. Where you started ($p_0 = [0, 0]$),
-2. How fast you are walking ($1.5\text{ m/s}$), and
-3. What direction your nose is pointing ($45^\circ$ North-East),
+If you have an accelerometer, physics says:
+$$\text{acceleration} \xrightarrow{\text{integrate}} \text{velocity} \xrightarrow{\text{integrate}} \text{position}$$
 
-you can calculate where you are after 10 seconds:
-$$\text{Distance} = 1.5\text{ m/s} \times 10\text{ s} = 15\text{ meters}$$
-This process of estimating current position based on past position, speed, and heading is called **Dead Reckoning (DR)**.
-
----
-
-## 3. Why Does Classical Dead Reckoning Fail on Smartphones?
-
-In pure physics, you integrate acceleration to get velocity, and integrate velocity to get position:
-
-$$v(t) = v(0) + \int_{0}^{t} a(\tau) \, d\tau$$
-$$p(t) = p(0) + \int_{0}^{t} v(\tau) \, d\tau$$
-
-### The Enemy: Sensor Bias and Quadratic Error Growth
-Smartphone MEMS sensors suffer from **bias** ($b$), an internal calibration error that makes the sensor output a non-zero value even when completely stationary.
-
-Suppose the accelerometer has a tiny bias $b_a = 0.1\text{ m/s}^2$ (roughly $1\%$ of gravity). If the vehicle is moving at a constant speed, the true acceleration is $a_{\text{true}} = 0$, but the sensor reports $a_{\text{meas}} = 0.1\text{ m/s}^2$.
-
-Let's integrate that error over time:
-1. **Velocity Error:**
-   $$e_v(t) = \int_{0}^{t} b_a \, d\tau = b_a \cdot t$$
-   After 60 seconds: $e_v = 0.1 \times 60 = 6.0\text{ m/s}$ ($21.6\text{ km/h}$ error).
-2. **Position Error (Double Integration):**
-   $$e_p(t) = \int_{0}^{t} e_v(\tau) \, d\tau = \frac{1}{2} b_a \cdot t^2$$
-   After 60 seconds:
-   $$e_p(60) = \frac{1}{2} \times 0.1 \times (60)^2 = \frac{1}{2} \times 0.1 \times 3600 = \mathbf{180\text{ meters!}}$$
-
-Even with a tiny $0.1\text{ m/s}^2$ error, position drifts by $180\text{ meters}$ in just one minute. On real consumer phones with vibration and temperature shifts, bias can exceed $0.3\text{ m/s}^2$, generating over **$500\text{ meters}$ of drift**.
-
-### Gyroscope Drift: Rotating the Vector into Ruin
-The gyroscope has a bias too ($b_\omega \approx 0.2^\circ/\text{s}$). If the heading estimate drifts by just $10^\circ$:
-* The vehicle is driving straight forward.
-* The computer thinks the vehicle is driving $10^\circ$ off to the right.
-* At $72\text{ km/h}$ ($20\text{ m/s}$), the sideways cross-track error grows by:
-  $$\Delta y = 20\text{ m/s} \times \sin(10^\circ) \times 60\text{ s} \approx 208\text{ meters!}$$
-
-This is why **Baseline 1 (Raw IMU)** and **Baseline 2 (Standard EKF)** fail with $98\%\text{--}146\%$ drift in our benchmark.
+In theory, you can calculate where the car is by integrating acceleration twice. In practice on a $200 smartphone, this fails catastrophically:
+1. **Sensor Noise & Bias:** Smartphone sensors cost less than $1. They have tiny manufacturing imperfections called *biases*. Even when the phone is sitting still on a table, the accelerometer thinks it is accelerating slightly ($0.05\text{ m/s}^2$), and the gyroscope thinks it is slowly turning ($0.2^\circ/\text{s}$).
+2. **Double Integration Explosion:** When you integrate a constant acceleration error twice:
+   $$\text{position error} \propto \frac{1}{2} \cdot \text{bias} \cdot t^2$$
+   After just 60 seconds, an uncorrected smartphone accelerometer drifts by over **$200\text{ meters}$ to $1,000\text{ meters}$**!
+3. **Pure AI Fails Too:** Training a deep neural network to predict position directly from raw IMU sounds modern, but deep learning models have no concept of physical laws. Within 15 seconds of blackout, pure neural odometry accumulates heading drift and hallucinates the vehicle driving through buildings and rivers.
 
 ---
 
-## 4. Coordinate Reference Frames
+## 3. The Core Innovation: The Hybrid AI-Kinematic Pipeline
 
-Navigation is impossible unless you clearly define which coordinate system you are talking about. Our system uses three distinct frames:
+Rather than trusting pure physics or pure AI, our **Intelligent Dead Reckoning (IDR)** engine fuses deep learning with classical aerospace estimation and spatial road priors into an 8-stage causal pipeline:
 
 ```text
-       Phone Frame (p)                 Vehicle Body Frame (v)               World ENU Frame (w)
-      [Tilting in cradle]              [Fixed to car chassis]              [Tangent plane on Earth]
-            +Z_p                                 +Z_v (Up)                              +North
-             ▲                                    ▲                                       ▲
-             │                                    │                                       │
-             │   ▲ +Y_p                           │   ▲ +X_v (Forward)                    │
-             │  /                                 │  /                                    │
-             │ /                                  │ /                                     └────────► +East
-   ──────────┼────────► +X_p            ──────────┼────────► +Y_v (Right)                /
-            /                                    /                                      ▼ +Up
+[Raw Smartphone IMU: Accel + Gyro @ 10 Hz]
+                     │
+                     ▼
+       Stage 1: Ingestion & Calibration
+                     │
+                     ▼
+       Stage 2: Phone-to-Vehicle Alignment  ──► Computes 3D Rotation Matrix R_{p→v}
+                     │
+                     ▼
+       Stage 3: Vibration & Shock Filter    ──► Dynamic Noise Scaling s_{cov}
+                     │
+         ┌───────────┴───────────┐
+         ▼                       ▼
+Stage 4: InertialOdomNet    Stage 5: 7-State Kinematic EKF
+(1D-CNN + GRU Odometry)     (Predicts x, y, z, v_e, v_n, v_u, ψ)
+Infers v_fwd + σ²                ▲
+         │                       │
+         └───── Pseudo-Speed ────┘
+                     │
+                     ▼
+       Stage 6: Adaptive Centripetal NHC   ──► Enforces v_lat ≈ 0 (prevents side slip)
+                     │
+                     ▼
+       Stage 7: Causal HMM Map Matcher     ──► 30m Corridor Gating on OSM Vector Graph
+                     │
+                     ▼
+       Stage 8: GNSS Reacquisition Blending ──► C¹ Cosine Smoother (3.5s transition)
+                     │
+                     ▼
+          [Continuous Meter-Level Trajectory]
 ```
-
-### 1. Phone Frame ($p$): $\{X_p, Y_p, Z_p\}$
-* Attached to the physical smartphone hardware.
-* When a driver clips the phone into a magnetic air vent mount, the phone screen might face slightly up and left.
-* Measurements from the accelerometer and gyroscope come out in this arbitrary phone frame.
-
-### 2. Vehicle Body Frame ($v$): $\{X_v, Y_v, Z_v\}$
-* Fixed rigidly to the automobile chassis:
-  * **$X_v$ (Longitudinal):** Points forward through the front windshield.
-  * **$Y_v$ (Lateral):** Points out the passenger window (to the right).
-  * **$Z_v$ (Vertical):** Points vertically through the car roof.
-* Cars can only accelerate forward/backward along $X_v$. They cannot slide sideways along $Y_v$ without skidding.
-
-### 3. World Navigation Frame ($w$): Local ENU (East-North-Up)
-* Fixed to the surface of the Earth at the location where the GNSS blackout started.
-  * **East ($X_w$):** Tangent to Earth pointing East.
-  * **North ($Y_w$):** Tangent to Earth pointing North.
-  * **Up ($Z_w$):** Normal to Earth's ellipsoid pointing into the sky.
-* We express estimated vehicle position $(p_E, p_N)$ in meters relative to the start of the trip.
 
 ---
 
-## 5. Summary: What the Entire Project Does in Plain English
+## 4. What Each Block Actually Does (In Simple Terms)
 
-1. Take messy IMU signals from a crooked phone in a vibrating car.
-2. Rotate them so the computer knows which way is "car forward" and which way is "Earth down."
-3. Filter out engine buzz, potholes, and music rumble.
-4. Use an AI model to guess forward speed from vibrations so we never have to double-integrate acceleration.
-5. Feed that speed into a Kalman filter that enforces real car physics (wheels don't slide sideways).
-6. Snap the estimated route to the nearest real street on OpenStreetMap.
-7. Smoothly merge back onto satellites when the sky opens up.
+1. **Stage 1 (Ingestion):** Reads the phone's 3-axis accelerometer and 3-axis gyroscope at a steady $10\text{ Hz}$ clock ($0.1\text{ s}$ intervals).
+2. **Stage 2 (Alignment):** A phone in a car cradle is tilted at an arbitrary angle. This module watches gravity while stationary and detects the first forward acceleration to calculate a 3D rotation matrix ($R_{phone \to vehicle}$), transforming phone measurements into true vehicle coordinates (X=forward, Y=right, Z=up).
+3. **Stage 3 (Vibration Filter):** Engine rumble, potholes, and bass from speakers cause high-frequency vibrations that ruin dead reckoning. This filter separates gravity, detects shocks, and automatically inflates filter uncertainty ($s_{\text{cov}}$) so temporary jolts don't corrupt navigation.
+4. **Stage 4 (AI Odometry - `InertialOdomNet`):** A custom neural network (1D-CNN + GRU) inspects a rolling 5-second window of IMU vibrations to infer instantaneous forward speed ($v_{\text{fwd}}$) and its confidence ($\sigma^2$), completely without vehicle wheel sensors.
+5. **Stage 5 (Kinematic EKF):** An Extended Kalman Filter acts as the "conductor." It runs continuous physical equations of motion, propagating vehicle position and heading, using the AI speed as a measurement correction.
+6. **Stage 6 (Adaptive NHC):** Cars have wheels; they drive forward, they don't slide sideways like hockey pucks. Non-Holonomic Constraints (NHC) force lateral and vertical speed to zero. Crucially, our system is *adaptive*: when the car takes a sharp turn, it relaxes this rule using centripetal physics ($\sigma_{\text{lat}}^2 \propto (v \cdot |\omega_z|)^2$) so tyre slip doesn't distort heading.
+7. **Stage 7 (Causal Map Matcher):** Vehicles drive on roads, not in lakes. An online Hidden Markov Model (HMM) checks the OpenStreetMap (OSM) vector graph in real time with **zero future look-ahead**. If the vehicle is within $30\text{ meters}$ of a valid corridor, it projects the position along the road centerline. If off-road or unmapped, safety gates reject snapping.
+8. **Stage 8 (Reacquisition Smoother):** When emerging from a tunnel, the first satellite fix might be 30 meters away from the dead-reckoned estimate. Instead of the vehicle "teleporting" instantly, a $C^1$ continuous cosine curve smoothly blends the trajectory back to satellites over $3.5\text{ seconds}$.
+
+---
