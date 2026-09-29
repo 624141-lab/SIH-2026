@@ -1,4 +1,4 @@
-# 00 — SYSTEM OVERVIEW: THE IDR PROJECT
+# AI-ML based Intelligent Dead Reckoning system for seamless navigation (SIH26168)
 
 ---
 
