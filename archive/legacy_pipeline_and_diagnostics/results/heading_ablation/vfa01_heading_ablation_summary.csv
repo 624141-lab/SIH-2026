@@ -1,7 +1,0 @@
-Configuration,Heading RMSE (deg),Pos RMSE (m),Median Drift (%),Mean Drift (%),P90 Drift (%),Mean Cross-Track (m),Mean Along-Track (m),Pass Rate (<10%)
-A_baseline_gyro,19.35,271.26,23.98,27.56,50.94,166.4,97.29,7.7%
-B_transformed_gyro,19.34,271.24,23.99,27.55,50.94,166.41,97.18,7.7%
-C_explicit_bias_est,30.4,491.11,44.12,45.79,83.6,270.81,197.78,7.7%
-D_zaru_stationary,30.4,491.11,44.12,45.79,83.6,270.81,197.78,7.7%
-E_gated_magnetometer,30.35,486.46,44.12,45.9,85.16,269.22,194.29,7.7%
-F_ai_directional_consistency,30.4,491.11,44.12,45.79,83.6,270.81,197.78,7.7%

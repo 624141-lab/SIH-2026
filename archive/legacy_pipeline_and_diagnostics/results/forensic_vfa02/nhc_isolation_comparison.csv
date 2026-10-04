@@ -1,6 +1,0 @@
-Scenario ID,Heading Error (deg),Adaptive NHC Pos Error (m),Adaptive NHC Drift (%),Mean Adaptive Covariance (m/s)
-Vfa02_t130s_d15s,25.15,112.43,43.16,0.756
-Vfa02_t170s_d15s,109.15,250.64,173.12,0.428
-Vfa02_t10s_d30s,112.24,391.5,223.09,0.544
-Vfa02_t110s_d30s,10.93,97.68,18.83,0.709
-Vfa02_t130s_d30s,36.71,333.05,62.66,0.837

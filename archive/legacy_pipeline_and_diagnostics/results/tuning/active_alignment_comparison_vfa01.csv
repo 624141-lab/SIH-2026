@@ -1,4 +1,0 @@
-Configuration,Median_Drift_pct,Mean_Drift_pct,P90_Drift_pct,Mean_Pos_Error_m,Mean_Heading_Error_deg,Mean_Cross_Track_m,Pass_Rate_10pct
-Config_A_Identity,25.83,27.5,51.18,206.78,22.14,158.19,11.5%
-Config_B_Old_Flawed,26.85,31.02,52.74,218.67,23.55,192.99,3.8%
-Config_C_Corrected,25.83,27.5,51.18,206.78,22.14,158.19,11.5%

@@ -1,7 +1,0 @@
-Configuration,Median Drift (%),Mean Drift (%),P90 Drift (%),Pass Rate (<10%)
-Baseline 1: Raw IMU,41.69,88.5,222.08,4.2%
-Baseline 2: Standard EKF,40.84,85.1,222.96,4.2%
-Baseline 3: EKF + NHC,41.26,85.09,222.47,4.2%
-Baseline 4: EKF + NHC + Causal Map,108.08,139.44,241.93,0.0%
-System 5: AI Odom + EKF + Adaptive NHC,29.68,55.67,152.73,0.0%
-System 6: Full Hardened Pipeline,74.97,101.8,216.7,8.3%

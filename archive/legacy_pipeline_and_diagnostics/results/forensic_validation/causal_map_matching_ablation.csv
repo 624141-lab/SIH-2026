@@ -1,6 +1,0 @@
-Configuration,Final Error (m),Drift (%),Along-Track Error (m),Cross-Track Error (m),Causal?
-Config A: AI Odometry Only,210.58,20.3,192.5,85.37,YES (Causal Filter)
-Config B: AI + Adaptive NHC,199.73,19.25,198.18,24.84,YES (Causal Filter)
-Config C: AI + Causal Map (Zero-Lag),210.58,20.3,192.5,85.37,YES (Causal Online)
-Config D: AI + NHC + Causal Map (Zero-Lag),199.36,19.22,197.03,30.39,YES (Causal Online)
-Reference: AI + NHC + Old Retrospective HMM,199.36,19.22,197.03,30.39,NO (Retrospective Batch)
